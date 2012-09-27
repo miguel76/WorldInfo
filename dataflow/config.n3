@@ -1,0 +1,49 @@
+@prefix :        <http://www.cattid.uniroma1.it/2012/pampers#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix swi:     <http://www.swows.org/instance#> .
+
+swi:GraphRoot
+  :viewBox :viewBox ;
+  :possibleOption :gdp, :density, :agriAreaRate ;
+  :lensTangible :lensTangible0 ;
+  :lensOffset "-550"^^xsd:decimal ;
+  :lensPointerOffset "-1020"^^xsd:decimal ;
+  :radioBoxPos :boxPos .
+
+:viewBox
+  :minX "82.992"^^xsd:decimal ;
+  :minY "45.607"^^xsd:decimal ;
+  :width "2528.5721"^^xsd:decimal ;
+  :height "1428.3294"^^xsd:decimal .
+
+:boxPos
+  :x "100"^^xsd:decimal ;
+  :y "1100"^^xsd:decimal .
+
+:gdp
+  :id "gdp"^^xsd:string ;
+  :radioButtonPos
+    [ :cx "45"^^xsd:decimal ;
+      :cy "50"^^xsd:decimal ;
+      :r "25"^^xsd:decimal ] .
+
+:density
+  :id "density"^^xsd:string ;
+  :radioButtonPos
+    [ :cx "45"^^xsd:decimal ;
+      :cy "110"^^xsd:decimal ;
+      :r "25"^^xsd:decimal ] .
+
+:agriAreaRate
+  :id "agriAreaRate"^^xsd:string ;
+  :radioButtonPos
+    [ :cx "45"^^xsd:decimal ;
+      :cy "170"^^xsd:decimal ;
+      :r "25"^^xsd:decimal ] .
+
+:lensTangible0
+  :id "0"^^xsd:integer ;
+  :relativeX "-30"^^xsd:decimal ;
+  :relativeY "-50"^^xsd:decimal .
+
+

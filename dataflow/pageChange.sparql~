@@ -1,0 +1,83 @@
+PREFIX :      <http://www.cattid.uniroma1.it/2012/pampers#>
+PREFIX xml:   <http://www.swows.org/xml#>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+PREFIX swi:   <http://www.swows.org/instance#>
+PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX time:   <http://www.swows.org/time#>
+PREFIX tuio:  <http://www.swows.org/tuio#>
+PREFIX events:  <http://www.swows.org/DOM/Events#>
+PREFIX doc:   <http://www.swows.org/xml/instance#>
+
+DELETE {
+  swi:GraphRoot :selectedPage ?selectedPage .
+  ?selectedPage a :Intro .
+}
+INSERT {
+  swi:GraphRoot :selectedPage <#home> .
+  <#home> a :Home .
+}
+WHERE {
+  GRAPH swi:ThisGraph {
+    swi:GraphRoot :selectedPage ?selectedPage .
+    ?selectedPage a :Intro .
+  }
+  GRAPH swi:AddedGraph {
+    ?event
+      a events:MouseEvent ;
+      events:target doc:introPage .
+  }
+};
+
+DELETE {
+  swi:GraphRoot :selectedPage ?selectedPage .
+  ?selectedPage a :Home .
+}
+INSERT {
+  swi:GraphRoot :selectedPage ?newPalletPage .
+  ?newPalletPage
+    a :Pallet ; 
+    :id ?newPalletId . 
+}
+WHERE {
+  GRAPH swi:ThisGraph {
+    swi:GraphRoot :selectedPage ?selectedPage .
+    ?selectedPage a :Home .
+  }
+  GRAPH swi:AddedGraph {
+    ?event
+      a events:MouseEvent ;
+      events:target ?link .
+  }
+  BIND( URI( CONCAT( STR(:newPalletPage_), MD5(STR(?link)) ) ) AS ?newPalletPage ) .
+  BIND( SUBSTR( STR(?link), STRLEN(STR(doc:link_)) + 1, STRLEN(STR(?link)) ) AS ?newPalletId ) .
+};
+
+DELETE {
+  swi:GraphRoot :selectedPage ?selectedPage .
+  ?selectedPage
+    a :Pallet ;
+    :id ?palletId . 
+}
+INSERT {
+  swi:GraphRoot :selectedPage ?newPalletPage .
+  ?newPalletPage
+    a :Pallet ; 
+    :id ?newPalletId . 
+}
+WHERE {
+  GRAPH swi:ThisGraph {
+    swi:GraphRoot :selectedPage ?selectedPage .
+    ?selectedPage
+      a :Pallet ;
+      :id ?palletId . 
+  }
+  GRAPH swi:AddedGraph {
+    ?event
+      a events:MouseEvent ;
+      events:target ?link .
+  }
+  BIND( URI( CONCAT( STR(:newPalletPage_), MD5(STR(?link)) ) ) AS ?newPalletPage ) .
+  BIND( SUBSTR( STR(?link), STRLEN(STR(doc:link_)) + 1, STRLEN(STR(?link)) ) AS ?newPalletId ) .
+
+};

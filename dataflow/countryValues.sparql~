@@ -1,0 +1,30 @@
+PREFIX :      <http://www.cattid.uniroma1.it/2012/pampers#>
+PREFIX xml:   <http://www.swows.org/xml#>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+PREFIX swi:   <http://www.swows.org/instance#>
+PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX geo:   <http://www.fao.org/countryprofiles/geoinfo/geopolitical/resource/>
+
+CONSTRUCT {
+  ?country
+    a :Country ;
+    geo:codeISO2 ?codeISO2upper ;
+    :value ?value .
+}
+WHERE {
+  ?country
+    a geo:self_governing ;
+    geo:codeISO2 ?codeISO2upper ;
+    geo:GDPTotalInCurrentPrices ?gdp ;
+    geo:populationTotal ?pop ;
+    geo:landAreaTotal ?landArea ;
+    geo:agriculturalAreaTotal ?agriArea .
+  BIND( ?gdp / ?pop AS ?gdpPerCapita ) .
+  BIND( ?pop / ?landArea AS ?density ) .
+  BIND( ?agriArea / ?landArea AS ?agriAreaRate ) .
+  GRAPH :selectedOption {
+    swi:GraphRoot :selectedOption ?selectedOption .
+  }
+  BIND( IF( ?selectedOption = :gdp, ?gdpPerCapita, IF( ?selectedOption = :density, ?density, IF( ?selectedOption = :agriAreaRate, ?agriAreaRate, 0 ) ) ) AS ?value ) .
+}
+

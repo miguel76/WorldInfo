@@ -1,0 +1,81 @@
+@prefix :        <http://www.cattid.uniroma1.it/2012/pampers#> .
+@prefix svg:     <http://uispin.org/svg#> .
+@prefix uix:     <http://www.swows.org/uix#> .
+@prefix tuio:    <http://www.swows.org/tuio#> .
+@prefix xml:    <http://www.swows.org/xml#> .
+@prefix sp:      <http://spinrdf.org/sp#> .
+@prefix df:   <http://www.swows.org/dataflow#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix vp:   <http://www.swows.org/viewport#> .
+@prefix swi:   <http://www.swows.org/instance#> .
+@prefix rdfSyntax:   <http://www.swows.org/syntaxes/RDF/> .
+@prefix rdf2Syntax:   <http://www.swows.org/syntaxes/RDF/RDF/> .
+@prefix syntax:   <http://www.swows.org/syntaxes/> .
+@prefix query: <http://jena.hpl.hp.com/2003/07/query/> .
+@prefix sparql: <http://jena.hpl.hp.com/2003/07/query/SPARQL_11/> .
+
+swi:OutputDataset
+  a df:DataflowGraph ;
+  df:input
+    [ a df:InlineDataset ;
+      df:input
+        :normalizedCountryValues ;
+      df:namedInput 
+        [ a df:NamedGraph ;
+          df:id :selectedOption ;
+          df:input :selectedOption ] ;
+      df:namedInput 
+        [ a df:NamedGraph ;
+          df:id :config ;
+          df:input :config ] ] ;
+  df:config
+    [ a df:IncludedGraph ;
+      df:url <svg.n3> ;
+      df:syntax rdfSyntax:N3 ] .
+
+:normalizedCountryValues
+  a df:ConstructGraph ;
+  df:input :countryValues ;
+  df:config
+    [ a df:IncludedGraph ;
+      df:url <normalize.sparql> ;
+      df:syntax query:SPARQL_11 ].
+
+:countryValues
+  a df:ConstructGraph ;
+  df:input :faoData ;
+  df:config
+    [ a df:IncludedGraph ;
+      df:url <countryValues.sparql> ;
+      df:syntax query:SPARQL_11 ].
+
+:selectedOption
+  a df:UpdatableFromEventsGraph2 ;
+  df:baseGraph
+    [ a df:LoadGraph ;
+      df:url <startingOption.n3> ;
+      df:syntax rdfSyntax:N3 ] ;
+  df:input
+    [ df:eventsFrom :mouseEvents ;
+      df:input :config ;
+      df:config
+        [ a df:IncludedGraph ;
+          df:url <selectedOption.sparql> ;
+          df:syntax sparql:Update ] ] .
+
+:config
+  a df:IncludedGraph ;
+  df:url <config.n3> ;
+  df:syntax rdfSyntax:N3 .
+
+:faoData
+  a df:IncludedGraph ;
+  df:url <../data/fao.rdf> ;
+  df:syntax rdf2Syntax:XML .
+
+:mouseEvents
+  a df:SelectGraph ;
+  df:input swi:InputDataset ;
+  df:id swi:mouseEvents .
+
+
