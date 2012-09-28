@@ -18,64 +18,22 @@ swi:OutputDataset
   a df:DataflowGraph ;
   df:input
     [ a df:InlineDataset ;
-      df:input
-        :normalizedCountryValues ;
-      df:namedInput 
-        [ a df:NamedGraph ;
-          df:id :selectedOption ;
-          df:input :selectedOption ] ;
-      df:namedInput 
-        [ a df:NamedGraph ;
-          df:id :config ;
-          df:input :config ] ] ;
-  df:config
-    [ a df:IncludedGraph ;
-      df:url <svg.n3> ;
-      df:syntax rdfSyntax:N3 ] .
-
-:normalizedCountryValues
-  a df:ConstructGraph ;
-  df:input :countryValues ;
-  df:config
-    [ a df:IncludedGraph ;
-      df:url <normalize.sparql> ;
-      df:syntax query:SPARQL_11 ].
-
-:countryValues
-  a df:ConstructGraph ;
-  df:input :faoData ;
-  df:config
-    [ a df:IncludedGraph ;
-      df:url <countryValuesForEach.sparql> ;
-      df:syntax query:SPARQL_11 ].
+      df:input :normalizedCountryValues ;
+      df:namedInput [ a df:NamedGraph ; df:input :selectedOption ] ;
+      df:namedInput [ a df:NamedGraph ; df:input :config ] ] ;
+  df:config [ a df:LoadGraph ; df:url <svg.n3> ] .
 
 :selectedOption
-  a df:UpdatableFromEventsGraph2 ;
-  df:baseGraph
-    [ a df:LoadGraph ;
-      df:url <startingOption.n3> ;
-      df:syntax rdfSyntax:N3 ] ;
-  df:input
-    [ df:eventsFrom :mouseEvents ;
+  a df:UpdatableGraph ;
+  df:baseGraph [ a df:LoadGraph ; df:url <startingOption.n3> ] ;
+  df:trigger
+    [ df:eventsFrom [a df:SelectGraph ; df:id swi:mouseEvents] ;
       df:input :config ;
       df:config
-        [ a df:IncludedGraph ;
-          df:url <selectedOption.sparql> ;
+        [ a df:LoadGraph ;
+          df:url <changeOption.sparql> ;
           df:syntax sparql:Update ] ] .
 
-:config
-  a df:IncludedGraph ;
-  df:url <config.n3> ;
-  df:syntax rdfSyntax:N3 .
-
-:faoData
-  a df:IncludedGraph ;
-  df:url <../data/fao.rdf> ;
-  df:syntax rdf2Syntax:XML .
-
-:mouseEvents
-  a df:SelectGraph ;
-  df:input swi:InputDataset ;
-  df:id swi:mouseEvents .
-
+:config a df:LoadGraph ; df:url <config.n3> .
+:faoData a df:LoadGraph ; df:url <../data/fao.rdf> .
 

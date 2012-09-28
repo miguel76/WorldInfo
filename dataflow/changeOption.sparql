@@ -9,22 +9,16 @@ PREFIX tuio:  <http://www.swows.org/tuio#>
 PREFIX events:  <http://www.swows.org/DOM/Events#>
 PREFIX doc:   <http://www.swows.org/xml/instance#>
 
-DELETE {
-  swi:GraphRoot :selectedOption ?oldOption .
-}
-INSERT {
-  swi:GraphRoot :selectedOption ?newOption .
-}
+DELETE { swi:GraphRoot :selectedOption ?oldOption }
+INSERT { swi:GraphRoot :selectedOption ?newOption }
 WHERE {
-  GRAPH swi:ThisGraph {
-    swi:GraphRoot :selectedOption ?oldOption .
-  }
+  GRAPH swi:ThisGraph { swi:GraphRoot :selectedOption ?oldOption }
   GRAPH swi:AddedGraph {
-    ?event
-      a events:MouseEvent ;
-      events:target ?eventTarget .
+    ?event a events:MouseEvent ; events:target ?eventTarget .
   } .
   swi:GraphRoot :possibleOption ?newOption .
-  FILTER ( URI( CONCAT( STR(doc:option_), ?newOption, "_radioBorder" ) ) = ?eventTarget ).
+  FILTER (
+    URI( CONCAT( STR(doc:option_), ?newOption, "_radioBorder" ) )
+        = ?eventTarget ).
 };
 

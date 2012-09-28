@@ -24,9 +24,7 @@ WHERE {
       a events:MouseEvent ;
       events:target ?eventTarget .
   } .
-  GRAPH :config {
-    swi:GraphRoot :possibleOption ?newOption .
-  } .
+  swi:GraphRoot :possibleOption ?newOption .
   FILTER ( URI( CONCAT( STR(doc:option_), ?newOption, "_radioBorder" ) ) = ?eventTarget ).
 };
 

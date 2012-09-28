@@ -5,28 +5,17 @@ PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
 PREFIX swi:   <http://www.swows.org/instance#>
 PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX geo:   <http://www.fao.org/countryprofiles/geoinfo/geopolitical/resource/>
+PREFIX nn:    <http://www.swows.org/xml/no-namespace>
+PREFIX svg:   <http://www.w3.org/2000/svg>
+PREFIX xlink:   <http://www.w3.org/2000/svg>
 
 CONSTRUCT {
 
   ?selectedOption_g xml:hasChild <#selectedOption_use> .
-  <#selectedOption_use>
-    a xml:Element ;
-    xml:namespace <http://www.w3.org/2000/svg> ;
-    xml:nodeName "use"^^xsd:string ;
-    xml:hasAttribute <#selectedOption_href> .
-  <#selectedOption_href>
-    a xml:Attr ;
-    xml:nodeName "href"^^xsd:string ;
-    xml:namespace <http://www.w3.org/1999/xlink> ;
-    xml:nodeValue "#radioPoint"^^xsd:string .
-
+  <#selectedOption_use>  a svg:use ; xlink:href "#radioPoint".
   ?unselectedOption_radioBorder xml:listenedEventType "mousedown" .
 
-  ?country_elementOrDescendant xml:hasAttribute ?country_style .
-  ?country_style
-    a xml:Attr ;
-    xml:nodeName "style"^^xsd:string ;
-    xml:nodeValue ?country_style_value .
+  ?country_elementOrDescendant nn:style ?country_style_value .
 
 }
 WHERE {
@@ -44,6 +33,9 @@ WHERE {
   ?country
     a :Country ;
     geo:codeISO2 ?codeISO2upper ;
+    :option ?option .
+  ?option
+    :id ?selectedOption ;
     :value ?proportion .
   BIND( URI( CONCAT( STR( doc: ), LCASE(?codeISO2upper) ) ) AS ?country_element ) .
   GRAPH :descendants {
@@ -53,7 +45,6 @@ WHERE {
   BIND( STR(xsd:integer( ROUND( xsd:decimal( (1 - ?proportion) * 255) ) ) ) AS ?green ).
   BIND( STR(xsd:integer( ROUND( xsd:decimal( (1 - ?proportion) * 255) ) ) ) AS ?blue ).
   BIND( CONCAT( "fill: rgb(", ?red, ",", ?green, ",", ?blue, ")" ) AS ?country_style_value ) .
-  BIND( URI( CONCAT( STR( :country_style_ ), MD5( STR(?country) ) ) ) AS ?country_style ) .
 
 }
 
