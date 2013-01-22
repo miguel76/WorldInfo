@@ -21,29 +21,29 @@ swi:OutputDataset
       df:input :normalizedCountryValues ;
       df:namedInput [ a df:NamedGraph ; df:input :selectedOption ] ;
       df:namedInput [ a df:NamedGraph ; df:input :config ] ] ;
-  df:config [ a df:LoadGraph ; df:url <svg.n3> ] .
+  df:config [ a df:IncludedGraph ; df:url <svg.n3> ] .
 
 :normalizedCountryValues
   a df:ConstructGraph ;
   df:input :countryValues ;
-  df:config [ a df:LoadGraph ; df:url <normalize.sparql> ].
+  df:config [ a df:IncludedGraph ; df:url <normalize.sparql> ].
 
 :countryValues
   a df:ConstructGraph ;
   df:input :faoData ;
-  df:config [ a df:LoadGraph ; df:url <countryValues.sparql> ].
+  df:config [ a df:IncludedGraph ; df:url <countryValues.sparql> ].
 
 :selectedOption
   a df:UpdatableGraph ;
-  df:baseGraph [ a df:LoadGraph ; df:url <startingOption.n3> ] ;
+  df:baseGraph [ a df:IncludedGraph ; df:url <startingOption.n3> ] ;
   df:trigger
     [ df:eventsFrom [a df:SelectGraph ; df:id swi:mouseEvents] ;
       df:input :config ;
       df:config
-        [ a df:LoadGraph ;
+        [ a df:IncludedGraph ;
           df:url <changeOption.sparql> ;
           df:syntax sparql:Update ] ] .
 
-:config a df:LoadGraph ; df:url <config.n3> .
-:faoData a df:LoadGraph ; df:url <../data/fao.rdf> .
+:config a df:IncludedGraph ; df:url <config.n3> .
+:faoData a df:IncludedGraph ; df:url <../data/fao.rdf> .
 
