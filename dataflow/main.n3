@@ -25,12 +25,16 @@ swi:OutputDataset
 
 :normalizedCountryValues
   a df:ConstructGraph ;
-  df:input :countryValues ;
+  df:input
+    [ a df:InlineDataset ;
+      df:input :countryValues  ] ;
   df:config [ a df:IncludedGraph ; df:url <normalize.sparql> ].
 
 :countryValues
   a df:ConstructGraph ;
-  df:input :faoData ;
+  df:input
+    [ a df:InlineDataset ;
+      df:input :faoData  ] ;
   df:config [ a df:IncludedGraph ; df:url <countryValues.sparql> ].
 
 :selectedOption

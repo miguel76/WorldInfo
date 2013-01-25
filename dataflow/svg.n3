@@ -21,7 +21,7 @@ swi:OutputDataset
   a df:ConstructGraph ;
   df:input
     [ a df:InlineDataset ;
-      df:input swi:InputDataset ;
+      df:input :mainInfo ;
       df:namedInput 
         [ a df:NamedGraph ;
           df:id :descendants ;
@@ -41,7 +41,9 @@ swi:OutputDataset
 
 :descendants
   a df:ConstructGraph ;
-  df:input :svgDoc ;
+  df:input
+    [ a df:InlineDataset ;
+      df:input :svgDoc ] ;
   df:config
     [ a df:IncludedGraph ;
       df:url <children2descendants.sparql> ;
@@ -51,6 +53,10 @@ swi:OutputDataset
   a df:IncludedGraph ;
   df:url <../svg/BlankMapWithRadioBox.svg> ;
   df:syntax syntax:XML .
+
+:mainInfo
+  a df:SelectGraph ;
+  df:input swi:InputDataset .
 
 :selectedOption
   a df:SelectGraph ;
