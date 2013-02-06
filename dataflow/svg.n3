@@ -13,9 +13,12 @@
 @prefix query: <http://jena.hpl.hp.com/2003/07/query/> .
 
 swi:OutputDataset
-  a df:UnionGraph ;
-  df:input :svgVar ; 
-  df:input :svgDoc .
+  a df:InlineDataset ;
+    df:input
+      [ a df:UnionGraph ;
+        df:input :svgVar ; 
+        df:input :svgDoc 
+      ] .
 
 :svgVar
   a df:ConstructGraph ;

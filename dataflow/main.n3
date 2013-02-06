@@ -15,13 +15,21 @@
 @prefix sparql: <http://jena.hpl.hp.com/2003/07/query/SPARQL_11/> .
 
 swi:OutputDataset
-  a df:DataflowGraph ;
+  a df:InlineDataset ;
+  df:input
+    [ a df:SelectGraph ;
+      df:input [
+
+  a df:DataflowDataset ;
   df:input
     [ a df:InlineDataset ;
       df:input :normalizedCountryValues ;
       df:namedInput [ a df:NamedGraph ; df:input :selectedOption ] ;
       df:namedInput [ a df:NamedGraph ; df:input :config ] ] ;
-  df:config [ a df:IncludedGraph ; df:url <svg.n3> ] .
+  df:config [ a df:IncludedGraph ; df:url <svg.n3> ]
+
+      ]
+    ].
 
 :normalizedCountryValues
   a df:ConstructGraph ;
