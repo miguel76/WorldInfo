@@ -24,8 +24,8 @@ swi:OutputDataset
   df:input
     [ a df:InlineDataset ;
       df:input :normalizedCountryValues ;
-      df:namedInput [ a df:NamedGraph ; df:input :selectedOption ] ;
-      df:namedInput [ a df:NamedGraph ; df:input :config ] ] ;
+      df:namedInput [ a df:NamedGraph ; df:input :selectedOption ; df:id :selectedOption ] ;
+      df:namedInput [ a df:NamedGraph ; df:input :config  ; df:id :config ] ] ;
   df:config [ a df:IncludedGraph ; df:url <svg.n3> ]
 
       ]
