@@ -32,11 +32,11 @@ swi:OutputDataset
       df:namedInput 
         [ a df:NamedGraph ;
           df:id :selectedOption ;
-          df:input :selectedOption ] ;
+          df:input _:selectedOption ] ;
       df:namedInput 
         [ a df:NamedGraph ;
           df:id :config ;
-          df:input :config ] ] ;
+          df:input _:config ] ] ;
   df:config
     [ a df:IncludedGraph ;
       df:url <svg.sparql> ;
@@ -52,21 +52,21 @@ swi:OutputDataset
       df:url <children2descendants.sparql> ;
       df:syntax query:SPARQL_11 ] .
 
-:svgDoc
+_:svgDoc
   a df:IncludedGraph ;
   df:url <../svg/BlankMapWithRadioBox.svg> ;
   df:syntax syntax:XML .
 
-:mainInfo
+_:mainInfo
   a df:SelectGraph ;
   df:input swi:InputDataset .
 
-:selectedOption
+_:selectedOption
   a df:SelectGraph ;
   df:id :selectedOption ;
   df:input swi:InputDataset .
 
-:config
+_:config
   a df:SelectGraph ;
   df:id :config ;
   df:input swi:InputDataset .
