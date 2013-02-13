@@ -23,39 +23,41 @@ swi:OutputDataset
   a df:DataflowDataset ;
   df:input
     [ a df:InlineDataset ;
-      df:input :normalizedCountryValues ;
-      df:namedInput [ a df:NamedGraph ; df:input :selectedOption ; df:id :selectedOption ] ;
-      df:namedInput [ a df:NamedGraph ; df:input :config  ; df:id :config ] ] ;
+      df:input _:normalizedCountryValues ;
+      df:namedInput [ a df:NamedGraph ; df:input _:selectedOption ; df:id :selectedOption ] ;
+      df:namedInput [ a df:NamedGraph ; df:input _:config  ; df:id :config ] ] ;
   df:config [ a df:IncludedGraph ; df:url <svg.n3> ]
 
       ]
     ].
 
-:normalizedCountryValues
+_:normalizedCountryValues
   a df:ConstructGraph ;
   df:input
     [ a df:InlineDataset ;
-      df:input :countryValues  ] ;
+      df:input _:countryValues  ] ;
   df:config [ a df:IncludedGraph ; df:url <normalize.sparql> ].
 
-:countryValues
+_:countryValues
   a df:ConstructGraph ;
   df:input
     [ a df:InlineDataset ;
-      df:input :faoData  ] ;
+      df:input _:faoData  ] ;
   df:config [ a df:IncludedGraph ; df:url <countryValues.sparql> ].
 
-:selectedOption
+_:selectedOption
   a df:UpdatableGraph ;
   df:baseGraph [ a df:IncludedGraph ; df:url <startingOption.n3> ] ;
   df:trigger
     [ df:eventsFrom [a df:SelectGraph ; df:id swi:mouseEvents] ;
-      df:input :config ;
+      df:input
+        [ a df:InlineDataset ;
+          df:input _:config ] ;
       df:config
         [ a df:IncludedGraph ;
           df:url <changeOption.sparql> ;
           df:syntax sparql:Update ] ] .
 
-:config a df:IncludedGraph ; df:url <config.n3> .
-:faoData a df:IncludedGraph ; df:url <../data/fao.rdf> .
+_:config a df:IncludedGraph ; df:url <config.n3> .
+_:faoData a df:IncludedGraph ; df:url <../data/fao.rdf> .
 
