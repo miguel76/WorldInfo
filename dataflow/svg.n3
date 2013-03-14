@@ -16,19 +16,19 @@ swi:OutputDataset
   a df:InlineDataset ;
     df:input
       [ a df:UnionGraph ;
-        df:input :svgVar ; 
-        df:input :svgDoc 
+        df:input _:svgVar ; 
+        df:input _:svgDoc 
       ] .
 
-:svgVar
+_:svgVar
   a df:ConstructGraph ;
   df:input
     [ a df:InlineDataset ;
-      df:input :mainInfo ;
+      df:input _:mainInfo ;
       df:namedInput 
         [ a df:NamedGraph ;
           df:id :descendants ;
-          df:input :descendants ] ;
+          df:input _:descendants ] ;
       df:namedInput 
         [ a df:NamedGraph ;
           df:id :selectedOption ;
@@ -42,7 +42,7 @@ swi:OutputDataset
       df:url <svg.sparql> ;
       df:syntax query:SPARQL_11 ].
 
-:descendants
+_:descendants
   a df:ConstructGraph ;
   df:input
     [ a df:InlineDataset ;

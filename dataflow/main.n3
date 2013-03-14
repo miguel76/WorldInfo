@@ -47,16 +47,15 @@ _:countryValues
 
 _:selectedOption
   a df:UpdatableGraph ;
-  df:baseGraph [ a df:IncludedGraph ; df:url <startingOption.n3> ] ;
-  df:trigger
-    [ df:eventsFrom [a df:SelectGraph ; df:id swi:mouseEvents] ;
-      df:input
-        [ a df:InlineDataset ;
-          df:input _:config ] ;
-      df:config
-        [ a df:IncludedGraph ;
-          df:url <changeOption.sparql> ;
-          df:syntax sparql:Update ] ] .
+  df:input
+    [ a df:InlineDataset ;
+      df:input _:config ;
+      df:namedInput [ a df:NamedGraph ; df:input [a df:SelectGraph ; df:id swi:mouseEvents] ; df:id swi:mouseEvents ] ;
+      df:namedInput [ a df:NamedGraph ; df:input [a df:IncludedGraph ; df:url <startingOption.n3>] ; df:id :startingOption ] ] ;
+  df:config
+    [ a df:IncludedGraph ;
+      df:url <changeOption.sparql> ;
+      df:syntax sparql:Update ] .
 
 _:config a df:IncludedGraph ; df:url <config.n3> .
 _:faoData a df:IncludedGraph ; df:url <../data/fao.rdf> .

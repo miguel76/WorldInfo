@@ -9,11 +9,17 @@ PREFIX tuio:  <http://www.swows.org/tuio#>
 PREFIX events:  <http://www.swows.org/DOM/Events#>
 PREFIX doc:   <http://www.swows.org/xml/instance#>
 
+INSERT { swi:GraphRoot :selectedOption ?newOption }
+WHERE {
+  GRAPH :startingOption { swi:GraphRoot :selectedOption ?newOption } .
+  FILTER NOT EXISTS{ GRAPH swi:ThisGraph { swi:GraphRoot :selectedOption ?oldOption } } .
+};
+
 DELETE { swi:GraphRoot :selectedOption ?oldOption }
 INSERT { swi:GraphRoot :selectedOption ?newOption }
 WHERE {
   GRAPH swi:ThisGraph { swi:GraphRoot :selectedOption ?oldOption }
-  GRAPH swi:AddedGraph {
+  GRAPH swi:mouseEvents {
     ?event a events:MouseEvent ; events:target ?eventTarget .
   } .
   swi:GraphRoot :possibleOption ?newOption .
