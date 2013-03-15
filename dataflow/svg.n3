@@ -16,8 +16,8 @@ swi:OutputDataset
   a df:InlineDataset ;
     df:input
       [ a df:UnionGraph ;
-        df:input _:svgVar ; 
-        df:input _:svgDoc 
+        df:input _:svgVar
+#        df:input _:svgDoc 
       ] .
 
 _:svgVar
