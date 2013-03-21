@@ -1,4 +1,3 @@
-@prefix :        <http://www.cattid.uniroma1.it/2012/pampers#> .
 @prefix svg:     <http://uispin.org/svg#> .
 @prefix uix:     <http://www.swows.org/uix#> .
 @prefix tuio:    <http://www.swows.org/tuio#> .
@@ -13,60 +12,46 @@
 @prefix query: <http://jena.hpl.hp.com/2003/07/query/> .
 
 swi:OutputDataset
-  a df:InlineDataset ;
-    df:input
-      [ a df:UnionGraph ;
-        df:input _:svgVar
-#        df:input _:svgDoc 
-      ] .
-
-_:svgVar
-  a df:ConstructGraph ;
   df:input
-    [ a df:InlineDataset ;
-      df:input _:mainInfo ;
-      df:namedInput 
-        [ a df:NamedGraph ;
-          df:id :descendants ;
-          df:input _:descendants ] ;
-      df:namedInput 
-        [ a df:NamedGraph ;
-          df:id :selectedOption ;
-          df:input _:selectedOption ] ;
-      df:namedInput 
-        [ a df:NamedGraph ;
-          df:id :config ;
-          df:input _:config ] ] ;
+    [ a df:UnionGraph ;
+      df:input <#svgVar> ;
+      df:input <#svgDoc>
+    ] .
+
+<#svgVar>
+  a df:ConstructGraph ;
+  df:input <#mainInfo> ;
+  df:namedInput <#descendants> ;
+  df:namedInput <#selectedOption> ;
+  df:namedInput <#config> ;
   df:config
     [ a df:IncludedGraph ;
       df:url <svg.sparql> ;
       df:syntax query:SPARQL_11 ].
 
-_:descendants
+<#descendants>
   a df:ConstructGraph ;
-  df:input
-    [ a df:InlineDataset ;
-      df:input :svgDoc ] ;
+  df:input <#svgDoc> ;
   df:config
     [ a df:IncludedGraph ;
       df:url <children2descendants.sparql> ;
       df:syntax query:SPARQL_11 ] .
 
-_:svgDoc
+<#svgDoc>
   a df:IncludedGraph ;
   df:url <../svg/BlankMapWithRadioBox.svg> ;
   df:syntax syntax:XML .
 
-_:mainInfo
+<#mainInfo>
   a df:SelectGraph ;
   df:input swi:InputDataset .
 
-_:selectedOption
+<#selectedOption>
   a df:SelectGraph ;
   df:id :selectedOption ;
   df:input swi:InputDataset .
 
-_:config
+<#config>
   a df:SelectGraph ;
   df:id :config ;
   df:input swi:InputDataset .
