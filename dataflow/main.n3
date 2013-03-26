@@ -1,4 +1,4 @@
-@prefix :        <http://www.di.uniroma1.it/2013/WorldInfo#> .
+@prefix :        <http://www.cattid.uniroma1.it/2012/pampers#> .
 @prefix svg:     <http://uispin.org/svg#> .
 @prefix uix:     <http://www.swows.org/uix#> .
 @prefix tuio:    <http://www.swows.org/tuio#> .
@@ -19,43 +19,44 @@ swi:OutputDataset
   df:input
     [ a df:SelectGraph ;
       df:input [
-        a df:DataflowDataset ;
-          df:input <#normalizedCountryValues> ;
-          df:namedInput [ a df:NamedGraph ; df:input <#selectedOption> ; df:id :selectedOption ] ;
-          df:namedInput [ a df:NamedGraph ; df:input <#config>  ; df:id :config ] ;
-          df:config [ a df:IncludedGraph ; df:url <svg.n3> ]
+
+  a df:DataflowDataset ;
+  df:input
+    [ a df:InlineDataset ;
+      df:input _:normalizedCountryValues ;
+      df:namedInput [ a df:NamedGraph ; df:input _:selectedOption ; df:id :selectedOption ] ;
+      df:namedInput [ a df:NamedGraph ; df:input _:config  ; df:id :config ] ] ;
+  df:config [ a df:IncludedGraph ; df:url <svg.n3> ]
+
       ]
     ].
 
-<#normalizedCountryValues>
+_:normalizedCountryValues
   a df:ConstructGraph ;
   df:input
     [ a df:InlineDataset ;
       df:input _:countryValues  ] ;
   df:config [ a df:IncludedGraph ; df:url <normalize.sparql> ].
 
-<#countryValues>
+_:countryValues
   a df:ConstructGraph ;
   df:input
     [ a df:InlineDataset ;
       df:input _:faoData  ] ;
   df:config [ a df:IncludedGraph ; df:url <countryValues.sparql> ].
 
-<#selectedOption>
+_:selectedOption
   a df:UpdatableGraph ;
-  df:input <#config> ;
-  df:namedInput <#selectedOption> ;
-  df:namedInput <#mouseEvents> ;
-  df:namedInput [ a df:NamedGraph ; df:input [a df:IncludedGraph ; df:url <startingOption.n3>] ; df:id :startingOption ] ] ;
+  df:input
+    [ a df:InlineDataset ;
+      df:input _:config ;
+      df:namedInput [ a df:NamedGraph ; df:input [a df:SelectGraph ; df:id swi:mouseEvents] ; df:id swi:mouseEvents ] ;
+      df:namedInput [ a df:NamedGraph ; df:input [a df:IncludedGraph ; df:url <startingOption.n3>] ; df:id :startingOption ] ] ;
   df:config
     [ a df:IncludedGraph ;
       df:url <changeOption.sparql> ;
       df:syntax sparql:Update ] .
 
-<#mouseEvents>
-  a df:SelectGraph ;
-  df:id swi:mouseEvents .
-
-<#config> a df:IncludedGraph ; df:url <config.n3> .
-<#faoData> a df:IncludedGraph ; df:url <../data/fao.rdf> .
+_:config a df:IncludedGraph ; df:url <config.n3> .
+_:faoData a df:IncludedGraph ; df:url <../data/fao.rdf> .
 
