@@ -4,68 +4,64 @@
 
 _:b1  a       <http://spinrdf.org/sp#Variable> ;
       <http://spinrdf.org/sp#varName>
-              "country" .
+              "proportion" .
 
 _:b2  a       <http://spinrdf.org/sp#Variable> ;
       <http://spinrdf.org/sp#varName>
-              "option" .
+              "optionDensity" .
 
 _:b3  a       <http://spinrdf.org/sp#Variable> ;
       <http://spinrdf.org/sp#varName>
-              "gdp" .
+              "gdpPerCapita" .
 
 _:b4  a       <http://spinrdf.org/sp#Variable> ;
       <http://spinrdf.org/sp#varName>
-              "optionAgriAreaRate" .
+              "country" .
 
 _:b5  a       <http://spinrdf.org/sp#Variable> ;
       <http://spinrdf.org/sp#varName>
-              "value" .
+              "gdp" .
 
 _:b6  a       <http://spinrdf.org/sp#Variable> ;
       <http://spinrdf.org/sp#varName>
-              "pop" .
+              "optionGdp" .
 
 _:b7  a       <http://spinrdf.org/sp#Variable> ;
       <http://spinrdf.org/sp#varName>
-              "unselectedOption" .
+              "codeISO2upper" .
 
 _:b8  a       <http://spinrdf.org/sp#Variable> ;
       <http://spinrdf.org/sp#varName>
-              "option" .
+              "density" .
 
 _:b9  a       <http://spinrdf.org/sp#Variable> ;
       <http://spinrdf.org/sp#varName>
-              "selectedOption" .
+              "value" .
 
 _:b10
       a       <http://spinrdf.org/sp#Variable> ;
       <http://spinrdf.org/sp#varName>
-              "optionId" .
+              "option" .
 
 _:b11
-      a       df:ImportedGraph ;
-      df:uri  <file:///home/miguel/git/WorldInfo/dataflow/config.n3> .
+      a       <http://spinrdf.org/sp#Variable> ;
+      <http://spinrdf.org/sp#varName>
+              "country" .
 
 _:b12
       a       <http://spinrdf.org/sp#Variable> ;
       <http://spinrdf.org/sp#varName>
-              "red" .
+              "agriArea" .
 
 _:b13
       a       <http://spinrdf.org/sp#Variable> ;
       <http://spinrdf.org/sp#varName>
-              "agriArea" .
+              "minValue" .
 
 _:b14
       a       <http://spinrdf.org/sp#Variable> ;
       <http://spinrdf.org/sp#varName>
-              "selectedOption_g" .
-
-_:b15
-      a       <http://spinrdf.org/sp#Variable> ;
-      <http://spinrdf.org/sp#varName>
-              "country_style_value" .
+              "selectedOption" .
 
 <http://www.swows.org/instance#OutputDataset>
       df:input
@@ -85,16 +81,25 @@ _:b15
                                               <http://spinrdf.org/sp#predicate>
                                                       <http://www.swows.org/xml#hasChild> ;
                                               <http://spinrdf.org/sp#subject>
-                                                      _:b14
+                                                      _:b15
                                             ] ;
                                     spx:triple
                                             [ a       <http://spinrdf.org/sp#TripleTemplate> ;
                                               <http://spinrdf.org/sp#object>
-                                                      <http://www.w3.org/2000/svguse> ;
+                                                      _:b16 ;
                                               <http://spinrdf.org/sp#predicate>
-                                                      <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ;
+                                                      <http://www.swows.org/xml/no-namespacestyle> ;
                                               <http://spinrdf.org/sp#subject>
-                                                      <file:///home/miguel/git/SWOWS/swows/#selectedOption_use>
+                                                      _:b17
+                                            ] ;
+                                    spx:triple
+                                            [ a       <http://spinrdf.org/sp#TripleTemplate> ;
+                                              <http://spinrdf.org/sp#object>
+                                                      "mousedown" ;
+                                              <http://spinrdf.org/sp#predicate>
+                                                      <http://www.swows.org/xml#listenedEventType> ;
+                                              <http://spinrdf.org/sp#subject>
+                                                      _:b18
                                             ] ;
                                     spx:triple
                                             [ a       <http://spinrdf.org/sp#TripleTemplate> ;
@@ -108,20 +113,11 @@ _:b15
                                     spx:triple
                                             [ a       <http://spinrdf.org/sp#TripleTemplate> ;
                                               <http://spinrdf.org/sp#object>
-                                                      _:b15 ;
+                                                      <http://www.w3.org/2000/svguse> ;
                                               <http://spinrdf.org/sp#predicate>
-                                                      <http://www.swows.org/xml/no-namespacestyle> ;
+                                                      <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ;
                                               <http://spinrdf.org/sp#subject>
-                                                      _:b16
-                                            ] ;
-                                    spx:triple
-                                            [ a       <http://spinrdf.org/sp#TripleTemplate> ;
-                                              <http://spinrdf.org/sp#object>
-                                                      "mousedown" ;
-                                              <http://spinrdf.org/sp#predicate>
-                                                      <http://www.swows.org/xml#listenedEventType> ;
-                                              <http://spinrdf.org/sp#subject>
-                                                      _:b17
+                                                      <file:///home/miguel/git/SWOWS/swows/#selectedOption_use>
                                             ]
                                   ] ;
                           <http://spinrdf.org/sp#where>
@@ -133,29 +129,20 @@ _:b15
                                                         spx:triple
                                                                 [ a       <http://spinrdf.org/sp#TripleTemplate> ;
                                                                   <http://spinrdf.org/sp#object>
-                                                                          _:b10 ;
+                                                                          _:b19 ;
                                                                   <http://spinrdf.org/sp#predicate>
                                                                           <http://www.cattid.uniroma1.it/2012/pampers#id> ;
                                                                   <http://spinrdf.org/sp#subject>
-                                                                          _:b18
+                                                                          _:b10
                                                                 ] ;
                                                         spx:triple
                                                                 [ a       <http://spinrdf.org/sp#TripleTemplate> ;
                                                                   <http://spinrdf.org/sp#object>
-                                                                          <http://www.cattid.uniroma1.it/2012/pampers#Country> ;
+                                                                          _:b1 ;
                                                                   <http://spinrdf.org/sp#predicate>
-                                                                          <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ;
+                                                                          <http://www.cattid.uniroma1.it/2012/pampers#value> ;
                                                                   <http://spinrdf.org/sp#subject>
-                                                                          _:b19
-                                                                ] ;
-                                                        spx:triple
-                                                                [ a       <http://spinrdf.org/sp#TripleTemplate> ;
-                                                                  <http://spinrdf.org/sp#object>
-                                                                          _:b18 ;
-                                                                  <http://spinrdf.org/sp#predicate>
-                                                                          <http://www.cattid.uniroma1.it/2012/pampers#option> ;
-                                                                  <http://spinrdf.org/sp#subject>
-                                                                          _:b19
+                                                                          _:b10
                                                                 ] ;
                                                         spx:triple
                                                                 [ a       <http://spinrdf.org/sp#TripleTemplate> ;
@@ -164,16 +151,25 @@ _:b15
                                                                   <http://spinrdf.org/sp#predicate>
                                                                           <http://www.fao.org/countryprofiles/geoinfo/geopolitical/resource/codeISO2> ;
                                                                   <http://spinrdf.org/sp#subject>
-                                                                          _:b19
+                                                                          _:b4
                                                                 ] ;
                                                         spx:triple
                                                                 [ a       <http://spinrdf.org/sp#TripleTemplate> ;
                                                                   <http://spinrdf.org/sp#object>
-                                                                          _:b21 ;
+                                                                          <http://www.cattid.uniroma1.it/2012/pampers#Country> ;
                                                                   <http://spinrdf.org/sp#predicate>
-                                                                          <http://www.cattid.uniroma1.it/2012/pampers#value> ;
+                                                                          <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ;
                                                                   <http://spinrdf.org/sp#subject>
-                                                                          _:b18
+                                                                          _:b4
+                                                                ] ;
+                                                        spx:triple
+                                                                [ a       <http://spinrdf.org/sp#TripleTemplate> ;
+                                                                  <http://spinrdf.org/sp#object>
+                                                                          _:b10 ;
+                                                                  <http://spinrdf.org/sp#predicate>
+                                                                          <http://www.cattid.uniroma1.it/2012/pampers#option> ;
+                                                                  <http://spinrdf.org/sp#subject>
+                                                                          _:b4
                                                                 ]
                                                       ] ;
                                               <http://spinrdf.org/sp#where>
@@ -185,47 +181,20 @@ _:b15
                                                                             spx:triple
                                                                                     [ a       <http://spinrdf.org/sp#TripleTemplate> ;
                                                                                       <http://spinrdf.org/sp#object>
-                                                                                              _:b22 ;
+                                                                                              "gdp"^^<http://www.w3.org/2001/XMLSchema#string> ;
+                                                                                      <http://spinrdf.org/sp#predicate>
+                                                                                              <http://www.cattid.uniroma1.it/2012/pampers#id> ;
+                                                                                      <http://spinrdf.org/sp#subject>
+                                                                                              _:b6
+                                                                                    ] ;
+                                                                            spx:triple
+                                                                                    [ a       <http://spinrdf.org/sp#TripleTemplate> ;
+                                                                                      <http://spinrdf.org/sp#object>
+                                                                                              _:b21 ;
                                                                                       <http://spinrdf.org/sp#predicate>
                                                                                               <http://www.cattid.uniroma1.it/2012/pampers#option> ;
                                                                                       <http://spinrdf.org/sp#subject>
-                                                                                              _:b1
-                                                                                    ] ;
-                                                                            spx:triple
-                                                                                    [ a       <http://spinrdf.org/sp#TripleTemplate> ;
-                                                                                      <http://spinrdf.org/sp#object>
-                                                                                              <http://www.cattid.uniroma1.it/2012/pampers#Country> ;
-                                                                                      <http://spinrdf.org/sp#predicate>
-                                                                                              <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ;
-                                                                                      <http://spinrdf.org/sp#subject>
-                                                                                              _:b1
-                                                                                    ] ;
-                                                                            spx:triple
-                                                                                    [ a       <http://spinrdf.org/sp#TripleTemplate> ;
-                                                                                      <http://spinrdf.org/sp#object>
-                                                                                              _:b23 ;
-                                                                                      <http://spinrdf.org/sp#predicate>
-                                                                                              <http://www.cattid.uniroma1.it/2012/pampers#value> ;
-                                                                                      <http://spinrdf.org/sp#subject>
-                                                                                              _:b24
-                                                                                    ] ;
-                                                                            spx:triple
-                                                                                    [ a       <http://spinrdf.org/sp#TripleTemplate> ;
-                                                                                      <http://spinrdf.org/sp#object>
-                                                                                              _:b25 ;
-                                                                                      <http://spinrdf.org/sp#predicate>
-                                                                                              <http://www.fao.org/countryprofiles/geoinfo/geopolitical/resource/codeISO2> ;
-                                                                                      <http://spinrdf.org/sp#subject>
-                                                                                              _:b1
-                                                                                    ] ;
-                                                                            spx:triple
-                                                                                    [ a       <http://spinrdf.org/sp#TripleTemplate> ;
-                                                                                      <http://spinrdf.org/sp#object>
-                                                                                              _:b26 ;
-                                                                                      <http://spinrdf.org/sp#predicate>
-                                                                                              <http://www.cattid.uniroma1.it/2012/pampers#value> ;
-                                                                                      <http://spinrdf.org/sp#subject>
-                                                                                              _:b22
+                                                                                              _:b11
                                                                                     ] ;
                                                                             spx:triple
                                                                                     [ a       <http://spinrdf.org/sp#TripleTemplate> ;
@@ -234,43 +203,70 @@ _:b15
                                                                                       <http://spinrdf.org/sp#predicate>
                                                                                               <http://www.cattid.uniroma1.it/2012/pampers#id> ;
                                                                                       <http://spinrdf.org/sp#subject>
-                                                                                              _:b22
+                                                                                              _:b2
                                                                                     ] ;
                                                                             spx:triple
                                                                                     [ a       <http://spinrdf.org/sp#TripleTemplate> ;
                                                                                       <http://spinrdf.org/sp#object>
-                                                                                              _:b24 ;
-                                                                                      <http://spinrdf.org/sp#predicate>
-                                                                                              <http://www.cattid.uniroma1.it/2012/pampers#option> ;
-                                                                                      <http://spinrdf.org/sp#subject>
-                                                                                              _:b1
-                                                                                    ] ;
-                                                                            spx:triple
-                                                                                    [ a       <http://spinrdf.org/sp#TripleTemplate> ;
-                                                                                      <http://spinrdf.org/sp#object>
-                                                                                              _:b4 ;
-                                                                                      <http://spinrdf.org/sp#predicate>
-                                                                                              <http://www.cattid.uniroma1.it/2012/pampers#option> ;
-                                                                                      <http://spinrdf.org/sp#subject>
-                                                                                              _:b1
-                                                                                    ] ;
-                                                                            spx:triple
-                                                                                    [ a       <http://spinrdf.org/sp#TripleTemplate> ;
-                                                                                      <http://spinrdf.org/sp#object>
-                                                                                              "gdp"^^<http://www.w3.org/2001/XMLSchema#string> ;
-                                                                                      <http://spinrdf.org/sp#predicate>
-                                                                                              <http://www.cattid.uniroma1.it/2012/pampers#id> ;
-                                                                                      <http://spinrdf.org/sp#subject>
-                                                                                              _:b24
-                                                                                    ] ;
-                                                                            spx:triple
-                                                                                    [ a       <http://spinrdf.org/sp#TripleTemplate> ;
-                                                                                      <http://spinrdf.org/sp#object>
-                                                                                              _:b27 ;
+                                                                                              _:b22 ;
                                                                                       <http://spinrdf.org/sp#predicate>
                                                                                               <http://www.cattid.uniroma1.it/2012/pampers#value> ;
                                                                                       <http://spinrdf.org/sp#subject>
-                                                                                              _:b4
+                                                                                              _:b21
+                                                                                    ] ;
+                                                                            spx:triple
+                                                                                    [ a       <http://spinrdf.org/sp#TripleTemplate> ;
+                                                                                      <http://spinrdf.org/sp#object>
+                                                                                              _:b6 ;
+                                                                                      <http://spinrdf.org/sp#predicate>
+                                                                                              <http://www.cattid.uniroma1.it/2012/pampers#option> ;
+                                                                                      <http://spinrdf.org/sp#subject>
+                                                                                              _:b11
+                                                                                    ] ;
+                                                                            spx:triple
+                                                                                    [ a       <http://spinrdf.org/sp#TripleTemplate> ;
+                                                                                      <http://spinrdf.org/sp#object>
+                                                                                              <http://www.cattid.uniroma1.it/2012/pampers#Country> ;
+                                                                                      <http://spinrdf.org/sp#predicate>
+                                                                                              <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ;
+                                                                                      <http://spinrdf.org/sp#subject>
+                                                                                              _:b11
+                                                                                    ] ;
+                                                                            spx:triple
+                                                                                    [ a       <http://spinrdf.org/sp#TripleTemplate> ;
+                                                                                      <http://spinrdf.org/sp#object>
+                                                                                              _:b3 ;
+                                                                                      <http://spinrdf.org/sp#predicate>
+                                                                                              <http://www.cattid.uniroma1.it/2012/pampers#value> ;
+                                                                                      <http://spinrdf.org/sp#subject>
+                                                                                              _:b6
+                                                                                    ] ;
+                                                                            spx:triple
+                                                                                    [ a       <http://spinrdf.org/sp#TripleTemplate> ;
+                                                                                      <http://spinrdf.org/sp#object>
+                                                                                              _:b8 ;
+                                                                                      <http://spinrdf.org/sp#predicate>
+                                                                                              <http://www.cattid.uniroma1.it/2012/pampers#value> ;
+                                                                                      <http://spinrdf.org/sp#subject>
+                                                                                              _:b2
+                                                                                    ] ;
+                                                                            spx:triple
+                                                                                    [ a       <http://spinrdf.org/sp#TripleTemplate> ;
+                                                                                      <http://spinrdf.org/sp#object>
+                                                                                              _:b7 ;
+                                                                                      <http://spinrdf.org/sp#predicate>
+                                                                                              <http://www.fao.org/countryprofiles/geoinfo/geopolitical/resource/codeISO2> ;
+                                                                                      <http://spinrdf.org/sp#subject>
+                                                                                              _:b11
+                                                                                    ] ;
+                                                                            spx:triple
+                                                                                    [ a       <http://spinrdf.org/sp#TripleTemplate> ;
+                                                                                      <http://spinrdf.org/sp#object>
+                                                                                              _:b2 ;
+                                                                                      <http://spinrdf.org/sp#predicate>
+                                                                                              <http://www.cattid.uniroma1.it/2012/pampers#option> ;
+                                                                                      <http://spinrdf.org/sp#subject>
+                                                                                              _:b11
                                                                                     ] ;
                                                                             spx:triple
                                                                                     [ a       <http://spinrdf.org/sp#TripleTemplate> ;
@@ -279,7 +275,7 @@ _:b15
                                                                                       <http://spinrdf.org/sp#predicate>
                                                                                               <http://www.cattid.uniroma1.it/2012/pampers#id> ;
                                                                                       <http://spinrdf.org/sp#subject>
-                                                                                              _:b4
+                                                                                              _:b21
                                                                                     ]
                                                                           ] ;
                                                                   <http://spinrdf.org/sp#where>
@@ -289,48 +285,7 @@ _:b15
                                                                                       df:uri  <file:///home/miguel/git/WorldInfo/data/fao.rdf>
                                                                                     ] ;
                                                                             spx:element
-                                                                                    [ a       spx:ElementGroup , <http://spinrdf.org/sp#Element> ;
-                                                                                      spx:element
-                                                                                              [ a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#Bind> ;
-                                                                                                spx:expr
-                                                                                                        [ a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
-                                                                                                          <http://spinrdf.org/sp#arg1>
-                                                                                                                  [ a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
-                                                                                                                    <http://spinrdf.org/sp#arg1>
-                                                                                                                            [ a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
-                                                                                                                              <http://spinrdf.org/sp#arg1>
-                                                                                                                                      <http://www.cattid.uniroma1.it/2012/pampers#optionGdp_> ;
-                                                                                                                              spx:functionLabel "str"
-                                                                                                                            ] ;
-                                                                                                                    <http://spinrdf.org/sp#arg2>
-                                                                                                                            [ a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
-                                                                                                                              <http://spinrdf.org/sp#arg1>
-                                                                                                                                      [ a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
-                                                                                                                                        <http://spinrdf.org/sp#arg1>
-                                                                                                                                                _:b1 ;
-                                                                                                                                        spx:functionLabel "str"
-                                                                                                                                      ] ;
-                                                                                                                              spx:functionLabel "MD5"
-                                                                                                                            ] ;
-                                                                                                                    spx:functionLabel "concat"
-                                                                                                                  ] ;
-                                                                                                          spx:functionLabel "uri"
-                                                                                                        ] ;
-                                                                                                spx:var _:b24
-                                                                                              ] ;
-                                                                                      spx:element
-                                                                                              [ a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#Bind> ;
-                                                                                                spx:expr
-                                                                                                        [ a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
-                                                                                                          <http://spinrdf.org/sp#arg1>
-                                                                                                                  _:b3 ;
-                                                                                                          <http://spinrdf.org/sp#arg2>
-                                                                                                                  _:b6 ;
-                                                                                                          spx:functionLabel "div" ;
-                                                                                                          spx:opName "/"
-                                                                                                        ] ;
-                                                                                                spx:var _:b23
-                                                                                              ] ;
+                                                                                    [ a       <http://spinrdf.org/sp#Element> , spx:ElementGroup ;
                                                                                       spx:element
                                                                                               [ a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePattern> ;
                                                                                                 <http://spinrdf.org/sp#object>
@@ -338,106 +293,20 @@ _:b15
                                                                                                 <http://spinrdf.org/sp#predicate>
                                                                                                         <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ;
                                                                                                 <http://spinrdf.org/sp#subject>
-                                                                                                        _:b1
+                                                                                                        _:b11
                                                                                               ] ;
                                                                                       spx:element
                                                                                               [ a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#Bind> ;
                                                                                                 spx:expr
                                                                                                         [ a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
                                                                                                           <http://spinrdf.org/sp#arg1>
-                                                                                                                  _:b13 ;
+                                                                                                                  _:b12 ;
                                                                                                           <http://spinrdf.org/sp#arg2>
-                                                                                                                  _:b28 ;
+                                                                                                                  _:b23 ;
                                                                                                           spx:functionLabel "div" ;
                                                                                                           spx:opName "/"
                                                                                                         ] ;
-                                                                                                spx:var _:b27
-                                                                                              ] ;
-                                                                                      spx:element
-                                                                                              [ a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#Bind> ;
-                                                                                                spx:expr
-                                                                                                        [ a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
-                                                                                                          <http://spinrdf.org/sp#arg1>
-                                                                                                                  [ a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
-                                                                                                                    <http://spinrdf.org/sp#arg1>
-                                                                                                                            [ a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
-                                                                                                                              <http://spinrdf.org/sp#arg1>
-                                                                                                                                      <http://www.cattid.uniroma1.it/2012/pampers#optionAgriAreaRate_> ;
-                                                                                                                              spx:functionLabel "str"
-                                                                                                                            ] ;
-                                                                                                                    <http://spinrdf.org/sp#arg2>
-                                                                                                                            [ a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
-                                                                                                                              <http://spinrdf.org/sp#arg1>
-                                                                                                                                      [ a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
-                                                                                                                                        <http://spinrdf.org/sp#arg1>
-                                                                                                                                                _:b1 ;
-                                                                                                                                        spx:functionLabel "str"
-                                                                                                                                      ] ;
-                                                                                                                              spx:functionLabel "MD5"
-                                                                                                                            ] ;
-                                                                                                                    spx:functionLabel "concat"
-                                                                                                                  ] ;
-                                                                                                          spx:functionLabel "uri"
-                                                                                                        ] ;
-                                                                                                spx:var _:b4
-                                                                                              ] ;
-                                                                                      spx:element
-                                                                                              [ a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePattern> ;
-                                                                                                <http://spinrdf.org/sp#object>
-                                                                                                        _:b28 ;
-                                                                                                <http://spinrdf.org/sp#predicate>
-                                                                                                        <http://www.fao.org/countryprofiles/geoinfo/geopolitical/resource/landAreaTotal> ;
-                                                                                                <http://spinrdf.org/sp#subject>
-                                                                                                        _:b1
-                                                                                              ] ;
-                                                                                      spx:element
-                                                                                              [ a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePattern> ;
-                                                                                                <http://spinrdf.org/sp#object>
-                                                                                                        _:b6 ;
-                                                                                                <http://spinrdf.org/sp#predicate>
-                                                                                                        <http://www.fao.org/countryprofiles/geoinfo/geopolitical/resource/populationTotal> ;
-                                                                                                <http://spinrdf.org/sp#subject>
-                                                                                                        _:b1
-                                                                                              ] ;
-                                                                                      spx:element
-                                                                                              [ a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePattern> ;
-                                                                                                <http://spinrdf.org/sp#object>
-                                                                                                        _:b3 ;
-                                                                                                <http://spinrdf.org/sp#predicate>
-                                                                                                        <http://www.fao.org/countryprofiles/geoinfo/geopolitical/resource/GDPTotalInCurrentPrices> ;
-                                                                                                <http://spinrdf.org/sp#subject>
-                                                                                                        _:b1
-                                                                                              ] ;
-                                                                                      spx:element
-                                                                                              [ a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePattern> ;
-                                                                                                <http://spinrdf.org/sp#object>
-                                                                                                        _:b13 ;
-                                                                                                <http://spinrdf.org/sp#predicate>
-                                                                                                        <http://www.fao.org/countryprofiles/geoinfo/geopolitical/resource/agriculturalAreaTotal> ;
-                                                                                                <http://spinrdf.org/sp#subject>
-                                                                                                        _:b1
-                                                                                              ] ;
-                                                                                      spx:element
-                                                                                              [ a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePattern> ;
-                                                                                                <http://spinrdf.org/sp#object>
-                                                                                                        _:b25 ;
-                                                                                                <http://spinrdf.org/sp#predicate>
-                                                                                                        <http://www.fao.org/countryprofiles/geoinfo/geopolitical/resource/codeISO2> ;
-                                                                                                <http://spinrdf.org/sp#subject>
-                                                                                                        _:b1
-                                                                                              ] ;
-                                                                                      spx:element
-                                                                                              [ a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#Bind> ;
-                                                                                                spx:expr
-                                                                                                        [ a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
-                                                                                                          <http://spinrdf.org/sp#arg1>
-                                                                                                                  _:b6 ;
-                                                                                                          <http://spinrdf.org/sp#arg2>
-                                                                                                                  _:b28 ;
-                                                                                                          spx:functionLabel "div" ;
-                                                                                                          spx:opName "/"
-                                                                                                        ] ;
-                                                                                                spx:var _:b26
+                                                                                                spx:var _:b22
                                                                                               ] ;
                                                                                       spx:element
                                                                                               [ a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#Bind> ;
@@ -456,7 +325,7 @@ _:b15
                                                                                                                               <http://spinrdf.org/sp#arg1>
                                                                                                                                       [ a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
                                                                                                                                         <http://spinrdf.org/sp#arg1>
-                                                                                                                                                _:b1 ;
+                                                                                                                                                _:b11 ;
                                                                                                                                         spx:functionLabel "str"
                                                                                                                                       ] ;
                                                                                                                               spx:functionLabel "MD5"
@@ -465,7 +334,134 @@ _:b15
                                                                                                                   ] ;
                                                                                                           spx:functionLabel "uri"
                                                                                                         ] ;
-                                                                                                spx:var _:b22
+                                                                                                spx:var _:b2
+                                                                                              ] ;
+                                                                                      spx:element
+                                                                                              [ a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePattern> ;
+                                                                                                <http://spinrdf.org/sp#object>
+                                                                                                        _:b7 ;
+                                                                                                <http://spinrdf.org/sp#predicate>
+                                                                                                        <http://www.fao.org/countryprofiles/geoinfo/geopolitical/resource/codeISO2> ;
+                                                                                                <http://spinrdf.org/sp#subject>
+                                                                                                        _:b11
+                                                                                              ] ;
+                                                                                      spx:element
+                                                                                              [ a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePattern> ;
+                                                                                                <http://spinrdf.org/sp#object>
+                                                                                                        _:b5 ;
+                                                                                                <http://spinrdf.org/sp#predicate>
+                                                                                                        <http://www.fao.org/countryprofiles/geoinfo/geopolitical/resource/GDPTotalInCurrentPrices> ;
+                                                                                                <http://spinrdf.org/sp#subject>
+                                                                                                        _:b11
+                                                                                              ] ;
+                                                                                      spx:element
+                                                                                              [ a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePattern> ;
+                                                                                                <http://spinrdf.org/sp#object>
+                                                                                                        _:b23 ;
+                                                                                                <http://spinrdf.org/sp#predicate>
+                                                                                                        <http://www.fao.org/countryprofiles/geoinfo/geopolitical/resource/landAreaTotal> ;
+                                                                                                <http://spinrdf.org/sp#subject>
+                                                                                                        _:b11
+                                                                                              ] ;
+                                                                                      spx:element
+                                                                                              [ a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePattern> ;
+                                                                                                <http://spinrdf.org/sp#object>
+                                                                                                        _:b24 ;
+                                                                                                <http://spinrdf.org/sp#predicate>
+                                                                                                        <http://www.fao.org/countryprofiles/geoinfo/geopolitical/resource/populationTotal> ;
+                                                                                                <http://spinrdf.org/sp#subject>
+                                                                                                        _:b11
+                                                                                              ] ;
+                                                                                      spx:element
+                                                                                              [ a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#Bind> ;
+                                                                                                spx:expr
+                                                                                                        [ a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+                                                                                                          <http://spinrdf.org/sp#arg1>
+                                                                                                                  [ a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+                                                                                                                    <http://spinrdf.org/sp#arg1>
+                                                                                                                            [ a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+                                                                                                                              <http://spinrdf.org/sp#arg1>
+                                                                                                                                      <http://www.cattid.uniroma1.it/2012/pampers#optionGdp_> ;
+                                                                                                                              spx:functionLabel "str"
+                                                                                                                            ] ;
+                                                                                                                    <http://spinrdf.org/sp#arg2>
+                                                                                                                            [ a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+                                                                                                                              <http://spinrdf.org/sp#arg1>
+                                                                                                                                      [ a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+                                                                                                                                        <http://spinrdf.org/sp#arg1>
+                                                                                                                                                _:b11 ;
+                                                                                                                                        spx:functionLabel "str"
+                                                                                                                                      ] ;
+                                                                                                                              spx:functionLabel "MD5"
+                                                                                                                            ] ;
+                                                                                                                    spx:functionLabel "concat"
+                                                                                                                  ] ;
+                                                                                                          spx:functionLabel "uri"
+                                                                                                        ] ;
+                                                                                                spx:var _:b6
+                                                                                              ] ;
+                                                                                      spx:element
+                                                                                              [ a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#Bind> ;
+                                                                                                spx:expr
+                                                                                                        [ a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+                                                                                                          <http://spinrdf.org/sp#arg1>
+                                                                                                                  _:b5 ;
+                                                                                                          <http://spinrdf.org/sp#arg2>
+                                                                                                                  _:b24 ;
+                                                                                                          spx:functionLabel "div" ;
+                                                                                                          spx:opName "/"
+                                                                                                        ] ;
+                                                                                                spx:var _:b3
+                                                                                              ] ;
+                                                                                      spx:element
+                                                                                              [ a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePattern> ;
+                                                                                                <http://spinrdf.org/sp#object>
+                                                                                                        _:b12 ;
+                                                                                                <http://spinrdf.org/sp#predicate>
+                                                                                                        <http://www.fao.org/countryprofiles/geoinfo/geopolitical/resource/agriculturalAreaTotal> ;
+                                                                                                <http://spinrdf.org/sp#subject>
+                                                                                                        _:b11
+                                                                                              ] ;
+                                                                                      spx:element
+                                                                                              [ a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#Bind> ;
+                                                                                                spx:expr
+                                                                                                        [ a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+                                                                                                          <http://spinrdf.org/sp#arg1>
+                                                                                                                  _:b24 ;
+                                                                                                          <http://spinrdf.org/sp#arg2>
+                                                                                                                  _:b23 ;
+                                                                                                          spx:functionLabel "div" ;
+                                                                                                          spx:opName "/"
+                                                                                                        ] ;
+                                                                                                spx:var _:b8
+                                                                                              ] ;
+                                                                                      spx:element
+                                                                                              [ a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#Bind> ;
+                                                                                                spx:expr
+                                                                                                        [ a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+                                                                                                          <http://spinrdf.org/sp#arg1>
+                                                                                                                  [ a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+                                                                                                                    <http://spinrdf.org/sp#arg1>
+                                                                                                                            [ a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+                                                                                                                              <http://spinrdf.org/sp#arg1>
+                                                                                                                                      <http://www.cattid.uniroma1.it/2012/pampers#optionAgriAreaRate_> ;
+                                                                                                                              spx:functionLabel "str"
+                                                                                                                            ] ;
+                                                                                                                    <http://spinrdf.org/sp#arg2>
+                                                                                                                            [ a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+                                                                                                                              <http://spinrdf.org/sp#arg1>
+                                                                                                                                      [ a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+                                                                                                                                        <http://spinrdf.org/sp#arg1>
+                                                                                                                                                _:b11 ;
+                                                                                                                                        spx:functionLabel "str"
+                                                                                                                                      ] ;
+                                                                                                                              spx:functionLabel "MD5"
+                                                                                                                            ] ;
+                                                                                                                    spx:functionLabel "concat"
+                                                                                                                  ] ;
+                                                                                                          spx:functionLabel "uri"
+                                                                                                        ] ;
+                                                                                                spx:var _:b21
                                                                                               ]
                                                                                     ]
                                                                           ] ;
@@ -480,11 +476,11 @@ _:b15
                                                                   spx:element
                                                                           [ a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePattern> ;
                                                                             <http://spinrdf.org/sp#object>
-                                                                                    _:b10 ;
+                                                                                    _:b19 ;
                                                                             <http://spinrdf.org/sp#predicate>
                                                                                     <http://www.cattid.uniroma1.it/2012/pampers#id> ;
                                                                             <http://spinrdf.org/sp#subject>
-                                                                                    _:b18
+                                                                                    _:b10
                                                                           ] ;
                                                                   spx:element
                                                                           [ a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePattern> ;
@@ -493,34 +489,7 @@ _:b15
                                                                             <http://spinrdf.org/sp#predicate>
                                                                                     <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ;
                                                                             <http://spinrdf.org/sp#subject>
-                                                                                    _:b19
-                                                                          ] ;
-                                                                  spx:element
-                                                                          [ a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#Bind> ;
-                                                                            spx:expr
-                                                                                    [ a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
-                                                                                      <http://spinrdf.org/sp#arg1>
-                                                                                              [ a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
-                                                                                                <http://spinrdf.org/sp#arg1>
-                                                                                                        _:b29 ;
-                                                                                                <http://spinrdf.org/sp#arg2>
-                                                                                                        _:b30 ;
-                                                                                                spx:functionLabel "sub" ;
-                                                                                                spx:opName "-"
-                                                                                              ] ;
-                                                                                      <http://spinrdf.org/sp#arg2>
-                                                                                              [ a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
-                                                                                                <http://spinrdf.org/sp#arg1>
-                                                                                                        _:b31 ;
-                                                                                                <http://spinrdf.org/sp#arg2>
-                                                                                                        _:b30 ;
-                                                                                                spx:functionLabel "sub" ;
-                                                                                                spx:opName "-"
-                                                                                              ] ;
-                                                                                      spx:functionLabel "div" ;
-                                                                                      spx:opName "/"
-                                                                                    ] ;
-                                                                            spx:var _:b21
+                                                                                    _:b4
                                                                           ] ;
                                                                   spx:element
                                                                           [ a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#SubQuery> ;
@@ -528,18 +497,133 @@ _:b15
                                                                                     [ a       <http://spinrdf.org/sp#Select> , <http://spinrdf.org/sp#Query> ;
                                                                                       <http://spinrdf.org/sp#groupBy>
                                                                                               [ <http://spinrdf.org/sp#as>
-                                                                                                        _:b10
+                                                                                                        _:b19
                                                                                               ] ;
                                                                                       <http://spinrdf.org/sp#where>
                                                                                               [ a       <http://spinrdf.org/sp#Element> , spx:ElementGroup ;
                                                                                                 spx:element
                                                                                                         [ a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePattern> ;
                                                                                                           <http://spinrdf.org/sp#object>
-                                                                                                                  _:b5 ;
+                                                                                                                  [ a       <http://spinrdf.org/sp#Variable> ;
+                                                                                                                    <http://spinrdf.org/sp#varName>
+                                                                                                                            "optionId"
+                                                                                                                  ] ;
+                                                                                                          <http://spinrdf.org/sp#predicate>
+                                                                                                                  <http://www.cattid.uniroma1.it/2012/pampers#id> ;
+                                                                                                          <http://spinrdf.org/sp#subject>
+                                                                                                                  _:b25
+                                                                                                        ] ;
+                                                                                                spx:element
+                                                                                                        [ a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePattern> ;
+                                                                                                          <http://spinrdf.org/sp#object>
+                                                                                                                  _:b9 ;
                                                                                                           <http://spinrdf.org/sp#predicate>
                                                                                                                   <http://www.cattid.uniroma1.it/2012/pampers#value> ;
                                                                                                           <http://spinrdf.org/sp#subject>
-                                                                                                                  _:b2
+                                                                                                                  _:b25
+                                                                                                        ] ;
+                                                                                                spx:element
+                                                                                                        [ a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePattern> ;
+                                                                                                          <http://spinrdf.org/sp#object>
+                                                                                                                  <http://www.cattid.uniroma1.it/2012/pampers#Country> ;
+                                                                                                          <http://spinrdf.org/sp#predicate>
+                                                                                                                  <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ;
+                                                                                                          <http://spinrdf.org/sp#subject>
+                                                                                                                  _:b26
+                                                                                                        ] ;
+                                                                                                spx:element
+                                                                                                        [ a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePattern> ;
+                                                                                                          <http://spinrdf.org/sp#object>
+                                                                                                                  _:b25 ;
+                                                                                                          <http://spinrdf.org/sp#predicate>
+                                                                                                                  <http://www.cattid.uniroma1.it/2012/pampers#option> ;
+                                                                                                          <http://spinrdf.org/sp#subject>
+                                                                                                                  _:b26
+                                                                                                        ]
+                                                                                              ] ;
+                                                                                      <http://www.swows.org/sas#op>
+                                                                                              [ a       <http://www.swows.org/sas#Op> ;
+                                                                                                <http://www.swows.org/sas#name>
+                                                                                                        "project"
+                                                                                              ] ;
+                                                                                      spx:resultVariable
+                                                                                              [ <http://spinrdf.org/sp#as>
+                                                                                                        _:b19
+                                                                                              ] ;
+                                                                                      spx:resultVariable
+                                                                                              [ <http://spinrdf.org/sp#as>
+                                                                                                        _:b13 ;
+                                                                                                <http://spinrdf.org/sp#expression>
+                                                                                                        [ a       spx:Min , <http://spinrdf.org/sp#Expression> , <http://spinrdf.org/sp#Aggregation> ;
+                                                                                                          <http://spinrdf.org/sp#expression>
+                                                                                                                  _:b9
+                                                                                                        ]
+                                                                                              ]
+                                                                                    ]
+                                                                          ] ;
+                                                                  spx:element
+                                                                          [ a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePattern> ;
+                                                                            <http://spinrdf.org/sp#object>
+                                                                                    _:b27 ;
+                                                                            <http://spinrdf.org/sp#predicate>
+                                                                                    <http://www.cattid.uniroma1.it/2012/pampers#value> ;
+                                                                            <http://spinrdf.org/sp#subject>
+                                                                                    _:b10
+                                                                          ] ;
+                                                                  spx:element
+                                                                          [ a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePattern> ;
+                                                                            <http://spinrdf.org/sp#object>
+                                                                                    _:b20 ;
+                                                                            <http://spinrdf.org/sp#predicate>
+                                                                                    <http://www.fao.org/countryprofiles/geoinfo/geopolitical/resource/codeISO2> ;
+                                                                            <http://spinrdf.org/sp#subject>
+                                                                                    _:b4
+                                                                          ] ;
+                                                                  spx:element
+                                                                          [ a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePattern> ;
+                                                                            <http://spinrdf.org/sp#object>
+                                                                                    _:b10 ;
+                                                                            <http://spinrdf.org/sp#predicate>
+                                                                                    <http://www.cattid.uniroma1.it/2012/pampers#option> ;
+                                                                            <http://spinrdf.org/sp#subject>
+                                                                                    _:b4
+                                                                          ] ;
+                                                                  spx:element
+                                                                          [ a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#SubQuery> ;
+                                                                            <http://spinrdf.org/sp#query>
+                                                                                    [ a       <http://spinrdf.org/sp#Select> , <http://spinrdf.org/sp#Query> ;
+                                                                                      <http://spinrdf.org/sp#groupBy>
+                                                                                              [ <http://spinrdf.org/sp#as>
+                                                                                                        _:b19
+                                                                                              ] ;
+                                                                                      <http://spinrdf.org/sp#where>
+                                                                                              [ a       <http://spinrdf.org/sp#Element> , spx:ElementGroup ;
+                                                                                                spx:element
+                                                                                                        [ a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePattern> ;
+                                                                                                          <http://spinrdf.org/sp#object>
+                                                                                                                  <http://www.cattid.uniroma1.it/2012/pampers#Country> ;
+                                                                                                          <http://spinrdf.org/sp#predicate>
+                                                                                                                  <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ;
+                                                                                                          <http://spinrdf.org/sp#subject>
+                                                                                                                  _:b28
+                                                                                                        ] ;
+                                                                                                spx:element
+                                                                                                        [ a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePattern> ;
+                                                                                                          <http://spinrdf.org/sp#object>
+                                                                                                                  _:b29 ;
+                                                                                                          <http://spinrdf.org/sp#predicate>
+                                                                                                                  <http://www.cattid.uniroma1.it/2012/pampers#value> ;
+                                                                                                          <http://spinrdf.org/sp#subject>
+                                                                                                                  _:b30
+                                                                                                        ] ;
+                                                                                                spx:element
+                                                                                                        [ a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePattern> ;
+                                                                                                          <http://spinrdf.org/sp#object>
+                                                                                                                  _:b30 ;
+                                                                                                          <http://spinrdf.org/sp#predicate>
+                                                                                                                  <http://www.cattid.uniroma1.it/2012/pampers#option> ;
+                                                                                                          <http://spinrdf.org/sp#subject>
+                                                                                                                  _:b28
                                                                                                         ] ;
                                                                                                 spx:element
                                                                                                         [ a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePattern> ;
@@ -551,25 +635,7 @@ _:b15
                                                                                                           <http://spinrdf.org/sp#predicate>
                                                                                                                   <http://www.cattid.uniroma1.it/2012/pampers#id> ;
                                                                                                           <http://spinrdf.org/sp#subject>
-                                                                                                                  _:b2
-                                                                                                        ] ;
-                                                                                                spx:element
-                                                                                                        [ a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePattern> ;
-                                                                                                          <http://spinrdf.org/sp#object>
-                                                                                                                  <http://www.cattid.uniroma1.it/2012/pampers#Country> ;
-                                                                                                          <http://spinrdf.org/sp#predicate>
-                                                                                                                  <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ;
-                                                                                                          <http://spinrdf.org/sp#subject>
-                                                                                                                  _:b32
-                                                                                                        ] ;
-                                                                                                spx:element
-                                                                                                        [ a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePattern> ;
-                                                                                                          <http://spinrdf.org/sp#object>
-                                                                                                                  _:b2 ;
-                                                                                                          <http://spinrdf.org/sp#predicate>
-                                                                                                                  <http://www.cattid.uniroma1.it/2012/pampers#option> ;
-                                                                                                          <http://spinrdf.org/sp#subject>
-                                                                                                                  _:b32
+                                                                                                                  _:b30
                                                                                                         ]
                                                                                               ] ;
                                                                                       <http://www.swows.org/sas#op>
@@ -583,111 +649,41 @@ _:b15
                                                                                                 <http://spinrdf.org/sp#expression>
                                                                                                         [ a       <http://spinrdf.org/sp#Expression> , spx:Max , <http://spinrdf.org/sp#Aggregation> ;
                                                                                                           <http://spinrdf.org/sp#expression>
-                                                                                                                  _:b5
+                                                                                                                  _:b29
                                                                                                         ]
                                                                                               ] ;
                                                                                       spx:resultVariable
                                                                                               [ <http://spinrdf.org/sp#as>
-                                                                                                        _:b10
+                                                                                                        _:b19
                                                                                               ]
                                                                                     ]
                                                                           ] ;
                                                                   spx:element
-                                                                          [ a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePattern> ;
-                                                                            <http://spinrdf.org/sp#object>
-                                                                                    _:b29 ;
-                                                                            <http://spinrdf.org/sp#predicate>
-                                                                                    <http://www.cattid.uniroma1.it/2012/pampers#value> ;
-                                                                            <http://spinrdf.org/sp#subject>
-                                                                                    _:b18
-                                                                          ] ;
-                                                                  spx:element
-                                                                          [ a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#SubQuery> ;
-                                                                            <http://spinrdf.org/sp#query>
-                                                                                    [ a       <http://spinrdf.org/sp#Select> , <http://spinrdf.org/sp#Query> ;
-                                                                                      <http://spinrdf.org/sp#groupBy>
-                                                                                              [ <http://spinrdf.org/sp#as>
-                                                                                                        _:b10
+                                                                          [ a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#Bind> ;
+                                                                            spx:expr
+                                                                                    [ a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+                                                                                      <http://spinrdf.org/sp#arg1>
+                                                                                              [ a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+                                                                                                <http://spinrdf.org/sp#arg1>
+                                                                                                        _:b27 ;
+                                                                                                <http://spinrdf.org/sp#arg2>
+                                                                                                        _:b13 ;
+                                                                                                spx:functionLabel "sub" ;
+                                                                                                spx:opName "-"
                                                                                               ] ;
-                                                                                      <http://spinrdf.org/sp#where>
-                                                                                              [ a       <http://spinrdf.org/sp#Element> , spx:ElementGroup ;
-                                                                                                spx:element
-                                                                                                        [ a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePattern> ;
-                                                                                                          <http://spinrdf.org/sp#object>
-                                                                                                                  <http://www.cattid.uniroma1.it/2012/pampers#Country> ;
-                                                                                                          <http://spinrdf.org/sp#predicate>
-                                                                                                                  <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ;
-                                                                                                          <http://spinrdf.org/sp#subject>
-                                                                                                                  _:b33
-                                                                                                        ] ;
-                                                                                                spx:element
-                                                                                                        [ a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePattern> ;
-                                                                                                          <http://spinrdf.org/sp#object>
-                                                                                                                  _:b34 ;
-                                                                                                          <http://spinrdf.org/sp#predicate>
-                                                                                                                  <http://www.cattid.uniroma1.it/2012/pampers#value> ;
-                                                                                                          <http://spinrdf.org/sp#subject>
-                                                                                                                  _:b35
-                                                                                                        ] ;
-                                                                                                spx:element
-                                                                                                        [ a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePattern> ;
-                                                                                                          <http://spinrdf.org/sp#object>
-                                                                                                                  _:b35 ;
-                                                                                                          <http://spinrdf.org/sp#predicate>
-                                                                                                                  <http://www.cattid.uniroma1.it/2012/pampers#option> ;
-                                                                                                          <http://spinrdf.org/sp#subject>
-                                                                                                                  _:b33
-                                                                                                        ] ;
-                                                                                                spx:element
-                                                                                                        [ a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePattern> ;
-                                                                                                          <http://spinrdf.org/sp#object>
-                                                                                                                  [ a       <http://spinrdf.org/sp#Variable> ;
-                                                                                                                    <http://spinrdf.org/sp#varName>
-                                                                                                                            "optionId"
-                                                                                                                  ] ;
-                                                                                                          <http://spinrdf.org/sp#predicate>
-                                                                                                                  <http://www.cattid.uniroma1.it/2012/pampers#id> ;
-                                                                                                          <http://spinrdf.org/sp#subject>
-                                                                                                                  _:b35
-                                                                                                        ]
+                                                                                      <http://spinrdf.org/sp#arg2>
+                                                                                              [ a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+                                                                                                <http://spinrdf.org/sp#arg1>
+                                                                                                        _:b31 ;
+                                                                                                <http://spinrdf.org/sp#arg2>
+                                                                                                        _:b13 ;
+                                                                                                spx:functionLabel "sub" ;
+                                                                                                spx:opName "-"
                                                                                               ] ;
-                                                                                      <http://www.swows.org/sas#op>
-                                                                                              [ a       <http://www.swows.org/sas#Op> ;
-                                                                                                <http://www.swows.org/sas#name>
-                                                                                                        "project"
-                                                                                              ] ;
-                                                                                      spx:resultVariable
-                                                                                              [ <http://spinrdf.org/sp#as>
-                                                                                                        _:b30 ;
-                                                                                                <http://spinrdf.org/sp#expression>
-                                                                                                        [ a       spx:Min , <http://spinrdf.org/sp#Expression> , <http://spinrdf.org/sp#Aggregation> ;
-                                                                                                          <http://spinrdf.org/sp#expression>
-                                                                                                                  _:b34
-                                                                                                        ]
-                                                                                              ] ;
-                                                                                      spx:resultVariable
-                                                                                              [ <http://spinrdf.org/sp#as>
-                                                                                                        _:b10
-                                                                                              ]
-                                                                                    ]
-                                                                          ] ;
-                                                                  spx:element
-                                                                          [ a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePattern> ;
-                                                                            <http://spinrdf.org/sp#object>
-                                                                                    _:b20 ;
-                                                                            <http://spinrdf.org/sp#predicate>
-                                                                                    <http://www.fao.org/countryprofiles/geoinfo/geopolitical/resource/codeISO2> ;
-                                                                            <http://spinrdf.org/sp#subject>
-                                                                                    _:b19
-                                                                          ] ;
-                                                                  spx:element
-                                                                          [ a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePattern> ;
-                                                                            <http://spinrdf.org/sp#object>
-                                                                                    _:b18 ;
-                                                                            <http://spinrdf.org/sp#predicate>
-                                                                                    <http://www.cattid.uniroma1.it/2012/pampers#option> ;
-                                                                            <http://spinrdf.org/sp#subject>
-                                                                                    _:b19
+                                                                                      spx:functionLabel "div" ;
+                                                                                      spx:opName "/"
+                                                                                    ] ;
+                                                                            spx:var _:b1
                                                                           ]
                                                                 ]
                                                       ] ;
@@ -698,57 +694,39 @@ _:b15
                                                       ]
                                             ] ;
                                     spx:element
-                                            [ a       spx:ElementGroup , <http://spinrdf.org/sp#Element> ;
-                                              spx:element
-                                                      [ a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#NamedGraph> ;
-                                                        <http://spinrdf.org/sp#graphNameNode>
-                                                                [ a       df:UpdatableGraph ;
-                                                                  df:config
-                                                                          [ a       df:ImportedGraph ;
-                                                                            df:uri  <file:///home/miguel/git/WorldInfo/dataflow/changeOption.sparql>
-                                                                          ] ;
-                                                                  df:input
-                                                                          [ a       df:InlineDataset ;
-                                                                            df:input _:b11 ;
-                                                                            df:namedInput
-                                                                                    [ a       df:NamedGraph ;
-                                                                                      df:id   <http://www.swows.org/instance#mouseEvents> ;
-                                                                                      df:input
-                                                                                              [ a       df:SelectGraph ;
-                                                                                                df:id   <http://www.swows.org/instance#mouseEvents>
-                                                                                              ]
-                                                                                    ] ;
-                                                                            df:namedInput
-                                                                                    [ a       df:NamedGraph ;
-                                                                                      df:id   <http://www.cattid.uniroma1.it/2012/pampers#startingOption> ;
-                                                                                      df:input
-                                                                                              [ a       df:ImportedGraph ;
-                                                                                                df:uri  <file:///home/miguel/git/WorldInfo/dataflow/startingOption.n3>
-                                                                                              ]
-                                                                                    ]
-                                                                          ]
-                                                                ] ;
-                                                        spx:element
-                                                                [ a       <http://spinrdf.org/sp#Element> , spx:ElementGroup ;
-                                                                  spx:element
-                                                                          [ a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePattern> ;
-                                                                            <http://spinrdf.org/sp#object>
-                                                                                    _:b9 ;
-                                                                            <http://spinrdf.org/sp#predicate>
-                                                                                    <http://www.cattid.uniroma1.it/2012/pampers#selectedOption> ;
-                                                                            <http://spinrdf.org/sp#subject>
-                                                                                    <http://www.swows.org/instance#GraphRoot>
-                                                                          ]
-                                                                ]
-                                                      ] ;
+                                            [ a       <http://spinrdf.org/sp#Element> , spx:ElementGroup ;
                                               spx:element
                                                       [ a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePattern> ;
                                                         <http://spinrdf.org/sp#object>
-                                                                <http://www.cattid.uniroma1.it/2012/pampers#Country> ;
+                                                                _:b32 ;
                                                         <http://spinrdf.org/sp#predicate>
-                                                                <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ;
+                                                                <http://www.cattid.uniroma1.it/2012/pampers#option> ;
                                                         <http://spinrdf.org/sp#subject>
-                                                                _:b36
+                                                                _:b33
+                                                      ] ;
+                                              spx:element
+                                                      [ a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#Bind> ;
+                                                        spx:expr
+                                                                [ a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+                                                                  <http://spinrdf.org/sp#arg1>
+                                                                          [ a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+                                                                            <http://spinrdf.org/sp#arg1>
+                                                                                    [ a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+                                                                                      <http://spinrdf.org/sp#arg1>
+                                                                                              <http://www.swows.org/xml/instance#> ;
+                                                                                      spx:functionLabel "str"
+                                                                                    ] ;
+                                                                            <http://spinrdf.org/sp#arg2>
+                                                                                    [ a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+                                                                                      <http://spinrdf.org/sp#arg1>
+                                                                                              _:b34 ;
+                                                                                      spx:functionLabel "lcase"
+                                                                                    ] ;
+                                                                            spx:functionLabel "concat"
+                                                                          ] ;
+                                                                  spx:functionLabel "uri"
+                                                                ] ;
+                                                        spx:var _:b35
                                                       ] ;
                                               spx:element
                                                       [ a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#Bind> ;
@@ -757,7 +735,7 @@ _:b15
                                                                   <http://spinrdf.org/sp#arg1>
                                                                           "fill: rgb(" ;
                                                                   <http://spinrdf.org/sp#arg2>
-                                                                          _:b12 ;
+                                                                          _:b36 ;
                                                                   <http://spinrdf.org/sp#arg3>
                                                                           "," ;
                                                                   <http://spinrdf.org/sp#arg4>
@@ -770,118 +748,7 @@ _:b15
                                                                           ")" ;
                                                                   spx:functionLabel "concat"
                                                                 ] ;
-                                                        spx:var _:b15
-                                                      ] ;
-                                              spx:element
-                                                      [ a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePattern> ;
-                                                        <http://spinrdf.org/sp#object>
-                                                                _:b39 ;
-                                                        <http://spinrdf.org/sp#predicate>
-                                                                <http://www.cattid.uniroma1.it/2012/pampers#value> ;
-                                                        <http://spinrdf.org/sp#subject>
-                                                                _:b8
-                                                      ] ;
-                                              spx:element
-                                                      [ a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#Bind> ;
-                                                        spx:expr
-                                                                [ a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
-                                                                  <http://spinrdf.org/sp#arg1>
-                                                                          [ a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
-                                                                            <http://spinrdf.org/sp#arg1>
-                                                                                    [ a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
-                                                                                      <http://spinrdf.org/sp#arg1>
-                                                                                              <http://www.swows.org/xml/instance#option_> ;
-                                                                                      spx:functionLabel "str"
-                                                                                    ] ;
-                                                                            <http://spinrdf.org/sp#arg2>
-                                                                                    _:b7 ;
-                                                                            <http://spinrdf.org/sp#arg3>
-                                                                                    "_radioBorder" ;
-                                                                            spx:functionLabel "concat"
-                                                                          ] ;
-                                                                  spx:functionLabel "uri"
-                                                                ] ;
-                                                        spx:var _:b17
-                                                      ] ;
-                                              spx:element
-                                                      [ a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePattern> ;
-                                                        <http://spinrdf.org/sp#object>
-                                                                _:b40 ;
-                                                        <http://spinrdf.org/sp#predicate>
-                                                                <http://www.fao.org/countryprofiles/geoinfo/geopolitical/resource/codeISO2> ;
-                                                        <http://spinrdf.org/sp#subject>
-                                                                _:b36
-                                                      ] ;
-                                              spx:element
-                                                      [ a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#NamedGraph> ;
-                                                        <http://spinrdf.org/sp#graphNameNode>
-                                                                [ a       <http://spinrdf.org/sp#Construct> , df:ConstructGraph , <http://spinrdf.org/sp#Query> ;
-                                                                  <http://spinrdf.org/sp#templates>
-                                                                          [ a       spx:TripleTemplateSet ;
-                                                                            spx:triple
-                                                                                    [ a       <http://spinrdf.org/sp#TripleTemplate> ;
-                                                                                      <http://spinrdf.org/sp#object>
-                                                                                              _:b41 ;
-                                                                                      <http://spinrdf.org/sp#predicate>
-                                                                                              <http://www.cattid.uniroma1.it/2012/pampers#descendantOrSelf> ;
-                                                                                      <http://spinrdf.org/sp#subject>
-                                                                                              _:b42
-                                                                                    ]
-                                                                          ] ;
-                                                                  <http://spinrdf.org/sp#where>
-                                                                          [ a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#NamedGraph> ;
-                                                                            <http://spinrdf.org/sp#graphNameNode>
-                                                                                    <http://www.cattid.uniroma1.it/2012/pampers#svgDoc> ;
-                                                                            spx:element
-                                                                                    [ a       <http://spinrdf.org/sp#Element> , spx:ElementGroup ;
-                                                                                      spx:element
-                                                                                              [ a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePath> ;
-                                                                                                <http://spinrdf.org/sp#object>
-                                                                                                        _:b41 ;
-                                                                                                <http://spinrdf.org/sp#path>
-                                                                                                        [ a       <http://spinrdf.org/sp#Path> , <http://spinrdf.org/sp#ModPath> ;
-                                                                                                          <http://spinrdf.org/sp#modMax>
-                                                                                                                  -1 ;
-                                                                                                          <http://spinrdf.org/sp#subPath>
-                                                                                                                  <http://www.swows.org/xml#hasChild>
-                                                                                                        ] ;
-                                                                                                <http://spinrdf.org/sp#subject>
-                                                                                                        _:b42
-                                                                                              ]
-                                                                                    ]
-                                                                          ] ;
-                                                                  <http://www.swows.org/sas#op>
-                                                                          [ a       <http://www.swows.org/sas#BGP> , <http://www.swows.org/sas#Op> ;
-                                                                            <http://www.swows.org/sas#name>
-                                                                                    "path" ;
-                                                                            <http://www.swows.org/sas#triplePattern>
-                                                                                    [ a       <http://www.swows.org/sas#TriplePattern> ;
-                                                                                      <http://spinrdf.org/sp#object>
-                                                                                              _:b41 ;
-                                                                                      <http://spinrdf.org/sp#path>
-                                                                                              [ a       <http://spinrdf.org/sp#Path> , <http://spinrdf.org/sp#ModPath> ;
-                                                                                                <http://spinrdf.org/sp#modMax>
-                                                                                                        -1 ;
-                                                                                                <http://spinrdf.org/sp#subPath>
-                                                                                                        <http://www.swows.org/xml#hasChild>
-                                                                                              ] ;
-                                                                                      <http://spinrdf.org/sp#subject>
-                                                                                              _:b42
-                                                                                    ]
-                                                                          ]
-                                                                ] ;
-                                                        spx:element
-                                                                [ a       <http://spinrdf.org/sp#Element> , spx:ElementGroup ;
-                                                                  spx:element
-                                                                          [ a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePattern> ;
-                                                                            <http://spinrdf.org/sp#object>
-                                                                                    _:b16 ;
-                                                                            <http://spinrdf.org/sp#predicate>
-                                                                                    <http://www.cattid.uniroma1.it/2012/pampers#descendantOrSelf> ;
-                                                                            <http://spinrdf.org/sp#subject>
-                                                                                    _:b43
-                                                                          ]
-                                                                ]
+                                                        spx:var _:b16
                                                       ] ;
                                               spx:element
                                                       [ a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#Bind> ;
@@ -922,13 +789,40 @@ _:b15
                                                         spx:var _:b38
                                                       ] ;
                                               spx:element
+                                                      [ a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#Bind> ;
+                                                        spx:expr
+                                                                [ a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+                                                                  <http://spinrdf.org/sp#arg1>
+                                                                          255 ;
+                                                                  spx:functionLabel "str"
+                                                                ] ;
+                                                        spx:var _:b36
+                                                      ] ;
+                                              spx:element
+                                                      [ a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#NamedGraph> ;
+                                                        <http://spinrdf.org/sp#graphNameNode>
+                                                                _:b40 ;
+                                                        spx:element
+                                                                [ a       <http://spinrdf.org/sp#Element> , spx:ElementGroup ;
+                                                                  spx:element
+                                                                          [ a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePattern> ;
+                                                                            <http://spinrdf.org/sp#object>
+                                                                                    _:b41 ;
+                                                                            <http://spinrdf.org/sp#predicate>
+                                                                                    <http://www.cattid.uniroma1.it/2012/pampers#possibleOption> ;
+                                                                            <http://spinrdf.org/sp#subject>
+                                                                                    <http://www.swows.org/instance#GraphRoot>
+                                                                          ]
+                                                                ]
+                                                      ] ;
+                                              spx:element
                                                       [ a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#Filter> ;
                                                         spx:expr
                                                                 [ a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
                                                                   <http://spinrdf.org/sp#arg1>
-                                                                          _:b9 ;
+                                                                          _:b14 ;
                                                                   <http://spinrdf.org/sp#arg2>
-                                                                          _:b7 ;
+                                                                          _:b41 ;
                                                                   spx:functionLabel "ne" ;
                                                                   spx:opName "!="
                                                                 ]
@@ -936,31 +830,29 @@ _:b15
                                               spx:element
                                                       [ a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePattern> ;
                                                         <http://spinrdf.org/sp#object>
-                                                                _:b8 ;
+                                                                _:b34 ;
                                                         <http://spinrdf.org/sp#predicate>
-                                                                <http://www.cattid.uniroma1.it/2012/pampers#option> ;
+                                                                <http://www.fao.org/countryprofiles/geoinfo/geopolitical/resource/codeISO2> ;
                                                         <http://spinrdf.org/sp#subject>
-                                                                _:b36
+                                                                _:b33
                                                       ] ;
                                               spx:element
-                                                      [ a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#Bind> ;
-                                                        spx:expr
-                                                                [ a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
-                                                                  <http://spinrdf.org/sp#arg1>
-                                                                          [ a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
-                                                                            <http://spinrdf.org/sp#arg1>
-                                                                                    [ a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
-                                                                                      <http://spinrdf.org/sp#arg1>
-                                                                                              <http://www.swows.org/xml/instance#option_> ;
-                                                                                      spx:functionLabel "str"
-                                                                                    ] ;
-                                                                            <http://spinrdf.org/sp#arg2>
-                                                                                    _:b9 ;
-                                                                            spx:functionLabel "concat"
-                                                                          ] ;
-                                                                  spx:functionLabel "uri"
-                                                                ] ;
-                                                        spx:var _:b14
+                                                      [ a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePattern> ;
+                                                        <http://spinrdf.org/sp#object>
+                                                                <http://www.cattid.uniroma1.it/2012/pampers#Country> ;
+                                                        <http://spinrdf.org/sp#predicate>
+                                                                <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ;
+                                                        <http://spinrdf.org/sp#subject>
+                                                                _:b33
+                                                      ] ;
+                                              spx:element
+                                                      [ a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePattern> ;
+                                                        <http://spinrdf.org/sp#object>
+                                                                _:b14 ;
+                                                        <http://spinrdf.org/sp#predicate>
+                                                                <http://www.cattid.uniroma1.it/2012/pampers#id> ;
+                                                        <http://spinrdf.org/sp#subject>
+                                                                _:b32
                                                       ] ;
                                               spx:element
                                                       [ a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#Bind> ;
@@ -1001,6 +893,77 @@ _:b15
                                                         spx:var _:b37
                                                       ] ;
                                               spx:element
+                                                      [ a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#NamedGraph> ;
+                                                        <http://spinrdf.org/sp#graphNameNode>
+                                                                [ a       <http://spinrdf.org/sp#Construct> , df:ConstructGraph , <http://spinrdf.org/sp#Query> ;
+                                                                  <http://spinrdf.org/sp#templates>
+                                                                          [ a       spx:TripleTemplateSet ;
+                                                                            spx:triple
+                                                                                    [ a       <http://spinrdf.org/sp#TripleTemplate> ;
+                                                                                      <http://spinrdf.org/sp#object>
+                                                                                              _:b42 ;
+                                                                                      <http://spinrdf.org/sp#predicate>
+                                                                                              <http://www.cattid.uniroma1.it/2012/pampers#descendantOrSelf> ;
+                                                                                      <http://spinrdf.org/sp#subject>
+                                                                                              _:b43
+                                                                                    ]
+                                                                          ] ;
+                                                                  <http://spinrdf.org/sp#where>
+                                                                          [ a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#NamedGraph> ;
+                                                                            <http://spinrdf.org/sp#graphNameNode>
+                                                                                    <http://www.cattid.uniroma1.it/2012/pampers#svgDoc> ;
+                                                                            spx:element
+                                                                                    [ a       <http://spinrdf.org/sp#Element> , spx:ElementGroup ;
+                                                                                      spx:element
+                                                                                              [ a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePath> ;
+                                                                                                <http://spinrdf.org/sp#object>
+                                                                                                        _:b42 ;
+                                                                                                <http://spinrdf.org/sp#path>
+                                                                                                        [ a       <http://spinrdf.org/sp#Path> , <http://spinrdf.org/sp#ModPath> ;
+                                                                                                          <http://spinrdf.org/sp#modMax>
+                                                                                                                  -1 ;
+                                                                                                          <http://spinrdf.org/sp#subPath>
+                                                                                                                  <http://www.swows.org/xml#hasChild>
+                                                                                                        ] ;
+                                                                                                <http://spinrdf.org/sp#subject>
+                                                                                                        _:b43
+                                                                                              ]
+                                                                                    ]
+                                                                          ] ;
+                                                                  <http://www.swows.org/sas#op>
+                                                                          [ a       <http://www.swows.org/sas#BGP> , <http://www.swows.org/sas#Op> ;
+                                                                            <http://www.swows.org/sas#name>
+                                                                                    "path" ;
+                                                                            <http://www.swows.org/sas#triplePattern>
+                                                                                    [ a       <http://www.swows.org/sas#TriplePattern> ;
+                                                                                      <http://spinrdf.org/sp#object>
+                                                                                              _:b42 ;
+                                                                                      <http://spinrdf.org/sp#path>
+                                                                                              [ a       <http://spinrdf.org/sp#Path> , <http://spinrdf.org/sp#ModPath> ;
+                                                                                                <http://spinrdf.org/sp#modMax>
+                                                                                                        -1 ;
+                                                                                                <http://spinrdf.org/sp#subPath>
+                                                                                                        <http://www.swows.org/xml#hasChild>
+                                                                                              ] ;
+                                                                                      <http://spinrdf.org/sp#subject>
+                                                                                              _:b43
+                                                                                    ]
+                                                                          ]
+                                                                ] ;
+                                                        spx:element
+                                                                [ a       <http://spinrdf.org/sp#Element> , spx:ElementGroup ;
+                                                                  spx:element
+                                                                          [ a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePattern> ;
+                                                                            <http://spinrdf.org/sp#object>
+                                                                                    _:b17 ;
+                                                                            <http://spinrdf.org/sp#predicate>
+                                                                                    <http://www.cattid.uniroma1.it/2012/pampers#descendantOrSelf> ;
+                                                                            <http://spinrdf.org/sp#subject>
+                                                                                    _:b35
+                                                                          ]
+                                                                ]
+                                                      ] ;
+                                              spx:element
                                                       [ a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#Bind> ;
                                                         spx:expr
                                                                 [ a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
@@ -1009,43 +972,56 @@ _:b15
                                                                             <http://spinrdf.org/sp#arg1>
                                                                                     [ a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
                                                                                       <http://spinrdf.org/sp#arg1>
-                                                                                              <http://www.swows.org/xml/instance#> ;
+                                                                                              <http://www.swows.org/xml/instance#option_> ;
                                                                                       spx:functionLabel "str"
                                                                                     ] ;
                                                                             <http://spinrdf.org/sp#arg2>
-                                                                                    [ a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
-                                                                                      <http://spinrdf.org/sp#arg1>
-                                                                                              _:b40 ;
-                                                                                      spx:functionLabel "lcase"
-                                                                                    ] ;
+                                                                                    _:b41 ;
+                                                                            <http://spinrdf.org/sp#arg3>
+                                                                                    "_radioBorder" ;
                                                                             spx:functionLabel "concat"
                                                                           ] ;
                                                                   spx:functionLabel "uri"
                                                                 ] ;
-                                                        spx:var _:b43
-                                                      ] ;
-                                              spx:element
-                                                      [ a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#Bind> ;
-                                                        spx:expr
-                                                                [ a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
-                                                                  <http://spinrdf.org/sp#arg1>
-                                                                          255 ;
-                                                                  spx:functionLabel "str"
-                                                                ] ;
-                                                        spx:var _:b12
+                                                        spx:var _:b18
                                                       ] ;
                                               spx:element
                                                       [ a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#NamedGraph> ;
                                                         <http://spinrdf.org/sp#graphNameNode>
-                                                                _:b11 ;
+                                                                [ a       df:UpdatableGraph ;
+                                                                  df:config
+                                                                          [ a       df:ImportedGraph ;
+                                                                            df:uri  <file:///home/miguel/git/WorldInfo/dataflow/changeOption.sparql>
+                                                                          ] ;
+                                                                  df:input
+                                                                          [ a       df:InlineDataset ;
+                                                                            df:input _:b40 ;
+                                                                            df:namedInput
+                                                                                    [ a       df:NamedGraph ;
+                                                                                      df:id   <http://www.swows.org/instance#mouseEvents> ;
+                                                                                      df:input
+                                                                                              [ a       df:SelectGraph ;
+                                                                                                df:id   <http://www.swows.org/instance#mouseEvents>
+                                                                                              ]
+                                                                                    ] ;
+                                                                            df:namedInput
+                                                                                    [ a       df:NamedGraph ;
+                                                                                      df:id   <http://www.cattid.uniroma1.it/2012/pampers#startingOption> ;
+                                                                                      df:input
+                                                                                              [ a       df:ImportedGraph ;
+                                                                                                df:uri  <file:///home/miguel/git/WorldInfo/dataflow/startingOption.n3>
+                                                                                              ]
+                                                                                    ]
+                                                                          ]
+                                                                ] ;
                                                         spx:element
                                                                 [ a       <http://spinrdf.org/sp#Element> , spx:ElementGroup ;
                                                                   spx:element
                                                                           [ a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePattern> ;
                                                                             <http://spinrdf.org/sp#object>
-                                                                                    _:b7 ;
+                                                                                    _:b14 ;
                                                                             <http://spinrdf.org/sp#predicate>
-                                                                                    <http://www.cattid.uniroma1.it/2012/pampers#possibleOption> ;
+                                                                                    <http://www.cattid.uniroma1.it/2012/pampers#selectedOption> ;
                                                                             <http://spinrdf.org/sp#subject>
                                                                                     <http://www.swows.org/instance#GraphRoot>
                                                                           ]
@@ -1054,11 +1030,31 @@ _:b15
                                               spx:element
                                                       [ a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePattern> ;
                                                         <http://spinrdf.org/sp#object>
-                                                                _:b9 ;
+                                                                _:b39 ;
                                                         <http://spinrdf.org/sp#predicate>
-                                                                <http://www.cattid.uniroma1.it/2012/pampers#id> ;
+                                                                <http://www.cattid.uniroma1.it/2012/pampers#value> ;
                                                         <http://spinrdf.org/sp#subject>
-                                                                _:b8
+                                                                _:b32
+                                                      ] ;
+                                              spx:element
+                                                      [ a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#Bind> ;
+                                                        spx:expr
+                                                                [ a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+                                                                  <http://spinrdf.org/sp#arg1>
+                                                                          [ a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+                                                                            <http://spinrdf.org/sp#arg1>
+                                                                                    [ a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+                                                                                      <http://spinrdf.org/sp#arg1>
+                                                                                              <http://www.swows.org/xml/instance#option_> ;
+                                                                                      spx:functionLabel "str"
+                                                                                    ] ;
+                                                                            <http://spinrdf.org/sp#arg2>
+                                                                                    _:b14 ;
+                                                                            spx:functionLabel "concat"
+                                                                          ] ;
+                                                                  spx:functionLabel "uri"
+                                                                ] ;
+                                                        spx:var _:b15
                                                       ]
                                             ]
                                   ] ;
@@ -1070,154 +1066,158 @@ _:b15
                         ]
               ] .
 
-_:b39
-      a       <http://spinrdf.org/sp#Variable> ;
-      <http://spinrdf.org/sp#varName>
-              "proportion" .
+[]    a       df:ImportedGraph ;
+      df:uri  <file:///home/miguel/git/WorldInfo/dataflow/svg.sparql> .
 
-_:b20
+[]    a       df:ImportedGraph ;
+      df:uri  <file:///home/miguel/git/WorldInfo/dataflow/children2descendants.sparql> .
+
+_:b36
       a       <http://spinrdf.org/sp#Variable> ;
       <http://spinrdf.org/sp#varName>
-              "codeISO2upper" .
+              "red" .
+
+_:b24
+      a       <http://spinrdf.org/sp#Variable> ;
+      <http://spinrdf.org/sp#varName>
+              "pop" .
 
 _:b29
       a       <http://spinrdf.org/sp#Variable> ;
       <http://spinrdf.org/sp#varName>
               "value" .
 
-_:b21
+_:b26
       a       <http://spinrdf.org/sp#Variable> ;
       <http://spinrdf.org/sp#varName>
-              "proportion" .
+              "country" .
+
+_:b17
+      a       <http://spinrdf.org/sp#Variable> ;
+      <http://spinrdf.org/sp#varName>
+              "country_elementOrDescendant" .
+
+[]    a       df:ImportedGraph ;
+      df:uri  <file:///home/miguel/git/WorldInfo/dataflow/normalize.sparql> .
 
 _:b18
       a       <http://spinrdf.org/sp#Variable> ;
       <http://spinrdf.org/sp#varName>
-              "option" .
-
-_:b30
-      a       <http://spinrdf.org/sp#Variable> ;
-      <http://spinrdf.org/sp#varName>
-              "minValue" .
-
-[]    a       df:ImportedGraph ;
-      df:uri  <file:///home/miguel/git/WorldInfo/dataflow/svg.sparql> .
-
-_:b25
-      a       <http://spinrdf.org/sp#Variable> ;
-      <http://spinrdf.org/sp#varName>
-              "codeISO2upper" .
-
-[]    a       df:ImportedGraph ;
-      df:uri  <file:///home/miguel/git/WorldInfo/dataflow/children2descendants.sparql> .
-
-_:b41
-      a       <http://spinrdf.org/sp#Variable> ;
-      <http://spinrdf.org/sp#varName>
-              "descendantOrSelf" .
-
-_:b24
-      a       <http://spinrdf.org/sp#Variable> ;
-      <http://spinrdf.org/sp#varName>
-              "optionGdp" .
+              "unselectedOption_radioBorder" .
 
 _:b33
       a       <http://spinrdf.org/sp#Variable> ;
       <http://spinrdf.org/sp#varName>
               "country" .
 
-[]    a       df:ImportedGraph ;
-      df:uri  <file:///home/miguel/git/WorldInfo/dataflow/countryValues.sparql> .
-
-_:b35
+_:b15
       a       <http://spinrdf.org/sp#Variable> ;
       <http://spinrdf.org/sp#varName>
-              "option" .
+              "selectedOption_g" .
 
 _:b19
       a       <http://spinrdf.org/sp#Variable> ;
       <http://spinrdf.org/sp#varName>
-              "country" .
+              "optionId" .
 
-_:b36
-      a       <http://spinrdf.org/sp#Variable> ;
-      <http://spinrdf.org/sp#varName>
-              "country" .
-
-_:b23
-      a       <http://spinrdf.org/sp#Variable> ;
-      <http://spinrdf.org/sp#varName>
-              "gdpPerCapita" .
-
-_:b28
-      a       <http://spinrdf.org/sp#Variable> ;
-      <http://spinrdf.org/sp#varName>
-              "landArea" .
-
-_:b42
-      a       <http://spinrdf.org/sp#Variable> ;
-      <http://spinrdf.org/sp#varName>
-              "node" .
-
-_:b26
-      a       <http://spinrdf.org/sp#Variable> ;
-      <http://spinrdf.org/sp#varName>
-              "density" .
-
-_:b40
+_:b20
       a       <http://spinrdf.org/sp#Variable> ;
       <http://spinrdf.org/sp#varName>
               "codeISO2upper" .
-
-_:b31
-      a       <http://spinrdf.org/sp#Variable> ;
-      <http://spinrdf.org/sp#varName>
-              "maxValue" .
-
-_:b17
-      a       <http://spinrdf.org/sp#Variable> ;
-      <http://spinrdf.org/sp#varName>
-              "unselectedOption_radioBorder" .
-
-_:b34
-      a       <http://spinrdf.org/sp#Variable> ;
-      <http://spinrdf.org/sp#varName>
-              "value" .
-
-_:b22
-      a       <http://spinrdf.org/sp#Variable> ;
-      <http://spinrdf.org/sp#varName>
-              "optionDensity" .
-
-_:b16
-      a       <http://spinrdf.org/sp#Variable> ;
-      <http://spinrdf.org/sp#varName>
-              "country_elementOrDescendant" .
-
-_:b27
-      a       <http://spinrdf.org/sp#Variable> ;
-      <http://spinrdf.org/sp#varName>
-              "agriAreaRate" .
-
-_:b32
-      a       <http://spinrdf.org/sp#Variable> ;
-      <http://spinrdf.org/sp#varName>
-              "country" .
-
-[]    a       df:ImportedGraph ;
-      df:uri  <file:///home/miguel/git/WorldInfo/dataflow/normalize.sparql> .
-
-_:b43
-      a       <http://spinrdf.org/sp#Variable> ;
-      <http://spinrdf.org/sp#varName>
-              "country_element" .
 
 _:b37
       a       <http://spinrdf.org/sp#Variable> ;
       <http://spinrdf.org/sp#varName>
               "green" .
 
+_:b35
+      a       <http://spinrdf.org/sp#Variable> ;
+      <http://spinrdf.org/sp#varName>
+              "country_element" .
+
+_:b23
+      a       <http://spinrdf.org/sp#Variable> ;
+      <http://spinrdf.org/sp#varName>
+              "landArea" .
+
+[]    a       df:ImportedGraph ;
+      df:uri  <file:///home/miguel/git/WorldInfo/dataflow/countryValues.sparql> .
+
+_:b40
+      a       df:ImportedGraph ;
+      df:uri  <file:///home/miguel/git/WorldInfo/dataflow/config.n3> .
+
+_:b31
+      a       <http://spinrdf.org/sp#Variable> ;
+      <http://spinrdf.org/sp#varName>
+              "maxValue" .
+
+_:b43
+      a       <http://spinrdf.org/sp#Variable> ;
+      <http://spinrdf.org/sp#varName>
+              "node" .
+
 _:b38
       a       <http://spinrdf.org/sp#Variable> ;
       <http://spinrdf.org/sp#varName>
               "blue" .
+
+_:b32
+      a       <http://spinrdf.org/sp#Variable> ;
+      <http://spinrdf.org/sp#varName>
+              "option" .
+
+_:b16
+      a       <http://spinrdf.org/sp#Variable> ;
+      <http://spinrdf.org/sp#varName>
+              "country_style_value" .
+
+_:b21
+      a       <http://spinrdf.org/sp#Variable> ;
+      <http://spinrdf.org/sp#varName>
+              "optionAgriAreaRate" .
+
+_:b28
+      a       <http://spinrdf.org/sp#Variable> ;
+      <http://spinrdf.org/sp#varName>
+              "country" .
+
+_:b25
+      a       <http://spinrdf.org/sp#Variable> ;
+      <http://spinrdf.org/sp#varName>
+              "option" .
+
+_:b34
+      a       <http://spinrdf.org/sp#Variable> ;
+      <http://spinrdf.org/sp#varName>
+              "codeISO2upper" .
+
+_:b41
+      a       <http://spinrdf.org/sp#Variable> ;
+      <http://spinrdf.org/sp#varName>
+              "unselectedOption" .
+
+_:b27
+      a       <http://spinrdf.org/sp#Variable> ;
+      <http://spinrdf.org/sp#varName>
+              "value" .
+
+_:b30
+      a       <http://spinrdf.org/sp#Variable> ;
+      <http://spinrdf.org/sp#varName>
+              "option" .
+
+_:b22
+      a       <http://spinrdf.org/sp#Variable> ;
+      <http://spinrdf.org/sp#varName>
+              "agriAreaRate" .
+
+_:b42
+      a       <http://spinrdf.org/sp#Variable> ;
+      <http://spinrdf.org/sp#varName>
+              "descendantOrSelf" .
+
+_:b39
+      a       <http://spinrdf.org/sp#Variable> ;
+      <http://spinrdf.org/sp#varName>
+              "proportion" .
