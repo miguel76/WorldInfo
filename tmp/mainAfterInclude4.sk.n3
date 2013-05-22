@@ -1,0 +1,2968 @@
+@prefix :        <http://www.cattid.uniroma1.it/2012/pampers#> .
+@prefix spx:     <http://www.swows.org/spinx#> .
+@prefix sp:      <http://spinrdf.org/sp> .
+@prefix svg:     <http://uispin.org/svg#> .
+@prefix query:   <http://jena.hpl.hp.com/2003/07/query/> .
+@prefix swi:     <http://www.swows.org/instance#> .
+@prefix xml:     <http://www.swows.org/xml#> .
+@prefix vp:      <http://www.swows.org/viewport#> .
+@prefix sparql:  <http://jena.hpl.hp.com/2003/07/query/SPARQL_11/> .
+@prefix rdf2Syntax:  <http://www.swows.org/syntaxes/RDF/RDF/> .
+@prefix syntax:  <http://www.swows.org/syntaxes/> .
+@prefix df:      <http://www.swows.org/dataflow#> .
+@prefix rdfSyntax:  <http://www.swows.org/syntaxes/RDF/> .
+@prefix uix:     <http://www.swows.org/uix#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix tuio:    <http://www.swows.org/tuio#> .
+
+<http://www.swows.org/instance/.well-known/genid/199>
+      a       <http://spinrdf.org/sp#Expression> , spx:Max , <http://spinrdf.org/sp#Aggregation> ;
+      <http://spinrdf.org/sp#expression>
+              <http://www.swows.org/instance/.well-known/genid/183> .
+
+<http://www.swows.org/instance/.well-known/genid/378>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              1 ;
+      <http://spinrdf.org/sp#arg2>
+              <http://www.swows.org/instance/.well-known/genid/333> ;
+      spx:functionLabel "sub" ;
+      spx:opName "-" .
+
+<http://www.swows.org/instance/.well-known/genid/29>
+      a       <http://spinrdf.org/sp#TripleTemplate> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.swows.org/instance/.well-known/genid/9> ;
+      <http://spinrdf.org/sp#predicate>
+              :selectedOption ;
+      <http://spinrdf.org/sp#subject>
+              swi:GraphRoot .
+
+<http://www.swows.org/instance/.well-known/genid/225>
+      <http://spinrdf.org/sp#as>
+              <http://www.swows.org/instance/.well-known/genid/169> .
+
+<http://www.swows.org/instance/.well-known/genid/350>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/instance/.well-known/genid/351> ;
+      spx:functionLabel "str" .
+
+<http://www.swows.org/instance/.well-known/genid/77>
+      a       <http://spinrdf.org/sp#Variable> ;
+      <http://spinrdf.org/sp#varName>
+              "codeISO2upper" .
+
+_:b1  a       <http://spinrdf.org/sp#Construct> , <http://spinrdf.org/sp#Query> ;
+      <http://spinrdf.org/sp#op>
+              <http://www.swows.org/instance/.well-known/genid/mainOp_e9d2b5246e4abf5fc0ef7e01b8bad720> ;
+      <http://spinrdf.org/sp#templates>
+              <http://www.swows.org/instance/.well-known/genid/270> ;
+      <http://spinrdf.org/sp#where>
+              <http://www.swows.org/instance/.well-known/genid/where_e8fd5053ce20019d65da378587878211> .
+
+<http://www.swows.org/instance/.well-known/genid/19>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      spx:element <http://www.swows.org/instance/.well-known/genid/20> ;
+      spx:functionLabel "notexists" .
+
+<http://www.swows.org/instance/.well-known/genid/177>
+      a       <http://spinrdf.org/sp#Variable> ;
+      <http://spinrdf.org/sp#varName>
+              "country" .
+
+<http://www.swows.org/instance/.well-known/genid/425>
+      a       <http://spinrdf.org/sp#TripleTemplate> ;
+      <http://spinrdf.org/sp#object>
+              "mousedown" ;
+      <http://spinrdf.org/sp#predicate>
+              xml:listenedEventType ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/320> .
+
+<http://www.swows.org/instance/.well-known/genid/239>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/instance/.well-known/genid/198> ;
+      <http://spinrdf.org/sp#arg2>
+              <http://www.swows.org/instance/.well-known/genid/227> ;
+      spx:functionLabel "sub" ;
+      spx:opName "-" .
+
+<http://www.swows.org/instance/.well-known/genid/189>
+      a       <http://www.swows.org/sas#Op> , <http://www.swows.org/sas#Group> ;
+      <http://spinrdf.org/sp#groupBy>
+              <http://www.swows.org/instance/.well-known/genid/190> ;
+      <http://www.swows.org/sas#name>
+              "group" ;
+      <http://www.swows.org/sas#subOp>
+              <http://www.swows.org/instance/.well-known/genid/191> .
+
+<http://www.swows.org/instance/.well-known/genid/264>
+      <http://spinrdf.org/sp#as>
+              <http://www.swows.org/instance/.well-known/genid/254> .
+
+<http://www.swows.org/instance/.well-known/genid/97>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/instance/.well-known/genid/98> ;
+      spx:functionLabel "uri" .
+
+<http://www.swows.org/instance/.well-known/genid/78>
+      a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePattern> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.swows.org/instance/.well-known/genid/79> ;
+      <http://spinrdf.org/sp#predicate>
+              <http://www.fao.org/countryprofiles/geoinfo/geopolitical/resource/GDPTotalInCurrentPrices> ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/75> .
+
+<http://www.swows.org/instance/.well-known/genid/364>
+      a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#Bind> ;
+      spx:expr <http://www.swows.org/instance/.well-known/genid/366> ;
+      spx:var <http://www.swows.org/instance/.well-known/genid/365> .
+
+<http://www.swows.org/instance/.well-known/genid/163>
+      a       <http://spinrdf.org/sp#Variable> ;
+      <http://spinrdf.org/sp#varName>
+              "country" .
+
+<http://www.swows.org/instance/.well-known/genid/278>
+      a       df:NamedGraph .
+
+<http://www.swows.org/instance/.well-known/genid/224>
+      a       <http://www.swows.org/sas#TriplePattern> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.swows.org/instance/.well-known/genid/212> ;
+      <http://spinrdf.org/sp#predicate>
+              :value ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/208> .
+
+<http://www.swows.org/instance/.well-known/genid/377>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/instance/.well-known/genid/378> ;
+      <http://spinrdf.org/sp#arg2>
+              255 ;
+      spx:functionLabel "mul" ;
+      spx:opName "*" .
+
+<http://www.swows.org/instance/.well-known/genid/424>
+      a       <http://spinrdf.org/sp#TripleTemplate> ;
+      <http://spinrdf.org/sp#object>
+              "#radioPoint" ;
+      <http://spinrdf.org/sp#predicate>
+              <http://www.w3.org/1999/xlinkhref> ;
+      <http://spinrdf.org/sp#subject>
+              <file:///home/miguel/git/SWOWS/swows/#selectedOption_use> .
+
+<http://www.swows.org/instance/.well-known/genid/238>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/instance/.well-known/genid/171> ;
+      <http://spinrdf.org/sp#arg2>
+              <http://www.swows.org/instance/.well-known/genid/227> ;
+      spx:functionLabel "sub" ;
+      spx:opName "-" .
+
+<http://www.swows.org/instance/.well-known/genid/150>
+      a       <http://spinrdf.org/sp#TripleTemplate> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.swows.org/instance/.well-known/genid/77> ;
+      <http://spinrdf.org/sp#predicate>
+              <http://www.fao.org/countryprofiles/geoinfo/geopolitical/resource/codeISO2> ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/75> .
+
+<http://www.swows.org/instance/.well-known/genid/178>
+      a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePattern> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.swows.org/instance/.well-known/genid/179> ;
+      <http://spinrdf.org/sp#predicate>
+              :option ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/177> .
+
+<http://www.swows.org/instance/.well-known/genid/76>
+      a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePattern> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.swows.org/instance/.well-known/genid/77> ;
+      <http://spinrdf.org/sp#predicate>
+              <http://www.fao.org/countryprofiles/geoinfo/geopolitical/resource/codeISO2> ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/75> .
+
+<http://www.swows.org/instance/.well-known/genid/363>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              1 ;
+      <http://spinrdf.org/sp#arg2>
+              <http://www.swows.org/instance/.well-known/genid/333> ;
+      spx:functionLabel "sub" ;
+      spx:opName "-" .
+
+<http://www.swows.org/instance/.well-known/genid/96>
+      a       <http://spinrdf.org/sp#Variable> ;
+      <http://spinrdf.org/sp#varName>
+              "optionGdp" .
+
+<http://www.swows.org/instance/.well-known/genid/265>
+      a       <http://www.swows.org/sas#BGP> , <http://www.swows.org/sas#Op> ;
+      <http://www.swows.org/sas#name>
+              "bgp" ;
+      <http://www.swows.org/sas#triplePattern>
+              <http://www.swows.org/instance/.well-known/genid/267> , <http://www.swows.org/instance/.well-known/genid/266> , <http://www.swows.org/instance/.well-known/genid/268> , <http://www.swows.org/instance/.well-known/genid/269> .
+
+<http://www.swows.org/instance/.well-known/genid/164>
+      a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePattern> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.swows.org/instance/.well-known/genid/165> ;
+      <http://spinrdf.org/sp#predicate>
+              <http://www.fao.org/countryprofiles/geoinfo/geopolitical/resource/codeISO2> ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/163> .
+
+<http://www.swows.org/instance/.well-known/genid/279>
+      a       <http://spinrdf.org/sp#Construct> , <http://spinrdf.org/sp#Query> ;
+      <http://spinrdf.org/sp#op>
+              <http://www.swows.org/instance/.well-known/genid/mainOp_28c2f109c594f30d0edd6edb6bab463a> ;
+      <http://spinrdf.org/sp#templates>
+              <http://www.swows.org/instance/.well-known/genid/299> ;
+      <http://spinrdf.org/sp#where>
+              <http://www.swows.org/instance/.well-known/genid/where_51fee8b000cad81fe927a5d550e6f734> .
+
+<http://www.swows.org/instance/.well-known/genid/352>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/instance/.well-known/genid/353> ;
+      spx:functionLabel "round" .
+
+<http://www.swows.org/instance/.well-known/genid/227>
+      a       <http://spinrdf.org/sp#Variable> ;
+      <http://spinrdf.org/sp#varName>
+              "minValue" .
+
+<http://www.swows.org/instance/.well-known/genid/362>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/instance/.well-known/genid/363> ;
+      <http://spinrdf.org/sp#arg2>
+              255 ;
+      spx:functionLabel "mul" ;
+      spx:opName "*" .
+
+<http://www.swows.org/instance/.well-known/genid/237>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/instance/.well-known/genid/238> ;
+      <http://spinrdf.org/sp#arg2>
+              <http://www.swows.org/instance/.well-known/genid/239> ;
+      spx:functionLabel "div" ;
+      spx:opName "/" .
+
+<http://www.swows.org/instance/.well-known/genid/17>
+      a       <http://spinrdf.org/sp#Variable> ;
+      <http://spinrdf.org/sp#varName>
+              "oldOption" .
+
+_:b2  <http://spinrdf.org/sp#query>
+              <http://www.swows.org/instance/.well-known/genid/3> , <http://www.swows.org/instance/.well-known/genid/30> .
+
+<http://www.swows.org/instance/.well-known/genid/423>
+      a       <http://spinrdf.org/sp#TripleTemplate> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.w3.org/2000/svguse> ;
+      <http://spinrdf.org/sp#predicate>
+              <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ;
+      <http://spinrdf.org/sp#subject>
+              <file:///home/miguel/git/SWOWS/swows/#selectedOption_use> .
+
+<http://www.swows.org/instance/.well-known/genid/99>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              :optionGdp_ ;
+      spx:functionLabel "str" .
+
+<http://www.swows.org/instance/.well-known/genid/266>
+      a       <http://www.swows.org/sas#TriplePattern> ;
+      <http://spinrdf.org/sp#object>
+              :Country ;
+      <http://spinrdf.org/sp#predicate>
+              <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/163> .
+
+<http://www.swows.org/instance/.well-known/genid/187>
+      a       <http://www.swows.org/sas#Assign> ;
+      <http://www.swows.org/sas#expr>
+              <http://www.swows.org/instance/.well-known/genid/188> ;
+      <http://www.swows.org/sas#variable>
+              <http://www.swows.org/instance/.well-known/genid/185> .
+
+<http://www.swows.org/instance/.well-known/genid/165>
+      a       <http://spinrdf.org/sp#Variable> ;
+      <http://spinrdf.org/sp#varName>
+              "codeISO2upper" .
+
+<http://www.swows.org/instance/.well-known/genid/379>
+      a       <http://www.swows.org/sas#Assign> ;
+      <http://www.swows.org/sas#expr>
+              <http://www.swows.org/instance/.well-known/genid/380> ;
+      <http://www.swows.org/sas#variable>
+              <http://www.swows.org/instance/.well-known/genid/357> .
+
+<http://www.swows.org/instance/.well-known/genid/226>
+      <http://spinrdf.org/sp#as>
+              <http://www.swows.org/instance/.well-known/genid/227> ;
+      <http://spinrdf.org/sp#expression>
+              <http://www.swows.org/instance/.well-known/genid/228> .
+
+<http://www.swows.org/instance/.well-known/genid/166>
+      a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePattern> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.swows.org/instance/.well-known/genid/167> ;
+      <http://spinrdf.org/sp#predicate>
+              :option ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/163> .
+
+<http://www.swows.org/instance/.well-known/genid/88>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/instance/.well-known/genid/79> ;
+      <http://spinrdf.org/sp#arg2>
+              <http://www.swows.org/instance/.well-known/genid/81> ;
+      spx:functionLabel "div" ;
+      spx:opName "/" .
+
+<http://www.swows.org/instance/.well-known/genid/351>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/instance/.well-known/genid/352> ;
+      spx:functionIRI xsd:integer ;
+      spx:functionLabel "function" .
+
+<http://www.swows.org/instance/.well-known/genid/422>
+      a       <http://spinrdf.org/sp#TripleTemplate> ;
+      <http://spinrdf.org/sp#object>
+              <file:///home/miguel/git/SWOWS/swows/#selectedOption_use> ;
+      <http://spinrdf.org/sp#predicate>
+              xml:hasChild ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/315> .
+
+<http://www.swows.org/instance/.well-known/genid/188>
+      a       <http://spinrdf.org/sp#Variable> ;
+      <http://spinrdf.org/sp#varName>
+              ".0" .
+
+<http://www.swows.org/instance/.well-known/genid/389>
+      a       <http://www.swows.org/sas#Op> , <http://www.swows.org/sas#Extend> ;
+      <http://www.swows.org/sas#extension>
+              <http://www.swows.org/instance/.well-known/genid/390> ;
+      <http://www.swows.org/sas#name>
+              "extend" ;
+      <http://www.swows.org/sas#subOp>
+              <http://www.swows.org/instance/.well-known/genid/395> .
+
+<http://www.swows.org/instance/.well-known/genid/361>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/instance/.well-known/genid/362> ;
+      spx:functionIRI xsd:decimal ;
+      spx:functionLabel "function" .
+
+[]    a       df:NamedGraph .
+
+<http://www.swows.org/instance/.well-known/genid/18>
+      a       <http://www.swows.org/sas#Filter> , <http://www.swows.org/sas#Op> ;
+      <http://www.swows.org/sas#expr>
+              <http://www.swows.org/instance/.well-known/genid/19> ;
+      <http://www.swows.org/sas#name>
+              "filter" ;
+      <http://www.swows.org/sas#subOp>
+              <http://www.swows.org/instance/.well-known/genid/25> .
+
+<http://www.swows.org/instance/.well-known/genid/236>
+      a       <http://www.swows.org/sas#Assign> ;
+      <http://www.swows.org/sas#expr>
+              <http://www.swows.org/instance/.well-known/genid/237> ;
+      <http://www.swows.org/sas#variable>
+              <http://www.swows.org/instance/.well-known/genid/231> .
+
+<http://www.swows.org/instance/.well-known/genid/176>
+      a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePattern> ;
+      <http://spinrdf.org/sp#object>
+              :Country ;
+      <http://spinrdf.org/sp#predicate>
+              <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/177> .
+
+<http://www.swows.org/instance/.well-known/genid/79>
+      a       <http://spinrdf.org/sp#Variable> ;
+      <http://spinrdf.org/sp#varName>
+              "gdp" .
+
+<http://www.swows.org/instance/.well-known/genid/267>
+      a       <http://www.swows.org/sas#TriplePattern> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.swows.org/instance/.well-known/genid/167> ;
+      <http://spinrdf.org/sp#predicate>
+              :option ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/163> .
+
+<http://www.swows.org/instance/.well-known/genid/98>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/instance/.well-known/genid/99> ;
+      <http://spinrdf.org/sp#arg2>
+              <http://www.swows.org/instance/.well-known/genid/100> ;
+      spx:functionLabel "concat" .
+
+<http://www.swows.org/instance/.well-known/genid/277>
+      a       df:UnionGraph ;
+      df:input <http://www.swows.org/instance/.well-known/genid/280> , <http://www.swows.org/instance/.well-known/genid/281> .
+
+<http://www.swows.org/instance/.well-known/genid/89>
+      a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#Bind> ;
+      spx:expr <http://www.swows.org/instance/.well-known/genid/91> ;
+      spx:var <http://www.swows.org/instance/.well-known/genid/90> .
+
+<http://www.swows.org/instance/.well-known/genid/305>
+      a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePattern> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.swows.org/instance/.well-known/genid/306> ;
+      <http://spinrdf.org/sp#predicate>
+              :selectedOption ;
+      <http://spinrdf.org/sp#subject>
+              swi:GraphRoot .
+
+<http://www.swows.org/instance/.well-known/genid/229>
+      <http://spinrdf.org/sp#as>
+              <http://www.swows.org/instance/.well-known/genid/169> .
+
+<http://www.swows.org/instance/.well-known/genid/421>
+      a       spx:TripleTemplateSet ;
+      spx:triple <http://www.swows.org/instance/.well-known/genid/426> , <http://www.swows.org/instance/.well-known/genid/424> , <http://www.swows.org/instance/.well-known/genid/425> , <http://www.swows.org/instance/.well-known/genid/422> , <http://www.swows.org/instance/.well-known/genid/423> .
+
+<http://www.swows.org/instance/.well-known/genid/388>
+      a       <http://www.swows.org/sas#Join> , <http://www.swows.org/sas#Op> ;
+      <http://www.swows.org/sas#leftOp>
+              <http://www.swows.org/instance/.well-known/genid/389> ;
+      <http://www.swows.org/sas#name>
+              "join" ;
+      <http://www.swows.org/sas#rightOp>
+              <http://www.swows.org/instance/.well-known/genid/418> .
+
+<http://www.swows.org/instance/.well-known/genid/153>
+      a       <http://spinrdf.org/sp#TripleTemplate> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.swows.org/instance/.well-known/genid/110> ;
+      <http://spinrdf.org/sp#predicate>
+              :option ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/75> .
+
+<http://www.swows.org/instance/.well-known/genid/87>
+      a       <http://spinrdf.org/sp#Variable> ;
+      <http://spinrdf.org/sp#varName>
+              "gdpPerCapita" .
+
+<http://www.swows.org/instance/.well-known/genid/411>
+      a       <http://www.swows.org/sas#TriplePattern> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.swows.org/instance/.well-known/genid/311> ;
+      <http://spinrdf.org/sp#predicate>
+              :possibleOption ;
+      <http://spinrdf.org/sp#subject>
+              swi:GraphRoot .
+
+<http://www.swows.org/instance/.well-known/genid/354>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/instance/.well-known/genid/355> ;
+      <http://spinrdf.org/sp#arg2>
+              255 ;
+      spx:functionLabel "mul" ;
+      spx:opName "*" .
+
+<http://www.swows.org/instance/.well-known/genid/195>
+      a       <http://www.swows.org/sas#TriplePattern> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.swows.org/instance/.well-known/genid/183> ;
+      <http://spinrdf.org/sp#predicate>
+              :value ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/179> .
+
+<http://www.swows.org/instance/.well-known/genid/374>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/instance/.well-known/genid/375> ;
+      spx:functionIRI xsd:integer ;
+      spx:functionLabel "function" .
+
+<http://www.swows.org/instance/.well-known/genid/249>
+      a       <http://www.swows.org/sas#Op> , <http://www.swows.org/sas#Extend> ;
+      <http://www.swows.org/sas#extension>
+              <http://www.swows.org/instance/.well-known/genid/250> ;
+      <http://www.swows.org/sas#name>
+              "extend" ;
+      <http://www.swows.org/sas#subOp>
+              <http://www.swows.org/instance/.well-known/genid/252> .
+
+<http://www.swows.org/instance/.well-known/genid/185>
+      a       <http://spinrdf.org/sp#Variable> ;
+      <http://spinrdf.org/sp#varName>
+              "maxValue" .
+
+<http://www.swows.org/instance/.well-known/genid/268>
+      a       <http://www.swows.org/sas#TriplePattern> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.swows.org/instance/.well-known/genid/169> ;
+      <http://spinrdf.org/sp#predicate>
+              :id ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/167> .
+
+<http://www.swows.org/instance/.well-known/genid/368>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/instance/.well-known/genid/306> ;
+      <http://spinrdf.org/sp#arg2>
+              <http://www.swows.org/instance/.well-known/genid/311> ;
+      spx:functionLabel "ne" ;
+      spx:opName "!=" .
+
+<http://www.swows.org/instance/.well-known/genid/401>
+      a       <http://www.swows.org/sas#Assign> ;
+      <http://www.swows.org/sas#expr>
+              <http://www.swows.org/instance/.well-known/genid/402> ;
+      <http://www.swows.org/sas#variable>
+              <http://www.swows.org/instance/.well-known/genid/320> .
+
+<http://www.swows.org/instance/.well-known/genid/173>
+      a       <http://spinrdf.org/sp#Select> , <http://spinrdf.org/sp#Query> ;
+      <http://spinrdf.org/sp#groupBy>
+              <http://www.swows.org/instance/.well-known/genid/200> ;
+      <http://spinrdf.org/sp#where>
+              <http://www.swows.org/instance/.well-known/genid/174> ;
+      <http://www.swows.org/sas#op>
+              <http://www.swows.org/instance/.well-known/genid/184> ;
+      spx:resultVariable <http://www.swows.org/instance/.well-known/genid/197> , <http://www.swows.org/instance/.well-known/genid/196> .
+
+<http://www.swows.org/instance/.well-known/genid/154>
+      a       <http://spinrdf.org/sp#TripleTemplate> ;
+      <http://spinrdf.org/sp#object>
+              "gdp"^^xsd:string ;
+      <http://spinrdf.org/sp#predicate>
+              :id ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/96> .
+
+<http://www.swows.org/instance/.well-known/genid/387>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              "fill: rgb(" ;
+      <http://spinrdf.org/sp#arg2>
+              <http://www.swows.org/instance/.well-known/genid/346> ;
+      <http://spinrdf.org/sp#arg3>
+              "," ;
+      <http://spinrdf.org/sp#arg4>
+              <http://www.swows.org/instance/.well-known/genid/349> ;
+      <http://spinrdf.org/sp#arg5>
+              "," ;
+      <http://spinrdf.org/sp#arg6>
+              <http://www.swows.org/instance/.well-known/genid/357> ;
+      <http://spinrdf.org/sp#arg7>
+              ")" ;
+      spx:functionLabel "concat" .
+
+<http://www.swows.org/instance/.well-known/genid/420>
+      a       <http://www.swows.org/sas#TriplePattern> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.swows.org/instance/.well-known/genid/344> ;
+      <http://spinrdf.org/sp#predicate>
+              :descendantOrSelf ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/335> .
+
+<http://www.swows.org/instance/.well-known/genid/72>
+      a       spx:ElementGroup , <http://spinrdf.org/sp#Element> ;
+      spx:element <http://www.swows.org/instance/.well-known/genid/92> , <http://www.swows.org/instance/.well-known/genid/80> , <http://www.swows.org/instance/.well-known/genid/74> , <http://www.swows.org/instance/.well-known/genid/109> , <http://www.swows.org/instance/.well-known/genid/78> , <http://www.swows.org/instance/.well-known/genid/95> , <http://www.swows.org/instance/.well-known/genid/76> , <http://www.swows.org/instance/.well-known/genid/89> , <http://www.swows.org/instance/.well-known/genid/86> , <http://www.swows.org/instance/.well-known/genid/82> , <http://www.swows.org/instance/.well-known/genid/102> , <http://www.swows.org/instance/.well-known/genid/84> .
+
+<http://www.swows.org/instance/.well-known/genid/140>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/instance/.well-known/genid/75> ;
+      spx:functionLabel "str" .
+
+<http://www.swows.org/instance/.well-known/genid/228>
+      a       spx:Min , <http://spinrdf.org/sp#Expression> , <http://spinrdf.org/sp#Aggregation> ;
+      <http://spinrdf.org/sp#expression>
+              <http://www.swows.org/instance/.well-known/genid/212> .
+
+<http://www.swows.org/instance/.well-known/genid/306>
+      a       <http://spinrdf.org/sp#Variable> ;
+      <http://spinrdf.org/sp#varName>
+              "selectedOption" .
+
+<http://www.swows.org/instance/.well-known/genid/86>
+      a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#Bind> ;
+      spx:expr <http://www.swows.org/instance/.well-known/genid/88> ;
+      spx:var <http://www.swows.org/instance/.well-known/genid/87> .
+
+<http://www.swows.org/instance/.well-known/genid/353>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/instance/.well-known/genid/354> ;
+      spx:functionIRI xsd:decimal ;
+      spx:functionLabel "function" .
+
+<http://www.swows.org/instance/.well-known/genid/410>
+      a       <http://www.swows.org/sas#BGP> , <http://www.swows.org/sas#Op> ;
+      <http://www.swows.org/sas#name>
+              "bgp" ;
+      <http://www.swows.org/sas#triplePattern>
+              <http://www.swows.org/instance/.well-known/genid/411> .
+
+<http://www.swows.org/instance/.well-known/genid/160>
+      a       spx:ElementGroup , <http://spinrdf.org/sp#Element> ;
+      spx:element <http://www.swows.org/instance/.well-known/genid/201> , <http://www.swows.org/instance/.well-known/genid/170> , <http://www.swows.org/instance/.well-known/genid/230> , <http://www.swows.org/instance/.well-known/genid/166> , <http://www.swows.org/instance/.well-known/genid/168> , <http://www.swows.org/instance/.well-known/genid/162> , <http://www.swows.org/instance/.well-known/genid/164> , <http://www.swows.org/instance/.well-known/genid/172> .
+
+<http://www.swows.org/instance/.well-known/genid/373>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/instance/.well-known/genid/374> ;
+      spx:functionLabel "str" .
+
+<http://www.swows.org/instance/.well-known/genid/248>
+      a       <http://www.swows.org/sas#Project> , <http://www.swows.org/sas#Op> ;
+      <http://www.swows.org/sas#name>
+              "project" ;
+      <http://www.swows.org/sas#subOp>
+              <http://www.swows.org/instance/.well-known/genid/249> ;
+      <http://www.swows.org/sas#variable>
+              <http://www.swows.org/instance/.well-known/genid/198> , <http://www.swows.org/instance/.well-known/genid/169> .
+
+<http://www.swows.org/instance/.well-known/genid/196>
+      <http://spinrdf.org/sp#as>
+              <http://www.swows.org/instance/.well-known/genid/169> .
+
+<http://www.swows.org/instance/.well-known/genid/186>
+      a       <http://www.swows.org/sas#Op> , <http://www.swows.org/sas#Extend> ;
+      <http://www.swows.org/sas#extension>
+              <http://www.swows.org/instance/.well-known/genid/187> ;
+      <http://www.swows.org/sas#name>
+              "extend" ;
+      <http://www.swows.org/sas#subOp>
+              <http://www.swows.org/instance/.well-known/genid/189> .
+
+<http://www.swows.org/instance/.well-known/genid/400>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/xml/instance#option_> ;
+      spx:functionLabel "str" .
+
+<http://www.swows.org/instance/.well-known/genid/367>
+      a       <http://www.swows.org/sas#Filter> , <http://www.swows.org/sas#Op> ;
+      <http://www.swows.org/sas#expr>
+              <http://www.swows.org/instance/.well-known/genid/368> ;
+      <http://www.swows.org/sas#name>
+              "filter" ;
+      <http://www.swows.org/sas#subOp>
+              <http://www.swows.org/instance/.well-known/genid/369> .
+
+<http://www.swows.org/instance/.well-known/genid/174>
+      a       <http://spinrdf.org/sp#Element> , spx:ElementGroup ;
+      spx:element <http://www.swows.org/instance/.well-known/genid/176> , <http://www.swows.org/instance/.well-known/genid/180> , <http://www.swows.org/instance/.well-known/genid/182> , <http://www.swows.org/instance/.well-known/genid/178> .
+
+<http://www.swows.org/instance/.well-known/genid/269>
+      a       <http://www.swows.org/sas#TriplePattern> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.swows.org/instance/.well-known/genid/171> ;
+      <http://spinrdf.org/sp#predicate>
+              :value ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/167> .
+
+<http://www.swows.org/instance/.well-known/genid/151>
+      a       <http://spinrdf.org/sp#TripleTemplate> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.swows.org/instance/.well-known/genid/96> ;
+      <http://spinrdf.org/sp#predicate>
+              :option ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/75> .
+
+<http://www.swows.org/instance/.well-known/genid/where_3b0faa8849ce61d64be9e88ea48531a1>
+      a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#NamedGraph> ;
+      <http://spinrdf.org/sp#graphNameNode>
+              _:b3 ;
+      spx:element <http://www.swows.org/instance/.well-known/genid/72> .
+
+<http://www.swows.org/instance/.well-known/genid/386>
+      a       <http://www.swows.org/sas#Assign> ;
+      <http://www.swows.org/sas#expr>
+              <http://www.swows.org/instance/.well-known/genid/387> ;
+      <http://www.swows.org/sas#variable>
+              <http://www.swows.org/instance/.well-known/genid/365> .
+
+<http://www.swows.org/instance/.well-known/genid/71>
+      a       <http://spinrdf.org/sp#TripleTemplate> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.swows.org/instance/.well-known/genid/46> ;
+      <http://spinrdf.org/sp#predicate>
+              :selectedOption ;
+      <http://spinrdf.org/sp#subject>
+              swi:GraphRoot .
+
+<http://www.swows.org/instance/.well-known/genid/75>
+      a       <http://spinrdf.org/sp#Variable> ;
+      <http://spinrdf.org/sp#varName>
+              "country" .
+
+<http://www.swows.org/instance/.well-known/genid/307>
+      a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#NamedGraph> ;
+      <http://spinrdf.org/sp#graphNameNode>
+              _:b4 ;
+      spx:element <http://www.swows.org/instance/.well-known/genid/308> .
+
+<http://www.swows.org/instance/.well-known/genid/85>
+      a       <http://spinrdf.org/sp#Variable> ;
+      <http://spinrdf.org/sp#varName>
+              "agriArea" .
+
+<http://www.swows.org/instance/.well-known/genid/141>
+      a       <http://www.swows.org/sas#BGP> , <http://www.swows.org/sas#Op> ;
+      <http://www.swows.org/sas#name>
+              "bgp" ;
+      <http://www.swows.org/sas#triplePattern>
+              <http://www.swows.org/instance/.well-known/genid/144> , <http://www.swows.org/instance/.well-known/genid/145> , <http://www.swows.org/instance/.well-known/genid/146> , <http://www.swows.org/instance/.well-known/genid/147> , <http://www.swows.org/instance/.well-known/genid/142> , <http://www.swows.org/instance/.well-known/genid/143> .
+
+<http://www.swows.org/instance/.well-known/genid/209>
+      a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePattern> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.swows.org/instance/.well-known/genid/210> ;
+      <http://spinrdf.org/sp#predicate>
+              :id ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/208> .
+
+<http://www.swows.org/instance/.well-known/genid/376>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/instance/.well-known/genid/377> ;
+      spx:functionIRI xsd:decimal ;
+      spx:functionLabel "function" .
+
+<http://www.swows.org/instance/.well-known/genid/where_cbea8b80f239af06bf803ec6b80dcfbb>
+      a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#NamedGraph> ;
+      <http://spinrdf.org/sp#graphNameNode>
+              _:b1 ;
+      spx:element <http://www.swows.org/instance/.well-known/genid/301> .
+
+<http://www.swows.org/instance/.well-known/genid/197>
+      <http://spinrdf.org/sp#as>
+              <http://www.swows.org/instance/.well-known/genid/198> ;
+      <http://spinrdf.org/sp#expression>
+              <http://www.swows.org/instance/.well-known/genid/199> .
+
+<http://www.swows.org/instance/.well-known/genid/413>
+      a       <http://www.swows.org/sas#TriplePattern> ;
+      <http://spinrdf.org/sp#object>
+              :Country ;
+      <http://spinrdf.org/sp#predicate>
+              <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/326> .
+
+<http://www.swows.org/instance/.well-known/genid/356>
+      a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#Bind> ;
+      spx:expr <http://www.swows.org/instance/.well-known/genid/358> ;
+      spx:var <http://www.swows.org/instance/.well-known/genid/357> .
+
+<http://www.swows.org/instance/.well-known/genid/366>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              "fill: rgb(" ;
+      <http://spinrdf.org/sp#arg2>
+              <http://www.swows.org/instance/.well-known/genid/346> ;
+      <http://spinrdf.org/sp#arg3>
+              "," ;
+      <http://spinrdf.org/sp#arg4>
+              <http://www.swows.org/instance/.well-known/genid/349> ;
+      <http://spinrdf.org/sp#arg5>
+              "," ;
+      <http://spinrdf.org/sp#arg6>
+              <http://www.swows.org/instance/.well-known/genid/357> ;
+      <http://spinrdf.org/sp#arg7>
+              ")" ;
+      spx:functionLabel "concat" .
+
+<http://www.swows.org/instance/.well-known/genid/183>
+      a       <http://spinrdf.org/sp#Variable> ;
+      <http://spinrdf.org/sp#varName>
+              "value" .
+
+<http://www.swows.org/instance/.well-known/genid/171>
+      a       <http://spinrdf.org/sp#Variable> ;
+      <http://spinrdf.org/sp#varName>
+              "value" .
+
+<http://www.swows.org/instance/.well-known/genid/152>
+      a       <http://spinrdf.org/sp#TripleTemplate> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.swows.org/instance/.well-known/genid/103> ;
+      <http://spinrdf.org/sp#predicate>
+              :option ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/75> .
+
+<http://www.swows.org/instance/.well-known/genid/70>
+      spx:triple <http://www.swows.org/instance/.well-known/genid/71> .
+
+<http://www.swows.org/instance/.well-known/genid/74>
+      a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePattern> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.fao.org/countryprofiles/geoinfo/geopolitical/resource/self_governing> ;
+      <http://spinrdf.org/sp#predicate>
+              <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/75> .
+
+<http://www.swows.org/instance/.well-known/genid/308>
+      a       <http://spinrdf.org/sp#Element> , spx:ElementGroup ;
+      spx:element <http://www.swows.org/instance/.well-known/genid/310> .
+
+<http://www.swows.org/instance/.well-known/genid/142>
+      a       <http://www.swows.org/sas#TriplePattern> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.fao.org/countryprofiles/geoinfo/geopolitical/resource/self_governing> ;
+      <http://spinrdf.org/sp#predicate>
+              <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/75> .
+
+<http://www.swows.org/instance/.well-known/genid/375>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/instance/.well-known/genid/376> ;
+      spx:functionLabel "round" .
+
+<http://www.swows.org/instance/.well-known/genid/208>
+      a       <http://spinrdf.org/sp#Variable> ;
+      <http://spinrdf.org/sp#varName>
+              "option" .
+
+<http://www.swows.org/instance/.well-known/genid/84>
+      a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePattern> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.swows.org/instance/.well-known/genid/85> ;
+      <http://spinrdf.org/sp#predicate>
+              <http://www.fao.org/countryprofiles/geoinfo/geopolitical/resource/agriculturalAreaTotal> ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/75> .
+
+<http://www.swows.org/instance/.well-known/genid/198>
+      a       <http://spinrdf.org/sp#Variable> ;
+      <http://spinrdf.org/sp#varName>
+              "maxValue" .
+
+<http://www.swows.org/instance/.well-known/genid/412>
+      a       <http://www.swows.org/sas#BGP> , <http://www.swows.org/sas#Op> ;
+      <http://www.swows.org/sas#name>
+              "bgp" ;
+      <http://www.swows.org/sas#triplePattern>
+              <http://www.swows.org/instance/.well-known/genid/417> , <http://www.swows.org/instance/.well-known/genid/413> , <http://www.swows.org/instance/.well-known/genid/416> , <http://www.swows.org/instance/.well-known/genid/414> , <http://www.swows.org/instance/.well-known/genid/415> .
+
+<http://www.swows.org/instance/.well-known/genid/355>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              1 ;
+      <http://spinrdf.org/sp#arg2>
+              <http://www.swows.org/instance/.well-known/genid/333> ;
+      spx:functionLabel "sub" ;
+      spx:opName "-" .
+
+<http://www.swows.org/instance/.well-known/genid/162>
+      a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePattern> ;
+      <http://spinrdf.org/sp#object>
+              :Country ;
+      <http://spinrdf.org/sp#predicate>
+              <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/163> .
+
+<http://www.swows.org/instance/.well-known/genid/365>
+      a       <http://spinrdf.org/sp#Variable> ;
+      <http://spinrdf.org/sp#varName>
+              "country_style_value" .
+
+<http://www.swows.org/instance/.well-known/genid/172>
+      a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#SubQuery> ;
+      <http://spinrdf.org/sp#query>
+              <http://www.swows.org/instance/.well-known/genid/173> .
+
+<http://www.swows.org/instance/.well-known/genid/184>
+      a       <http://www.swows.org/sas#Project> , <http://www.swows.org/sas#Op> ;
+      <http://www.swows.org/sas#name>
+              "project" ;
+      <http://www.swows.org/sas#subOp>
+              <http://www.swows.org/instance/.well-known/genid/186> ;
+      <http://www.swows.org/sas#variable>
+              <http://www.swows.org/instance/.well-known/genid/181> , <http://www.swows.org/instance/.well-known/genid/185> .
+
+<http://www.swows.org/instance/.well-known/genid/385>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              1 ;
+      <http://spinrdf.org/sp#arg2>
+              <http://www.swows.org/instance/.well-known/genid/333> ;
+      spx:functionLabel "sub" ;
+      spx:opName "-" .
+
+<http://www.swows.org/instance/.well-known/genid/231>
+      a       <http://spinrdf.org/sp#Variable> ;
+      <http://spinrdf.org/sp#varName>
+              "proportion" .
+
+<http://www.swows.org/instance/.well-known/genid/259>
+      a       <http://www.swows.org/sas#TriplePattern> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.swows.org/instance/.well-known/genid/171> ;
+      <http://spinrdf.org/sp#predicate>
+              :value ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/167> .
+
+<http://www.swows.org/instance/.well-known/genid/181>
+      a       <http://spinrdf.org/sp#Variable> ;
+      <http://spinrdf.org/sp#varName>
+              "optionId" .
+
+<http://www.swows.org/instance/.well-known/genid/245>
+      a       <http://www.swows.org/sas#TriplePattern> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.swows.org/instance/.well-known/genid/167> ;
+      <http://spinrdf.org/sp#predicate>
+              :option ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/163> .
+
+<http://www.swows.org/instance/.well-known/genid/191>
+      a       <http://www.swows.org/sas#BGP> , <http://www.swows.org/sas#Op> ;
+      <http://www.swows.org/sas#name>
+              "bgp" ;
+      <http://www.swows.org/sas#triplePattern>
+              <http://www.swows.org/instance/.well-known/genid/195> , <http://www.swows.org/instance/.well-known/genid/192> , <http://www.swows.org/instance/.well-known/genid/193> , <http://www.swows.org/instance/.well-known/genid/194> .
+
+<http://www.swows.org/instance/.well-known/genid/358>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/instance/.well-known/genid/359> ;
+      spx:functionLabel "str" .
+
+_:b5  a       df:ImportedGraph ;
+      df:uri  <file:///home/miguel/git/WorldInfo/dataflow/startingOption.n3> .
+
+<http://www.swows.org/instance/.well-known/genid/130>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/instance/.well-known/genid/131> ;
+      spx:functionLabel "uri" .
+
+<http://www.swows.org/instance/.well-known/genid/397>
+      a       <http://www.swows.org/sas#Assign> ;
+      <http://www.swows.org/sas#expr>
+              <http://www.swows.org/instance/.well-known/genid/398> ;
+      <http://www.swows.org/sas#variable>
+              <http://www.swows.org/instance/.well-known/genid/315> .
+
+<http://www.swows.org/instance/.well-known/genid/where_51fee8b000cad81fe927a5d550e6f734>
+      a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#NamedGraph> ;
+      <http://spinrdf.org/sp#graphNameNode>
+              :svgDoc ;
+      spx:element <http://www.swows.org/instance/.well-known/genid/290> .
+
+<http://www.swows.org/instance/.well-known/genid/258>
+      a       <http://www.swows.org/sas#TriplePattern> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.swows.org/instance/.well-known/genid/169> ;
+      <http://spinrdf.org/sp#predicate>
+              :id ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/167> .
+
+<http://www.swows.org/instance/.well-known/genid/170>
+      a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePattern> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.swows.org/instance/.well-known/genid/171> ;
+      <http://spinrdf.org/sp#predicate>
+              :value ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/167> .
+
+<http://www.swows.org/instance/.well-known/genid/230>
+      a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#Bind> ;
+      spx:expr <http://www.swows.org/instance/.well-known/genid/232> ;
+      spx:var <http://www.swows.org/instance/.well-known/genid/231> .
+
+<http://www.swows.org/instance/.well-known/genid/182>
+      a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePattern> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.swows.org/instance/.well-known/genid/183> ;
+      <http://spinrdf.org/sp#predicate>
+              :value ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/179> .
+
+<http://www.swows.org/instance/.well-known/genid/192>
+      a       <http://www.swows.org/sas#TriplePattern> ;
+      <http://spinrdf.org/sp#object>
+              :Country ;
+      <http://spinrdf.org/sp#predicate>
+              <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/177> .
+
+<http://www.swows.org/instance/.well-known/genid/244>
+      a       <http://www.swows.org/sas#TriplePattern> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.swows.org/instance/.well-known/genid/165> ;
+      <http://spinrdf.org/sp#predicate>
+              <http://www.fao.org/countryprofiles/geoinfo/geopolitical/resource/codeISO2> ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/163> .
+
+<http://www.swows.org/instance/.well-known/genid/357>
+      a       <http://spinrdf.org/sp#Variable> ;
+      <http://spinrdf.org/sp#varName>
+              "blue" .
+
+<http://www.swows.org/instance/.well-known/genid/319>
+      a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#Bind> ;
+      spx:expr <http://www.swows.org/instance/.well-known/genid/321> ;
+      spx:var <http://www.swows.org/instance/.well-known/genid/320> .
+
+[]    a       df:NamedGraph .
+
+<http://www.swows.org/instance/.well-known/genid/398>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/instance/.well-known/genid/399> ;
+      spx:functionLabel "uri" .
+
+<http://www.swows.org/instance/.well-known/genid/329>
+      a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePattern> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.swows.org/instance/.well-known/genid/330> ;
+      <http://spinrdf.org/sp#predicate>
+              :option ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/326> .
+
+<http://www.swows.org/instance/.well-known/genid/257>
+      a       <http://www.swows.org/sas#TriplePattern> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.swows.org/instance/.well-known/genid/167> ;
+      <http://spinrdf.org/sp#predicate>
+              :option ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/163> .
+
+<http://www.swows.org/instance/.well-known/genid/247>
+      a       <http://www.swows.org/sas#TriplePattern> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.swows.org/instance/.well-known/genid/171> ;
+      <http://spinrdf.org/sp#predicate>
+              :value ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/167> .
+
+<http://www.swows.org/instance/.well-known/genid/193>
+      a       <http://www.swows.org/sas#TriplePattern> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.swows.org/instance/.well-known/genid/179> ;
+      <http://spinrdf.org/sp#predicate>
+              :option ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/177> .
+
+<http://www.swows.org/instance/.well-known/genid/318>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/xml/instance#option_> ;
+      spx:functionLabel "str" .
+
+_:b6  a       df:SelectGraph ;
+      df:id   swi:mouseEvents .
+
+<http://www.swows.org/instance/.well-known/genid/399>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/instance/.well-known/genid/400> ;
+      <http://spinrdf.org/sp#arg2>
+              <http://www.swows.org/instance/.well-known/genid/306> ;
+      spx:functionLabel "concat" .
+
+<http://www.swows.org/instance/.well-known/genid/180>
+      a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePattern> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.swows.org/instance/.well-known/genid/181> ;
+      <http://spinrdf.org/sp#predicate>
+              :id ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/179> .
+
+<http://www.swows.org/instance/.well-known/genid/256>
+      a       <http://www.swows.org/sas#TriplePattern> ;
+      <http://spinrdf.org/sp#object>
+              :Country ;
+      <http://spinrdf.org/sp#predicate>
+              <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/163> .
+
+<http://www.swows.org/instance/.well-known/genid/369>
+      a       <http://www.swows.org/sas#Op> , <http://www.swows.org/sas#Extend> ;
+      <http://www.swows.org/sas#extension>
+              <http://www.swows.org/instance/.well-known/genid/379> , <http://www.swows.org/instance/.well-known/genid/386> , <http://www.swows.org/instance/.well-known/genid/372> , <http://www.swows.org/instance/.well-known/genid/370> ;
+      <http://www.swows.org/sas#name>
+              "extend" ;
+      <http://www.swows.org/sas#subOp>
+              <http://www.swows.org/instance/.well-known/genid/388> .
+
+<http://www.swows.org/instance/.well-known/genid/359>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/instance/.well-known/genid/360> ;
+      spx:functionIRI xsd:integer ;
+      spx:functionLabel "function" .
+
+<http://www.swows.org/instance/.well-known/genid/194>
+      a       <http://www.swows.org/sas#TriplePattern> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.swows.org/instance/.well-known/genid/181> ;
+      <http://spinrdf.org/sp#predicate>
+              :id ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/179> .
+
+<http://www.swows.org/instance/.well-known/genid/246>
+      a       <http://www.swows.org/sas#TriplePattern> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.swows.org/instance/.well-known/genid/169> ;
+      <http://spinrdf.org/sp#predicate>
+              :id ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/167> .
+
+[]    a       df:NamedGraph .
+
+<http://www.swows.org/instance/.well-known/genid/317>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/instance/.well-known/genid/318> ;
+      <http://spinrdf.org/sp#arg2>
+              <http://www.swows.org/instance/.well-known/genid/306> ;
+      spx:functionLabel "concat" .
+
+<http://www.swows.org/instance/.well-known/genid/255>
+      a       <http://www.swows.org/sas#BGP> , <http://www.swows.org/sas#Op> ;
+      <http://www.swows.org/sas#name>
+              "bgp" ;
+      <http://www.swows.org/sas#triplePattern>
+              <http://www.swows.org/instance/.well-known/genid/258> , <http://www.swows.org/instance/.well-known/genid/257> , <http://www.swows.org/instance/.well-known/genid/256> , <http://www.swows.org/instance/.well-known/genid/259> .
+
+<http://www.swows.org/instance/.well-known/genid/235>
+      a       <http://www.swows.org/sas#Op> , <http://www.swows.org/sas#Extend> ;
+      <http://www.swows.org/sas#extension>
+              <http://www.swows.org/instance/.well-known/genid/236> ;
+      <http://www.swows.org/sas#name>
+              "extend" ;
+      <http://www.swows.org/sas#subOp>
+              <http://www.swows.org/instance/.well-known/genid/240> .
+
+<http://www.swows.org/instance/.well-known/genid/221>
+      a       <http://www.swows.org/sas#TriplePattern> ;
+      <http://spinrdf.org/sp#object>
+              :Country ;
+      <http://spinrdf.org/sp#predicate>
+              <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/206> .
+
+<http://www.swows.org/instance/.well-known/genid/241>
+      a       <http://www.swows.org/sas#Join> , <http://www.swows.org/sas#Op> ;
+      <http://www.swows.org/sas#leftOp>
+              <http://www.swows.org/instance/.well-known/genid/242> ;
+      <http://www.swows.org/sas#name>
+              "join" ;
+      <http://www.swows.org/sas#rightOp>
+              <http://www.swows.org/instance/.well-known/genid/248> .
+
+<http://www.swows.org/instance/.well-known/genid/220>
+      a       <http://www.swows.org/sas#BGP> , <http://www.swows.org/sas#Op> ;
+      <http://www.swows.org/sas#name>
+              "bgp" ;
+      <http://www.swows.org/sas#triplePattern>
+              <http://www.swows.org/instance/.well-known/genid/224> , <http://www.swows.org/instance/.well-known/genid/221> , <http://www.swows.org/instance/.well-known/genid/223> , <http://www.swows.org/instance/.well-known/genid/222> .
+
+<http://www.swows.org/instance/.well-known/genid/254>
+      a       <http://spinrdf.org/sp#Variable> ;
+      <http://spinrdf.org/sp#varName>
+              "optionId" .
+
+<http://www.swows.org/instance/.well-known/genid/234>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/instance/.well-known/genid/198> ;
+      <http://spinrdf.org/sp#arg2>
+              <http://www.swows.org/instance/.well-known/genid/227> ;
+      spx:functionLabel "sub" ;
+      spx:opName "-" .
+
+<http://www.swows.org/instance/.well-known/genid/240>
+      a       <http://www.swows.org/sas#Join> , <http://www.swows.org/sas#Op> ;
+      <http://www.swows.org/sas#leftOp>
+              <http://www.swows.org/instance/.well-known/genid/241> ;
+      <http://www.swows.org/sas#name>
+              "join" ;
+      <http://www.swows.org/sas#rightOp>
+              <http://www.swows.org/instance/.well-known/genid/260> .
+
+<http://www.swows.org/instance/.well-known/genid/243>
+      a       <http://www.swows.org/sas#TriplePattern> ;
+      <http://spinrdf.org/sp#object>
+              :Country ;
+      <http://spinrdf.org/sp#predicate>
+              <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/163> .
+
+<http://www.swows.org/instance/.well-known/genid/233>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/instance/.well-known/genid/171> ;
+      <http://spinrdf.org/sp#arg2>
+              <http://www.swows.org/instance/.well-known/genid/227> ;
+      spx:functionLabel "sub" ;
+      spx:opName "-" .
+
+<http://www.swows.org/instance/.well-known/genid/253>
+      <http://spinrdf.org/sp#as>
+              <http://www.swows.org/instance/.well-known/genid/254> .
+
+<http://www.swows.org/instance/.well-known/genid/223>
+      a       <http://www.swows.org/sas#TriplePattern> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.swows.org/instance/.well-known/genid/210> ;
+      <http://spinrdf.org/sp#predicate>
+              :id ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/208> .
+
+<http://www.swows.org/instance/.well-known/genid/190>
+      <http://spinrdf.org/sp#as>
+              <http://www.swows.org/instance/.well-known/genid/169> .
+
+<http://www.swows.org/instance/.well-known/genid/232>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/instance/.well-known/genid/233> ;
+      <http://spinrdf.org/sp#arg2>
+              <http://www.swows.org/instance/.well-known/genid/234> ;
+      spx:functionLabel "div" ;
+      spx:opName "/" .
+
+<http://www.swows.org/instance/.well-known/genid/252>
+      a       <http://www.swows.org/sas#Op> , <http://www.swows.org/sas#Group> ;
+      <http://spinrdf.org/sp#groupBy>
+              <http://www.swows.org/instance/.well-known/genid/253> ;
+      <http://www.swows.org/sas#name>
+              "group" ;
+      <http://www.swows.org/sas#subOp>
+              <http://www.swows.org/instance/.well-known/genid/255> .
+
+<http://www.swows.org/instance/.well-known/genid/242>
+      a       <http://www.swows.org/sas#BGP> , <http://www.swows.org/sas#Op> ;
+      <http://www.swows.org/sas#name>
+              "bgp" ;
+      <http://www.swows.org/sas#triplePattern>
+              <http://www.swows.org/instance/.well-known/genid/243> , <http://www.swows.org/instance/.well-known/genid/245> , <http://www.swows.org/instance/.well-known/genid/244> , <http://www.swows.org/instance/.well-known/genid/247> , <http://www.swows.org/instance/.well-known/genid/246> .
+
+<http://www.swows.org/instance/.well-known/genid/222>
+      a       <http://www.swows.org/sas#TriplePattern> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.swows.org/instance/.well-known/genid/208> ;
+      <http://spinrdf.org/sp#predicate>
+              :option ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/206> .
+
+<http://www.swows.org/instance/.well-known/genid/321>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/instance/.well-known/genid/322> ;
+      spx:functionLabel "uri" .
+
+<http://www.swows.org/instance/.well-known/genid/49>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/instance/.well-known/genid/50> ;
+      spx:functionLabel "uri" .
+
+<http://www.swows.org/instance/.well-known/genid/311>
+      a       <http://spinrdf.org/sp#Variable> ;
+      <http://spinrdf.org/sp#varName>
+              "unselectedOption" .
+
+<http://www.swows.org/instance/.well-known/genid/262>
+      a       <http://www.swows.org/sas#Assign> ;
+      <http://www.swows.org/sas#expr>
+              <http://www.swows.org/instance/.well-known/genid/251> ;
+      <http://www.swows.org/sas#variable>
+              <http://www.swows.org/instance/.well-known/genid/227> .
+
+<http://www.swows.org/instance/.well-known/genid/111>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/instance/.well-known/genid/112> ;
+      spx:functionLabel "uri" .
+
+<http://www.swows.org/instance/.well-known/genid/69>
+      a       <http://spinrdf.org/sp#TripleTemplate> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.swows.org/instance/.well-known/genid/36> ;
+      <http://spinrdf.org/sp#predicate>
+              :selectedOption ;
+      <http://spinrdf.org/sp#subject>
+              swi:GraphRoot .
+
+<http://www.swows.org/instance/.well-known/genid/59>
+      a       <http://www.swows.org/sas#Graph> , <http://www.swows.org/sas#Op> ;
+      <http://www.swows.org/sas#graphNameNode>
+              swi:ThisGraph ;
+      <http://www.swows.org/sas#name>
+              "graph" ;
+      <http://www.swows.org/sas#subOp>
+              <http://www.swows.org/instance/.well-known/genid/60> .
+
+<http://www.swows.org/instance/.well-known/genid/125>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/instance/.well-known/genid/126> ;
+      <http://spinrdf.org/sp#arg2>
+              <http://www.swows.org/instance/.well-known/genid/127> ;
+      spx:functionLabel "concat" .
+
+<http://www.swows.org/instance/.well-known/genid/339>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/instance/.well-known/genid/328> ;
+      spx:functionLabel "lcase" .
+
+<http://www.swows.org/instance/.well-known/genid/349>
+      a       <http://spinrdf.org/sp#Variable> ;
+      <http://spinrdf.org/sp#varName>
+              "green" .
+
+<http://www.swows.org/instance/.well-known/genid/322>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/instance/.well-known/genid/323> ;
+      <http://spinrdf.org/sp#arg2>
+              <http://www.swows.org/instance/.well-known/genid/311> ;
+      <http://spinrdf.org/sp#arg3>
+              "_radioBorder" ;
+      spx:functionLabel "concat" .
+
+<http://www.swows.org/instance/.well-known/genid/312>
+      a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#Filter> ;
+      spx:expr <http://www.swows.org/instance/.well-known/genid/313> .
+
+<http://www.swows.org/instance/.well-known/genid/263>
+      a       <http://www.swows.org/sas#Op> , <http://www.swows.org/sas#Group> ;
+      <http://spinrdf.org/sp#groupBy>
+              <http://www.swows.org/instance/.well-known/genid/264> ;
+      <http://www.swows.org/sas#name>
+              "group" ;
+      <http://www.swows.org/sas#subOp>
+              <http://www.swows.org/instance/.well-known/genid/265> .
+
+<http://www.swows.org/instance/.well-known/genid/112>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/instance/.well-known/genid/113> ;
+      <http://spinrdf.org/sp#arg2>
+              <http://www.swows.org/instance/.well-known/genid/114> ;
+      spx:functionLabel "concat" .
+
+<http://www.swows.org/instance/.well-known/genid/126>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              :optionGdp_ ;
+      spx:functionLabel "str" .
+
+<http://www.swows.org/instance/.well-known/genid/139>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/instance/.well-known/genid/140> ;
+      spx:functionLabel "MD5" .
+
+<http://www.swows.org/instance/.well-known/genid/where_765bcd4abc676bed441c032f05a8363c>
+      a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#NamedGraph> ;
+      <http://spinrdf.org/sp#graphNameNode>
+              _:b4 .
+
+<http://www.swows.org/instance/.well-known/genid/37>
+      a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#NamedGraph> ;
+      <http://spinrdf.org/sp#graphNameNode>
+              _:b6 ;
+      spx:element <http://www.swows.org/instance/.well-known/genid/38> .
+
+<http://www.swows.org/instance/.well-known/genid/323>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/xml/instance#option_> ;
+      spx:functionLabel "str" .
+
+<http://www.swows.org/instance/.well-known/genid/210>
+      a       <http://spinrdf.org/sp#Variable> ;
+      <http://spinrdf.org/sp#varName>
+              "optionId" .
+
+<http://www.swows.org/instance/.well-known/genid/250>
+      a       <http://www.swows.org/sas#Assign> ;
+      <http://www.swows.org/sas#expr>
+              <http://www.swows.org/instance/.well-known/genid/251> ;
+      <http://www.swows.org/sas#variable>
+              <http://www.swows.org/instance/.well-known/genid/198> .
+
+<http://www.swows.org/instance/.well-known/genid/260>
+      a       <http://www.swows.org/sas#Project> , <http://www.swows.org/sas#Op> ;
+      <http://www.swows.org/sas#name>
+              "project" ;
+      <http://www.swows.org/sas#subOp>
+              <http://www.swows.org/instance/.well-known/genid/261> ;
+      <http://www.swows.org/sas#variable>
+              <http://www.swows.org/instance/.well-known/genid/227> , <http://www.swows.org/instance/.well-known/genid/169> .
+
+<http://www.swows.org/instance/.well-known/genid/113>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              :optionAgriAreaRate_ ;
+      spx:functionLabel "str" .
+
+<http://www.swows.org/instance/.well-known/genid/337>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/instance/.well-known/genid/338> ;
+      <http://spinrdf.org/sp#arg2>
+              <http://www.swows.org/instance/.well-known/genid/339> ;
+      spx:functionLabel "concat" .
+
+<http://www.swows.org/instance/.well-known/genid/mainOp_74a7f226de987702713e40dfc26e7ffc>
+      a       <http://www.swows.org/sas#Graph> , <http://www.swows.org/sas#Op> ;
+      <http://www.swows.org/sas#graphNameNode>
+              _:b1 ;
+      <http://www.swows.org/sas#subOp>
+              <http://www.swows.org/instance/.well-known/genid/367> .
+
+<http://www.swows.org/instance/.well-known/genid/123>
+      a       <http://www.swows.org/sas#Assign> ;
+      <http://www.swows.org/sas#expr>
+              <http://www.swows.org/instance/.well-known/genid/124> ;
+      <http://www.swows.org/sas#variable>
+              <http://www.swows.org/instance/.well-known/genid/96> .
+
+<http://www.swows.org/instance/.well-known/genid/57>
+      a       <http://www.swows.org/sas#Join> , <http://www.swows.org/sas#Op> ;
+      <http://www.swows.org/sas#leftOp>
+              <http://www.swows.org/instance/.well-known/genid/58> ;
+      <http://www.swows.org/sas#name>
+              "join" ;
+      <http://www.swows.org/sas#rightOp>
+              <http://www.swows.org/instance/.well-known/genid/66> .
+
+<http://www.swows.org/instance/.well-known/genid/38>
+      a       <http://spinrdf.org/sp#Element> , spx:ElementGroup ;
+      spx:element <http://www.swows.org/instance/.well-known/genid/40> , <http://www.swows.org/instance/.well-known/genid/42> .
+
+<http://www.swows.org/instance/.well-known/genid/211>
+      a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePattern> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.swows.org/instance/.well-known/genid/212> ;
+      <http://spinrdf.org/sp#predicate>
+              :value ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/208> .
+
+<http://www.swows.org/instance/.well-known/genid/251>
+      a       <http://spinrdf.org/sp#Variable> ;
+      <http://spinrdf.org/sp#varName>
+              ".0" .
+
+<http://www.swows.org/instance/.well-known/genid/261>
+      a       <http://www.swows.org/sas#Op> , <http://www.swows.org/sas#Extend> ;
+      <http://www.swows.org/sas#extension>
+              <http://www.swows.org/instance/.well-known/genid/262> ;
+      <http://www.swows.org/sas#name>
+              "extend" ;
+      <http://www.swows.org/sas#subOp>
+              <http://www.swows.org/instance/.well-known/genid/263> .
+
+<http://www.swows.org/instance/.well-known/genid/310>
+      a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePattern> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.swows.org/instance/.well-known/genid/311> ;
+      <http://spinrdf.org/sp#predicate>
+              :possibleOption ;
+      <http://spinrdf.org/sp#subject>
+              swi:GraphRoot .
+
+<http://www.swows.org/instance/.well-known/genid/290>
+      a       <http://spinrdf.org/sp#Element> , spx:ElementGroup ;
+      spx:element <http://www.swows.org/instance/.well-known/genid/292> .
+
+<http://www.swows.org/instance/.well-known/genid/mainOp_40f7dc02743f04ea3f64825bc553dab4>
+      a       <http://www.swows.org/sas#Graph> , <http://www.swows.org/sas#Op> ;
+      <http://www.swows.org/sas#graphNameNode>
+              _:b4 ;
+      <http://www.swows.org/sas#subOp>
+              <http://www.swows.org/instance/.well-known/genid/18> .
+
+<http://www.swows.org/instance/.well-known/genid/338>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/xml/instance#> ;
+      spx:functionLabel "str" .
+
+<http://www.swows.org/instance/.well-known/genid/114>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/instance/.well-known/genid/115> ;
+      spx:functionLabel "MD5" .
+
+<http://www.swows.org/instance/.well-known/genid/124>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/instance/.well-known/genid/125> ;
+      spx:functionLabel "uri" .
+
+<http://www.swows.org/instance/.well-known/genid/58>
+      a       <http://www.swows.org/sas#Join> , <http://www.swows.org/sas#Op> ;
+      <http://www.swows.org/sas#leftOp>
+              <http://www.swows.org/instance/.well-known/genid/59> ;
+      <http://www.swows.org/sas#name>
+              "join" ;
+      <http://www.swows.org/sas#rightOp>
+              <http://www.swows.org/instance/.well-known/genid/62> .
+
+<http://www.swows.org/instance/.well-known/genid/315>
+      a       <http://spinrdf.org/sp#Variable> ;
+      <http://spinrdf.org/sp#varName>
+              "selectedOption_g" .
+
+<http://www.swows.org/instance/.well-known/genid/45>
+      a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePattern> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.swows.org/instance/.well-known/genid/46> ;
+      <http://spinrdf.org/sp#predicate>
+              :possibleOption ;
+      <http://spinrdf.org/sp#subject>
+              swi:GraphRoot .
+
+<http://www.swows.org/instance/.well-known/genid/121>
+      a       <http://www.swows.org/sas#Assign> ;
+      <http://www.swows.org/sas#expr>
+              <http://www.swows.org/instance/.well-known/genid/122> ;
+      <http://www.swows.org/sas#variable>
+              <http://www.swows.org/instance/.well-known/genid/93> .
+
+<http://www.swows.org/instance/.well-known/genid/35>
+      a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePattern> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.swows.org/instance/.well-known/genid/36> ;
+      <http://spinrdf.org/sp#predicate>
+              :selectedOption ;
+      <http://spinrdf.org/sp#subject>
+              swi:GraphRoot .
+
+<http://www.swows.org/instance/.well-known/genid/325>
+      a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePattern> ;
+      <http://spinrdf.org/sp#object>
+              :Country ;
+      <http://spinrdf.org/sp#predicate>
+              <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/326> .
+
+<http://www.swows.org/instance/.well-known/genid/9>
+      a       <http://spinrdf.org/sp#Variable> ;
+      <http://spinrdf.org/sp#varName>
+              "newOption" .
+
+<http://www.swows.org/instance/.well-known/genid/101>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/instance/.well-known/genid/75> ;
+      spx:functionLabel "str" .
+
+swi:OutputDataset
+      a       df:InlineDataset ;
+      df:input <http://www.swows.org/instance/.well-known/genid/277> .
+
+_:b3  a       df:ImportedGraph ;
+      df:uri  <file:///home/miguel/git/WorldInfo/data/fao.rdf> .
+
+<http://www.swows.org/instance/.well-known/genid/345>
+      a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#Bind> ;
+      spx:expr <http://www.swows.org/instance/.well-known/genid/347> ;
+      spx:var <http://www.swows.org/instance/.well-known/genid/346> .
+
+<http://www.swows.org/instance/.well-known/genid/335>
+      a       <http://spinrdf.org/sp#Variable> ;
+      <http://spinrdf.org/sp#varName>
+              "country_element" .
+
+<http://www.swows.org/instance/.well-known/genid/316>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/instance/.well-known/genid/317> ;
+      spx:functionLabel "uri" .
+
+<http://www.swows.org/instance/.well-known/genid/8>
+      a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePattern> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.swows.org/instance/.well-known/genid/9> ;
+      <http://spinrdf.org/sp#predicate>
+              :selectedOption ;
+      <http://spinrdf.org/sp#subject>
+              swi:GraphRoot .
+
+<http://www.swows.org/instance/.well-known/genid/where_e8fd5053ce20019d65da378587878211>
+      a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#NamedGraph> ;
+      <http://spinrdf.org/sp#graphNameNode>
+              _:b7 ;
+      spx:element <http://www.swows.org/instance/.well-known/genid/160> .
+
+<http://www.swows.org/instance/.well-known/genid/46>
+      a       <http://spinrdf.org/sp#Variable> ;
+      <http://spinrdf.org/sp#varName>
+              "newOption" .
+
+<http://www.swows.org/instance/.well-known/genid/36>
+      a       <http://spinrdf.org/sp#Variable> ;
+      <http://spinrdf.org/sp#varName>
+              "oldOption" .
+
+<http://www.swows.org/instance/.well-known/genid/326>
+      a       <http://spinrdf.org/sp#Variable> ;
+      <http://spinrdf.org/sp#varName>
+              "country" .
+
+<http://www.swows.org/instance/.well-known/genid/102>
+      a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#Bind> ;
+      spx:expr <http://www.swows.org/instance/.well-known/genid/104> ;
+      spx:var <http://www.swows.org/instance/.well-known/genid/103> .
+
+<http://www.swows.org/instance/.well-known/genid/122>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/instance/.well-known/genid/85> ;
+      <http://spinrdf.org/sp#arg2>
+              <http://www.swows.org/instance/.well-known/genid/83> ;
+      spx:functionLabel "div" ;
+      spx:opName "/" .
+
+<http://www.swows.org/instance/.well-known/genid/346>
+      a       <http://spinrdf.org/sp#Variable> ;
+      <http://spinrdf.org/sp#varName>
+              "red" .
+
+<http://www.swows.org/instance/.well-known/genid/336>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/instance/.well-known/genid/337> ;
+      spx:functionLabel "uri" .
+
+<http://www.swows.org/instance/.well-known/genid/47>
+      a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#Filter> ;
+      spx:expr <http://www.swows.org/instance/.well-known/genid/48> .
+
+<http://www.swows.org/instance/.well-known/genid/mainOp_28c2f109c594f30d0edd6edb6bab463a>
+      a       <http://www.swows.org/sas#Graph> , <http://www.swows.org/sas#Op> ;
+      <http://www.swows.org/sas#graphNameNode>
+              :svgDoc ;
+      <http://www.swows.org/sas#subOp>
+              <http://www.swows.org/instance/.well-known/genid/296> .
+
+<http://www.swows.org/instance/.well-known/genid/313>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/instance/.well-known/genid/306> ;
+      <http://spinrdf.org/sp#arg2>
+              <http://www.swows.org/instance/.well-known/genid/311> ;
+      spx:functionLabel "ne" ;
+      spx:opName "!=" .
+
+<http://www.swows.org/instance/.well-known/genid/327>
+      a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePattern> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.swows.org/instance/.well-known/genid/328> ;
+      <http://spinrdf.org/sp#predicate>
+              <http://www.fao.org/countryprofiles/geoinfo/geopolitical/resource/codeISO2> ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/326> .
+
+<http://www.swows.org/instance/.well-known/genid/347>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              255 ;
+      spx:functionLabel "str" .
+
+<http://www.swows.org/instance/.well-known/genid/32>
+      a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#NamedGraph> ;
+      spx:element <http://www.swows.org/instance/.well-known/genid/33> .
+
+<http://www.swows.org/instance/.well-known/genid/333>
+      a       <http://spinrdf.org/sp#Variable> ;
+      <http://spinrdf.org/sp#varName>
+              "proportion" .
+
+<http://www.swows.org/instance/.well-known/genid/48>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/instance/.well-known/genid/49> ;
+      <http://spinrdf.org/sp#arg2>
+              <http://www.swows.org/instance/.well-known/genid/43> ;
+      spx:functionLabel "eq" ;
+      spx:opName "=" .
+
+<http://www.swows.org/instance/.well-known/genid/110>
+      a       <http://spinrdf.org/sp#Variable> ;
+      <http://spinrdf.org/sp#varName>
+              "optionAgriAreaRate" .
+
+<http://www.swows.org/instance/.well-known/genid/314>
+      a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#Bind> ;
+      spx:expr <http://www.swows.org/instance/.well-known/genid/316> ;
+      spx:var <http://www.swows.org/instance/.well-known/genid/315> .
+
+<http://www.swows.org/instance/.well-known/genid/6>
+      a       <http://spinrdf.org/sp#Element> , spx:ElementGroup ;
+      spx:element <http://www.swows.org/instance/.well-known/genid/8> .
+
+<http://www.swows.org/instance/.well-known/genid/328>
+      a       <http://spinrdf.org/sp#Variable> ;
+      <http://spinrdf.org/sp#varName>
+              "codeISO2upper" .
+
+<http://www.swows.org/instance/.well-known/genid/100>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/instance/.well-known/genid/101> ;
+      spx:functionLabel "MD5" .
+
+<http://www.swows.org/instance/.well-known/genid/120>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/instance/.well-known/genid/81> ;
+      <http://spinrdf.org/sp#arg2>
+              <http://www.swows.org/instance/.well-known/genid/83> ;
+      spx:functionLabel "div" ;
+      spx:opName "/" .
+
+<http://www.swows.org/instance/.well-known/genid/33>
+      a       <http://spinrdf.org/sp#Element> , spx:ElementGroup ;
+      spx:element <http://www.swows.org/instance/.well-known/genid/35> .
+
+<http://www.swows.org/instance/.well-known/genid/348>
+      a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#Bind> ;
+      spx:expr <http://www.swows.org/instance/.well-known/genid/350> ;
+      spx:var <http://www.swows.org/instance/.well-known/genid/349> .
+
+<http://www.swows.org/instance/.well-known/genid/334>
+      a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#Bind> ;
+      spx:expr <http://www.swows.org/instance/.well-known/genid/336> ;
+      spx:var <http://www.swows.org/instance/.well-known/genid/335> .
+
+<http://www.swows.org/instance/.well-known/genid/297>
+      a       <http://www.swows.org/sas#TriplePattern> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.swows.org/instance/.well-known/genid/295> ;
+      <http://spinrdf.org/sp#path>
+              <http://www.swows.org/instance/.well-known/genid/298> ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/293> .
+
+<http://www.swows.org/instance/.well-known/genid/395>
+      a       <http://www.swows.org/sas#Join> , <http://www.swows.org/sas#Op> ;
+      <http://www.swows.org/sas#leftOp>
+              <http://www.swows.org/instance/.well-known/genid/396> ;
+      <http://www.swows.org/sas#name>
+              "join" ;
+      <http://www.swows.org/sas#rightOp>
+              <http://www.swows.org/instance/.well-known/genid/412> .
+
+<http://www.swows.org/instance/.well-known/genid/404>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/xml/instance#option_> ;
+      spx:functionLabel "str" .
+
+<http://www.swows.org/instance/.well-known/genid/11>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      spx:element <http://www.swows.org/instance/.well-known/genid/12> ;
+      spx:functionLabel "notexists" .
+
+<http://www.swows.org/instance/.well-known/genid/40>
+      a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePattern> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.swows.org/DOM/Events#MouseEvent> ;
+      <http://spinrdf.org/sp#predicate>
+              <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/41> .
+
+<http://www.swows.org/instance/.well-known/genid/331>
+      a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePattern> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.swows.org/instance/.well-known/genid/306> ;
+      <http://spinrdf.org/sp#predicate>
+              :id ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/330> .
+
+<http://www.swows.org/instance/.well-known/genid/146>
+      a       <http://www.swows.org/sas#TriplePattern> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.swows.org/instance/.well-known/genid/83> ;
+      <http://spinrdf.org/sp#predicate>
+              <http://www.fao.org/countryprofiles/geoinfo/geopolitical/resource/landAreaTotal> ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/75> .
+
+<http://www.swows.org/instance/.well-known/genid/21>
+      a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#NamedGraph> ;
+      spx:element <http://www.swows.org/instance/.well-known/genid/22> .
+
+<http://www.swows.org/instance/.well-known/genid/414>
+      a       <http://www.swows.org/sas#TriplePattern> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.swows.org/instance/.well-known/genid/328> ;
+      <http://spinrdf.org/sp#predicate>
+              <http://www.fao.org/countryprofiles/geoinfo/geopolitical/resource/codeISO2> ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/326> .
+
+<http://www.swows.org/instance/.well-known/genid/119>
+      a       <http://www.swows.org/sas#Assign> ;
+      <http://www.swows.org/sas#expr>
+              <http://www.swows.org/instance/.well-known/genid/120> ;
+      <http://www.swows.org/sas#variable>
+              <http://www.swows.org/instance/.well-known/genid/90> .
+
+<http://www.swows.org/instance/.well-known/genid/381>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/instance/.well-known/genid/382> ;
+      spx:functionIRI xsd:integer ;
+      spx:functionLabel "function" .
+
+<http://www.swows.org/instance/.well-known/genid/30>
+      a       <http://spinrdf.org/sp#Modify> ;
+      <http://spinrdf.org/sp#deletePattern>
+              <http://www.swows.org/instance/.well-known/genid/68> ;
+      <http://spinrdf.org/sp#insertPattern>
+              <http://www.swows.org/instance/.well-known/genid/70> ;
+      <http://spinrdf.org/sp#where>
+              <http://www.swows.org/instance/.well-known/genid/where_765bcd4abc676bed441c032f05a8363c> ;
+      <http://www.swows.org/sas#op>
+              <http://www.swows.org/instance/.well-known/genid/52> , <http://www.swows.org/instance/.well-known/genid/mainOp_f05df3a0ed4fbeba5833566b54ada113> .
+
+<http://www.swows.org/instance/.well-known/genid/50>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/instance/.well-known/genid/51> ;
+      <http://spinrdf.org/sp#arg2>
+              <http://www.swows.org/instance/.well-known/genid/46> ;
+      <http://spinrdf.org/sp#arg3>
+              "_radioBorder" ;
+      spx:functionLabel "concat" .
+
+<http://www.swows.org/instance/.well-known/genid/105>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/instance/.well-known/genid/106> ;
+      <http://spinrdf.org/sp#arg2>
+              <http://www.swows.org/instance/.well-known/genid/107> ;
+      spx:functionLabel "concat" .
+
+<http://www.swows.org/instance/.well-known/genid/80>
+      a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePattern> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.swows.org/instance/.well-known/genid/81> ;
+      <http://spinrdf.org/sp#predicate>
+              <http://www.fao.org/countryprofiles/geoinfo/geopolitical/resource/populationTotal> ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/75> .
+
+<http://www.swows.org/instance/.well-known/genid/341>
+      a       <http://spinrdf.org/sp#Element> , spx:ElementGroup ;
+      spx:element <http://www.swows.org/instance/.well-known/genid/343> .
+
+<http://www.swows.org/instance/.well-known/genid/94>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/instance/.well-known/genid/85> ;
+      <http://spinrdf.org/sp#arg2>
+              <http://www.swows.org/instance/.well-known/genid/83> ;
+      spx:functionLabel "div" ;
+      spx:opName "/" .
+
+<http://www.swows.org/instance/.well-known/genid/132>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              :optionDensity_ ;
+      spx:functionLabel "str" .
+
+<http://www.swows.org/instance/.well-known/genid/216>
+      a       <http://www.swows.org/sas#Assign> ;
+      <http://www.swows.org/sas#expr>
+              <http://www.swows.org/instance/.well-known/genid/217> ;
+      <http://www.swows.org/sas#variable>
+              <http://www.swows.org/instance/.well-known/genid/214> .
+
+<http://www.swows.org/instance/.well-known/genid/206>
+      a       <http://spinrdf.org/sp#Variable> ;
+      <http://spinrdf.org/sp#varName>
+              "country" .
+
+<http://www.swows.org/instance/.well-known/genid/5>
+      a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#NamedGraph> ;
+      <http://spinrdf.org/sp#graphNameNode>
+              _:b5 ;
+      spx:element <http://www.swows.org/instance/.well-known/genid/6> .
+
+<http://www.swows.org/instance/.well-known/genid/12>
+      a       <http://spinrdf.org/sp#Element> , spx:ElementGroup ;
+      spx:element <http://www.swows.org/instance/.well-known/genid/13> .
+
+<http://www.swows.org/instance/.well-known/genid/60>
+      a       <http://www.swows.org/sas#BGP> , <http://www.swows.org/sas#Op> ;
+      <http://www.swows.org/sas#name>
+              "bgp" ;
+      <http://www.swows.org/sas#triplePattern>
+              <http://www.swows.org/instance/.well-known/genid/61> .
+
+<http://www.swows.org/instance/.well-known/genid/302>
+      a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#NamedGraph> ;
+      <http://spinrdf.org/sp#graphNameNode>
+              _:b2 ;
+      spx:element <http://www.swows.org/instance/.well-known/genid/303> .
+
+<http://www.swows.org/instance/.well-known/genid/41>
+      a       <http://spinrdf.org/sp#Variable> ;
+      <http://spinrdf.org/sp#varName>
+              "event" .
+
+<http://www.swows.org/instance/.well-known/genid/296>
+      a       <http://www.swows.org/sas#BGP> , <http://www.swows.org/sas#Op> ;
+      <http://www.swows.org/sas#name>
+              "path" ;
+      <http://www.swows.org/sas#triplePattern>
+              <http://www.swows.org/instance/.well-known/genid/297> .
+
+<http://www.swows.org/instance/.well-known/genid/332>
+      a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePattern> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.swows.org/instance/.well-known/genid/333> ;
+      <http://spinrdf.org/sp#predicate>
+              :value ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/330> .
+
+<http://www.swows.org/instance/.well-known/genid/10>
+      a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#Filter> ;
+      spx:expr <http://www.swows.org/instance/.well-known/genid/11> .
+
+<http://www.swows.org/instance/.well-known/genid/396>
+      a       <http://www.swows.org/sas#Op> , <http://www.swows.org/sas#Extend> ;
+      <http://www.swows.org/sas#extension>
+              <http://www.swows.org/instance/.well-known/genid/397> , <http://www.swows.org/instance/.well-known/genid/401> ;
+      <http://www.swows.org/sas#name>
+              "extend" ;
+      <http://www.swows.org/sas#subOp>
+              <http://www.swows.org/instance/.well-known/genid/405> .
+
+<http://www.swows.org/instance/.well-known/genid/145>
+      a       <http://www.swows.org/sas#TriplePattern> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.swows.org/instance/.well-known/genid/81> ;
+      <http://spinrdf.org/sp#predicate>
+              <http://www.fao.org/countryprofiles/geoinfo/geopolitical/resource/populationTotal> ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/75> .
+
+<http://www.swows.org/instance/.well-known/genid/405>
+      a       <http://www.swows.org/sas#Join> , <http://www.swows.org/sas#Op> ;
+      <http://www.swows.org/sas#leftOp>
+              <http://www.swows.org/instance/.well-known/genid/406> ;
+      <http://www.swows.org/sas#name>
+              "join" ;
+      <http://www.swows.org/sas#rightOp>
+              <http://www.swows.org/instance/.well-known/genid/409> .
+
+<http://www.swows.org/instance/.well-known/genid/20>
+      a       <http://spinrdf.org/sp#Element> , spx:ElementGroup ;
+      spx:element <http://www.swows.org/instance/.well-known/genid/21> .
+
+<http://www.swows.org/instance/.well-known/genid/382>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/instance/.well-known/genid/383> ;
+      spx:functionLabel "round" .
+
+<http://www.swows.org/instance/.well-known/genid/415>
+      a       <http://www.swows.org/sas#TriplePattern> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.swows.org/instance/.well-known/genid/330> ;
+      <http://spinrdf.org/sp#predicate>
+              :option ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/326> .
+
+<http://www.swows.org/instance/.well-known/genid/106>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              :optionDensity_ ;
+      spx:functionLabel "str" .
+
+<http://www.swows.org/instance/.well-known/genid/282>
+      a       df:NamedGraph .
+
+<http://www.swows.org/instance/.well-known/genid/51>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/xml/instance#option_> ;
+      spx:functionLabel "str" .
+
+<http://www.swows.org/instance/.well-known/genid/131>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/instance/.well-known/genid/132> ;
+      <http://spinrdf.org/sp#arg2>
+              <http://www.swows.org/instance/.well-known/genid/133> ;
+      spx:functionLabel "concat" .
+
+<http://www.swows.org/instance/.well-known/genid/217>
+      a       <http://spinrdf.org/sp#Variable> ;
+      <http://spinrdf.org/sp#varName>
+              ".0" .
+
+<http://www.swows.org/instance/.well-known/genid/159>
+      a       <http://spinrdf.org/sp#TripleTemplate> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.swows.org/instance/.well-known/genid/93> ;
+      <http://spinrdf.org/sp#predicate>
+              :value ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/110> .
+
+<http://www.swows.org/instance/.well-known/genid/95>
+      a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#Bind> ;
+      spx:expr <http://www.swows.org/instance/.well-known/genid/97> ;
+      spx:var <http://www.swows.org/instance/.well-known/genid/96> .
+
+<http://www.swows.org/instance/.well-known/genid/207>
+      a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePattern> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.swows.org/instance/.well-known/genid/208> ;
+      <http://spinrdf.org/sp#predicate>
+              :option ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/206> .
+
+<http://www.swows.org/instance/.well-known/genid/81>
+      a       <http://spinrdf.org/sp#Variable> ;
+      <http://spinrdf.org/sp#varName>
+              "pop" .
+
+<http://www.swows.org/instance/.well-known/genid/301>
+      a       <http://spinrdf.org/sp#Element> , spx:ElementGroup ;
+      spx:element <http://www.swows.org/instance/.well-known/genid/332> , <http://www.swows.org/instance/.well-known/genid/314> , <http://www.swows.org/instance/.well-known/genid/331> , <http://www.swows.org/instance/.well-known/genid/327> , <http://www.swows.org/instance/.well-known/genid/307> , <http://www.swows.org/instance/.well-known/genid/325> , <http://www.swows.org/instance/.well-known/genid/312> , <http://www.swows.org/instance/.well-known/genid/348> , <http://www.swows.org/instance/.well-known/genid/319> , <http://www.swows.org/instance/.well-known/genid/345> , <http://www.swows.org/instance/.well-known/genid/356> , <http://www.swows.org/instance/.well-known/genid/364> , <http://www.swows.org/instance/.well-known/genid/334> , <http://www.swows.org/instance/.well-known/genid/340> , <http://www.swows.org/instance/.well-known/genid/302> , <http://www.swows.org/instance/.well-known/genid/329> .
+
+<http://www.swows.org/instance/.well-known/genid/where_e427ade9e382207c08fcb45d8333929c>
+      a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#NamedGraph> ;
+      <http://spinrdf.org/sp#graphNameNode>
+              _:b4 .
+
+<http://www.swows.org/instance/.well-known/genid/61>
+      a       <http://www.swows.org/sas#TriplePattern> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.swows.org/instance/.well-known/genid/36> ;
+      <http://spinrdf.org/sp#predicate>
+              :selectedOption ;
+      <http://spinrdf.org/sp#subject>
+              swi:GraphRoot .
+
+<http://www.swows.org/instance/.well-known/genid/144>
+      a       <http://www.swows.org/sas#TriplePattern> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.swows.org/instance/.well-known/genid/79> ;
+      <http://spinrdf.org/sp#predicate>
+              <http://www.fao.org/countryprofiles/geoinfo/geopolitical/resource/GDPTotalInCurrentPrices> ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/75> .
+
+<http://www.swows.org/instance/.well-known/genid/416>
+      a       <http://www.swows.org/sas#TriplePattern> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.swows.org/instance/.well-known/genid/306> ;
+      <http://spinrdf.org/sp#predicate>
+              :id ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/330> .
+
+<http://www.swows.org/instance/.well-known/genid/402>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/instance/.well-known/genid/403> ;
+      spx:functionLabel "uri" .
+
+<http://www.swows.org/instance/.well-known/genid/393>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/xml/instance#> ;
+      spx:functionLabel "str" .
+
+<http://www.swows.org/instance/.well-known/genid/42>
+      a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePattern> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.swows.org/instance/.well-known/genid/43> ;
+      <http://spinrdf.org/sp#predicate>
+              <http://www.swows.org/DOM/Events#target> ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/41> .
+
+<http://www.swows.org/instance/.well-known/genid/134>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/instance/.well-known/genid/75> ;
+      spx:functionLabel "str" .
+
+<http://www.swows.org/instance/.well-known/genid/383>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/instance/.well-known/genid/384> ;
+      spx:functionIRI xsd:decimal ;
+      spx:functionLabel "function" .
+
+<http://www.swows.org/instance/.well-known/genid/343>
+      a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePattern> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.swows.org/instance/.well-known/genid/344> ;
+      <http://spinrdf.org/sp#predicate>
+              :descendantOrSelf ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/335> .
+
+_:b7  a       <http://spinrdf.org/sp#Construct> , <http://spinrdf.org/sp#Query> ;
+      <http://spinrdf.org/sp#op>
+              <http://www.swows.org/instance/.well-known/genid/mainOp_f1230792b9253e20f4595525e1e0c0d6> ;
+      <http://spinrdf.org/sp#templates>
+              <http://www.swows.org/instance/.well-known/genid/148> ;
+      <http://spinrdf.org/sp#where>
+              <http://www.swows.org/instance/.well-known/genid/where_3b0faa8849ce61d64be9e88ea48531a1> .
+
+<http://www.swows.org/instance/.well-known/genid/24>
+      a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePattern> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.swows.org/instance/.well-known/genid/17> ;
+      <http://spinrdf.org/sp#predicate>
+              :selectedOption ;
+      <http://spinrdf.org/sp#subject>
+              swi:GraphRoot .
+
+<http://www.swows.org/instance/.well-known/genid/103>
+      a       <http://spinrdf.org/sp#Variable> ;
+      <http://spinrdf.org/sp#varName>
+              "optionDensity" .
+
+<http://www.swows.org/instance/.well-known/genid/92>
+      a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#Bind> ;
+      spx:expr <http://www.swows.org/instance/.well-known/genid/94> ;
+      spx:var <http://www.swows.org/instance/.well-known/genid/93> .
+
+<http://www.swows.org/instance/.well-known/genid/281>
+      a       <http://spinrdf.org/sp#Construct> , <http://spinrdf.org/sp#Query> ;
+      <http://spinrdf.org/sp#op>
+              <http://www.swows.org/instance/.well-known/genid/mainOp_74a7f226de987702713e40dfc26e7ffc> ;
+      <http://spinrdf.org/sp#templates>
+              <http://www.swows.org/instance/.well-known/genid/421> ;
+      <http://spinrdf.org/sp#where>
+              <http://www.swows.org/instance/.well-known/genid/where_cbea8b80f239af06bf803ec6b80dcfbb> .
+
+<http://www.swows.org/instance/.well-known/genid/299>
+      a       spx:TripleTemplateSet ;
+      spx:triple <http://www.swows.org/instance/.well-known/genid/300> .
+
+<http://www.swows.org/instance/.well-known/genid/62>
+      a       <http://www.swows.org/sas#Graph> , <http://www.swows.org/sas#Op> ;
+      <http://www.swows.org/sas#graphNameNode>
+              swi:mouseEvents , _:b6 ;
+      <http://www.swows.org/sas#name>
+              "graph" ;
+      <http://www.swows.org/sas#subOp>
+              <http://www.swows.org/instance/.well-known/genid/63> .
+
+<http://www.swows.org/instance/.well-known/genid/3>
+      a       <http://spinrdf.org/sp#Modify> ;
+      <http://spinrdf.org/sp#insertPattern>
+              <http://www.swows.org/instance/.well-known/genid/28> ;
+      <http://spinrdf.org/sp#where>
+              <http://www.swows.org/instance/.well-known/genid/where_e427ade9e382207c08fcb45d8333929c> ;
+      <http://www.swows.org/sas#op>
+              <http://www.swows.org/instance/.well-known/genid/mainOp_40f7dc02743f04ea3f64825bc553dab4> , <http://www.swows.org/instance/.well-known/genid/18> .
+
+<http://www.swows.org/instance/.well-known/genid/271>
+      a       <http://spinrdf.org/sp#TripleTemplate> ;
+      <http://spinrdf.org/sp#object>
+              :Country ;
+      <http://spinrdf.org/sp#predicate>
+              <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/163> .
+
+<http://www.swows.org/instance/.well-known/genid/218>
+      a       <http://www.swows.org/sas#Op> , <http://www.swows.org/sas#Group> ;
+      <http://spinrdf.org/sp#groupBy>
+              <http://www.swows.org/instance/.well-known/genid/219> ;
+      <http://www.swows.org/sas#name>
+              "group" ;
+      <http://www.swows.org/sas#subOp>
+              <http://www.swows.org/instance/.well-known/genid/220> .
+
+<http://www.swows.org/instance/.well-known/genid/82>
+      a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePattern> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.swows.org/instance/.well-known/genid/83> ;
+      <http://spinrdf.org/sp#predicate>
+              <http://www.fao.org/countryprofiles/geoinfo/geopolitical/resource/landAreaTotal> ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/75> .
+
+<http://www.swows.org/instance/.well-known/genid/394>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/instance/.well-known/genid/328> ;
+      spx:functionLabel "lcase" .
+
+<http://www.swows.org/instance/.well-known/genid/417>
+      a       <http://www.swows.org/sas#TriplePattern> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.swows.org/instance/.well-known/genid/333> ;
+      <http://spinrdf.org/sp#predicate>
+              :value ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/330> .
+
+<http://www.swows.org/instance/.well-known/genid/403>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/instance/.well-known/genid/404> ;
+      <http://spinrdf.org/sp#arg2>
+              <http://www.swows.org/instance/.well-known/genid/311> ;
+      <http://spinrdf.org/sp#arg3>
+              "_radioBorder" ;
+      spx:functionLabel "concat" .
+
+<http://www.swows.org/instance/.well-known/genid/43>
+      a       <http://spinrdf.org/sp#Variable> ;
+      <http://spinrdf.org/sp#varName>
+              "eventTarget" .
+
+<http://www.swows.org/instance/.well-known/genid/22>
+      a       <http://spinrdf.org/sp#Element> , spx:ElementGroup ;
+      spx:element <http://www.swows.org/instance/.well-known/genid/24> .
+
+<http://www.swows.org/instance/.well-known/genid/384>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/instance/.well-known/genid/385> ;
+      <http://spinrdf.org/sp#arg2>
+              255 ;
+      spx:functionLabel "mul" ;
+      spx:opName "*" .
+
+<http://www.swows.org/instance/.well-known/genid/344>
+      a       <http://spinrdf.org/sp#Variable> ;
+      <http://spinrdf.org/sp#varName>
+              "country_elementOrDescendant" .
+
+<http://www.swows.org/instance/.well-known/genid/133>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/instance/.well-known/genid/134> ;
+      spx:functionLabel "MD5" .
+
+<http://www.swows.org/instance/.well-known/genid/93>
+      a       <http://spinrdf.org/sp#Variable> ;
+      <http://spinrdf.org/sp#varName>
+              "agriAreaRate" .
+
+<http://www.swows.org/instance/.well-known/genid/104>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/instance/.well-known/genid/105> ;
+      spx:functionLabel "uri" .
+
+<http://www.swows.org/instance/.well-known/genid/280>
+      a       df:ImportedGraph ;
+      df:uri  <file:///home/miguel/git/WorldInfo/svg/BlankMapWithRadioBox.svg> .
+
+<http://www.swows.org/instance/.well-known/genid/270>
+      a       spx:TripleTemplateSet ;
+      spx:triple <http://www.swows.org/instance/.well-known/genid/273> , <http://www.swows.org/instance/.well-known/genid/272> , <http://www.swows.org/instance/.well-known/genid/274> , <http://www.swows.org/instance/.well-known/genid/275> , <http://www.swows.org/instance/.well-known/genid/271> .
+
+<http://www.swows.org/instance/.well-known/genid/303>
+      a       <http://spinrdf.org/sp#Element> , spx:ElementGroup ;
+      spx:element <http://www.swows.org/instance/.well-known/genid/305> .
+
+<http://www.swows.org/instance/.well-known/genid/298>
+      a       <http://spinrdf.org/sp#Path> , <http://spinrdf.org/sp#ModPath> ;
+      <http://spinrdf.org/sp#modMax>
+              -1 ;
+      <http://spinrdf.org/sp#subPath>
+              xml:hasChild .
+
+<http://www.swows.org/instance/.well-known/genid/63>
+      a       <http://www.swows.org/sas#BGP> , <http://www.swows.org/sas#Op> ;
+      <http://www.swows.org/sas#name>
+              "bgp" ;
+      <http://www.swows.org/sas#triplePattern>
+              <http://www.swows.org/instance/.well-known/genid/65> , <http://www.swows.org/instance/.well-known/genid/64> .
+
+<http://www.swows.org/instance/.well-known/genid/205>
+      a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePattern> ;
+      <http://spinrdf.org/sp#object>
+              :Country ;
+      <http://spinrdf.org/sp#predicate>
+              <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/206> .
+
+<http://www.swows.org/instance/.well-known/genid/143>
+      a       <http://www.swows.org/sas#TriplePattern> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.swows.org/instance/.well-known/genid/77> ;
+      <http://spinrdf.org/sp#predicate>
+              <http://www.fao.org/countryprofiles/geoinfo/geopolitical/resource/codeISO2> ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/75> .
+
+<http://www.swows.org/instance/.well-known/genid/219>
+      <http://spinrdf.org/sp#as>
+              <http://www.swows.org/instance/.well-known/genid/169> .
+
+<http://www.swows.org/instance/.well-known/genid/83>
+      a       <http://spinrdf.org/sp#Variable> ;
+      <http://spinrdf.org/sp#varName>
+              "landArea" .
+
+<http://www.swows.org/instance/.well-known/genid/330>
+      a       <http://spinrdf.org/sp#Variable> ;
+      <http://spinrdf.org/sp#varName>
+              "option" .
+
+<http://www.swows.org/instance/.well-known/genid/408>
+      a       <http://www.swows.org/sas#TriplePattern> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.swows.org/instance/.well-known/genid/306> ;
+      <http://spinrdf.org/sp#predicate>
+              :selectedOption ;
+      <http://spinrdf.org/sp#subject>
+              swi:GraphRoot .
+
+<http://www.swows.org/instance/.well-known/genid/129>
+      a       <http://www.swows.org/sas#Assign> ;
+      <http://www.swows.org/sas#expr>
+              <http://www.swows.org/instance/.well-known/genid/130> ;
+      <http://www.swows.org/sas#variable>
+              <http://www.swows.org/instance/.well-known/genid/103> .
+
+<http://www.swows.org/instance/.well-known/genid/136>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/instance/.well-known/genid/137> ;
+      spx:functionLabel "uri" .
+
+<http://www.swows.org/instance/.well-known/genid/391>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/instance/.well-known/genid/392> ;
+      spx:functionLabel "uri" .
+
+<http://www.swows.org/instance/.well-known/genid/mainOp_f05df3a0ed4fbeba5833566b54ada113>
+      a       <http://www.swows.org/sas#Graph> , <http://www.swows.org/sas#Op> ;
+      <http://www.swows.org/sas#graphNameNode>
+              _:b4 ;
+      <http://www.swows.org/sas#subOp>
+              <http://www.swows.org/instance/.well-known/genid/52> .
+
+<http://www.swows.org/instance/.well-known/genid/mainOp_f1230792b9253e20f4595525e1e0c0d6>
+      a       <http://www.swows.org/sas#Graph> , <http://www.swows.org/sas#Op> ;
+      <http://www.swows.org/sas#graphNameNode>
+              _:b3 ;
+      <http://www.swows.org/sas#subOp>
+              <http://www.swows.org/instance/.well-known/genid/116> .
+
+<http://www.swows.org/instance/.well-known/genid/115>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/instance/.well-known/genid/75> ;
+      spx:functionLabel "str" .
+
+<http://www.swows.org/instance/.well-known/genid/418>
+      a       <http://www.swows.org/sas#Graph> , <http://www.swows.org/sas#Op> ;
+      <http://www.swows.org/sas#graphNameNode>
+              :descendants , <http://www.swows.org/instance/.well-known/genid/279> ;
+      <http://www.swows.org/sas#name>
+              "graph" ;
+      <http://www.swows.org/sas#subOp>
+              <http://www.swows.org/instance/.well-known/genid/419> .
+
+<http://www.swows.org/instance/.well-known/genid/293>
+      a       <http://spinrdf.org/sp#Variable> ;
+      <http://spinrdf.org/sp#varName>
+              "node" .
+
+<http://www.swows.org/instance/.well-known/genid/90>
+      a       <http://spinrdf.org/sp#Variable> ;
+      <http://spinrdf.org/sp#varName>
+              "density" .
+
+<http://www.swows.org/instance/.well-known/genid/273>
+      a       <http://spinrdf.org/sp#TripleTemplate> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.swows.org/instance/.well-known/genid/167> ;
+      <http://spinrdf.org/sp#predicate>
+              :option ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/163> .
+
+<http://www.swows.org/instance/.well-known/genid/64>
+      a       <http://www.swows.org/sas#TriplePattern> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.swows.org/DOM/Events#MouseEvent> ;
+      <http://spinrdf.org/sp#predicate>
+              <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/41> .
+
+<http://www.swows.org/instance/.well-known/genid/109>
+      a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#Bind> ;
+      spx:expr <http://www.swows.org/instance/.well-known/genid/111> ;
+      spx:var <http://www.swows.org/instance/.well-known/genid/110> .
+
+<http://www.swows.org/instance/.well-known/genid/16>
+      a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePattern> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.swows.org/instance/.well-known/genid/17> ;
+      <http://spinrdf.org/sp#predicate>
+              :selectedOption ;
+      <http://spinrdf.org/sp#subject>
+              swi:GraphRoot .
+
+<http://www.swows.org/instance/.well-known/genid/371>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              255 ;
+      spx:functionLabel "str" .
+
+<http://www.swows.org/instance/.well-known/genid/202>
+      a       <http://spinrdf.org/sp#Select> , <http://spinrdf.org/sp#Query> ;
+      <http://spinrdf.org/sp#groupBy>
+              <http://www.swows.org/instance/.well-known/genid/229> ;
+      <http://spinrdf.org/sp#where>
+              <http://www.swows.org/instance/.well-known/genid/203> ;
+      <http://www.swows.org/sas#op>
+              <http://www.swows.org/instance/.well-known/genid/213> ;
+      spx:resultVariable <http://www.swows.org/instance/.well-known/genid/226> , <http://www.swows.org/instance/.well-known/genid/225> .
+
+<http://www.swows.org/instance/.well-known/genid/156>
+      a       <http://spinrdf.org/sp#TripleTemplate> ;
+      <http://spinrdf.org/sp#object>
+              "density"^^xsd:string ;
+      <http://spinrdf.org/sp#predicate>
+              :id ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/103> .
+
+<http://www.swows.org/instance/.well-known/genid/212>
+      a       <http://spinrdf.org/sp#Variable> ;
+      <http://spinrdf.org/sp#varName>
+              "value" .
+
+<http://www.swows.org/instance/.well-known/genid/54>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/instance/.well-known/genid/55> ;
+      spx:functionLabel "uri" .
+
+<http://www.swows.org/instance/.well-known/genid/26>
+      a       <http://www.swows.org/sas#BGP> , <http://www.swows.org/sas#Op> ;
+      <http://www.swows.org/sas#name>
+              "bgp" ;
+      <http://www.swows.org/sas#triplePattern>
+              <http://www.swows.org/instance/.well-known/genid/27> .
+
+<http://www.swows.org/instance/.well-known/genid/135>
+      a       <http://www.swows.org/sas#Assign> ;
+      <http://www.swows.org/sas#expr>
+              <http://www.swows.org/instance/.well-known/genid/136> ;
+      <http://www.swows.org/sas#variable>
+              <http://www.swows.org/instance/.well-known/genid/110> .
+
+<http://www.swows.org/instance/.well-known/genid/56>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/xml/instance#option_> ;
+      spx:functionLabel "str" .
+
+<http://www.swows.org/instance/.well-known/genid/409>
+      a       <http://www.swows.org/sas#Graph> , <http://www.swows.org/sas#Op> ;
+      <http://www.swows.org/sas#graphNameNode>
+              _:b4 , :config ;
+      <http://www.swows.org/sas#name>
+              "graph" ;
+      <http://www.swows.org/sas#subOp>
+              <http://www.swows.org/instance/.well-known/genid/410> .
+
+<http://www.swows.org/instance/.well-known/genid/392>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/instance/.well-known/genid/393> ;
+      <http://spinrdf.org/sp#arg2>
+              <http://www.swows.org/instance/.well-known/genid/394> ;
+      spx:functionLabel "concat" .
+
+<http://www.swows.org/instance/.well-known/genid/149>
+      a       <http://spinrdf.org/sp#TripleTemplate> ;
+      <http://spinrdf.org/sp#object>
+              :Country ;
+      <http://spinrdf.org/sp#predicate>
+              <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/75> .
+
+<http://www.swows.org/instance/.well-known/genid/292>
+      a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePath> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.swows.org/instance/.well-known/genid/295> ;
+      <http://spinrdf.org/sp#path>
+              <http://www.swows.org/instance/.well-known/genid/294> ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/293> .
+
+<http://www.swows.org/instance/.well-known/genid/419>
+      a       <http://www.swows.org/sas#BGP> , <http://www.swows.org/sas#Op> ;
+      <http://www.swows.org/sas#name>
+              "bgp" ;
+      <http://www.swows.org/sas#triplePattern>
+              <http://www.swows.org/instance/.well-known/genid/420> .
+
+<http://www.swows.org/instance/.well-known/genid/116>
+      a       <http://www.swows.org/sas#Op> , <http://www.swows.org/sas#Extend> ;
+      <http://www.swows.org/sas#extension>
+              <http://www.swows.org/instance/.well-known/genid/135> , <http://www.swows.org/instance/.well-known/genid/129> , <http://www.swows.org/instance/.well-known/genid/121> , <http://www.swows.org/instance/.well-known/genid/119> , <http://www.swows.org/instance/.well-known/genid/123> , <http://www.swows.org/instance/.well-known/genid/117> ;
+      <http://www.swows.org/sas#name>
+              "extend" ;
+      <http://www.swows.org/sas#subOp>
+              <http://www.swows.org/instance/.well-known/genid/141> .
+
+<http://www.swows.org/instance/.well-known/genid/65>
+      a       <http://www.swows.org/sas#TriplePattern> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.swows.org/instance/.well-known/genid/43> ;
+      <http://spinrdf.org/sp#predicate>
+              <http://www.swows.org/DOM/Events#target> ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/41> .
+
+<http://www.swows.org/instance/.well-known/genid/203>
+      a       <http://spinrdf.org/sp#Element> , spx:ElementGroup ;
+      spx:element <http://www.swows.org/instance/.well-known/genid/211> , <http://www.swows.org/instance/.well-known/genid/207> , <http://www.swows.org/instance/.well-known/genid/205> , <http://www.swows.org/instance/.well-known/genid/209> .
+
+<http://www.swows.org/instance/.well-known/genid/272>
+      a       <http://spinrdf.org/sp#TripleTemplate> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.swows.org/instance/.well-known/genid/165> ;
+      <http://spinrdf.org/sp#predicate>
+              <http://www.fao.org/countryprofiles/geoinfo/geopolitical/resource/codeISO2> ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/163> .
+
+<http://www.swows.org/instance/.well-known/genid/91>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/instance/.well-known/genid/81> ;
+      <http://spinrdf.org/sp#arg2>
+              <http://www.swows.org/instance/.well-known/genid/83> ;
+      spx:functionLabel "div" ;
+      spx:opName "/" .
+
+<http://www.swows.org/instance/.well-known/genid/372>
+      a       <http://www.swows.org/sas#Assign> ;
+      <http://www.swows.org/sas#expr>
+              <http://www.swows.org/instance/.well-known/genid/373> ;
+      <http://www.swows.org/sas#variable>
+              <http://www.swows.org/instance/.well-known/genid/349> .
+
+<http://www.swows.org/instance/.well-known/genid/169>
+      a       <http://spinrdf.org/sp#Variable> ;
+      <http://spinrdf.org/sp#varName>
+              "optionId" .
+
+<http://www.swows.org/instance/.well-known/genid/213>
+      a       <http://www.swows.org/sas#Project> , <http://www.swows.org/sas#Op> ;
+      <http://www.swows.org/sas#name>
+              "project" ;
+      <http://www.swows.org/sas#subOp>
+              <http://www.swows.org/instance/.well-known/genid/215> ;
+      <http://www.swows.org/sas#variable>
+              <http://www.swows.org/instance/.well-known/genid/210> , <http://www.swows.org/instance/.well-known/genid/214> .
+
+<http://www.swows.org/instance/.well-known/genid/155>
+      a       <http://spinrdf.org/sp#TripleTemplate> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.swows.org/instance/.well-known/genid/87> ;
+      <http://spinrdf.org/sp#predicate>
+              :value ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/96> .
+
+<http://www.swows.org/instance/.well-known/genid/25>
+      a       <http://www.swows.org/sas#Graph> , <http://www.swows.org/sas#Op> ;
+      <http://www.swows.org/sas#graphNameNode>
+              _:b5 , :startingOption ;
+      <http://www.swows.org/sas#name>
+              "graph" ;
+      <http://www.swows.org/sas#subOp>
+              <http://www.swows.org/instance/.well-known/genid/26> .
+
+<http://www.swows.org/instance/.well-known/genid/55>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/instance/.well-known/genid/56> ;
+      <http://spinrdf.org/sp#arg2>
+              <http://www.swows.org/instance/.well-known/genid/46> ;
+      <http://spinrdf.org/sp#arg3>
+              "_radioBorder" ;
+      spx:functionLabel "concat" .
+
+<http://www.swows.org/instance/.well-known/genid/138>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              :optionAgriAreaRate_ ;
+      spx:functionLabel "str" .
+
+[]    a       df:NamedGraph .
+
+<http://www.swows.org/instance/.well-known/genid/127>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/instance/.well-known/genid/128> ;
+      spx:functionLabel "MD5" .
+
+<http://www.swows.org/instance/.well-known/genid/406>
+      a       <http://www.swows.org/sas#Graph> , <http://www.swows.org/sas#Op> ;
+      <http://www.swows.org/sas#graphNameNode>
+              :selectedOption , _:b2 ;
+      <http://www.swows.org/sas#name>
+              "graph" ;
+      <http://www.swows.org/sas#subOp>
+              <http://www.swows.org/instance/.well-known/genid/407> .
+
+<http://www.swows.org/instance/.well-known/genid/117>
+      a       <http://www.swows.org/sas#Assign> ;
+      <http://www.swows.org/sas#expr>
+              <http://www.swows.org/instance/.well-known/genid/118> ;
+      <http://www.swows.org/sas#variable>
+              <http://www.swows.org/instance/.well-known/genid/87> .
+
+<http://www.swows.org/instance/.well-known/genid/67>
+      a       <http://www.swows.org/sas#TriplePattern> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.swows.org/instance/.well-known/genid/46> ;
+      <http://spinrdf.org/sp#predicate>
+              :possibleOption ;
+      <http://spinrdf.org/sp#subject>
+              swi:GraphRoot .
+
+<http://www.swows.org/instance/.well-known/genid/295>
+      a       <http://spinrdf.org/sp#Variable> ;
+      <http://spinrdf.org/sp#varName>
+              "descendantOrSelf" .
+
+<http://www.swows.org/instance/.well-known/genid/148>
+      a       spx:TripleTemplateSet ;
+      spx:triple <http://www.swows.org/instance/.well-known/genid/151> , <http://www.swows.org/instance/.well-known/genid/152> , <http://www.swows.org/instance/.well-known/genid/154> , <http://www.swows.org/instance/.well-known/genid/159> , <http://www.swows.org/instance/.well-known/genid/153> , <http://www.swows.org/instance/.well-known/genid/156> , <http://www.swows.org/instance/.well-known/genid/150> , <http://www.swows.org/instance/.well-known/genid/149> , <http://www.swows.org/instance/.well-known/genid/155> , <http://www.swows.org/instance/.well-known/genid/157> , <http://www.swows.org/instance/.well-known/genid/158> .
+
+<http://www.swows.org/instance/.well-known/genid/426>
+      a       <http://spinrdf.org/sp#TripleTemplate> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.swows.org/instance/.well-known/genid/365> ;
+      <http://spinrdf.org/sp#predicate>
+              <http://www.swows.org/xml/no-namespacestyle> ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/344> .
+
+<http://www.swows.org/instance/.well-known/genid/200>
+      <http://spinrdf.org/sp#as>
+              <http://www.swows.org/instance/.well-known/genid/169> .
+
+<http://www.swows.org/instance/.well-known/genid/168>
+      a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePattern> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.swows.org/instance/.well-known/genid/169> ;
+      <http://spinrdf.org/sp#predicate>
+              :id ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/167> .
+
+<http://www.swows.org/instance/.well-known/genid/14>
+      a       <http://spinrdf.org/sp#Element> , spx:ElementGroup ;
+      spx:element <http://www.swows.org/instance/.well-known/genid/16> .
+
+<http://www.swows.org/instance/.well-known/genid/300>
+      a       <http://spinrdf.org/sp#TripleTemplate> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.swows.org/instance/.well-known/genid/295> ;
+      <http://spinrdf.org/sp#predicate>
+              :descendantOrSelf ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/293> .
+
+<http://www.swows.org/instance/.well-known/genid/66>
+      a       <http://www.swows.org/sas#BGP> , <http://www.swows.org/sas#Op> ;
+      <http://www.swows.org/sas#name>
+              "bgp" ;
+      <http://www.swows.org/sas#triplePattern>
+              <http://www.swows.org/instance/.well-known/genid/67> .
+
+<http://www.swows.org/instance/.well-known/genid/275>
+      a       <http://spinrdf.org/sp#TripleTemplate> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.swows.org/instance/.well-known/genid/231> ;
+      <http://spinrdf.org/sp#predicate>
+              :value ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/167> .
+
+<http://www.swows.org/instance/.well-known/genid/214>
+      a       <http://spinrdf.org/sp#Variable> ;
+      <http://spinrdf.org/sp#varName>
+              "minValue" .
+
+<http://www.swows.org/instance/.well-known/genid/52>
+      a       <http://www.swows.org/sas#Filter> , <http://www.swows.org/sas#Op> ;
+      <http://www.swows.org/sas#expr>
+              <http://www.swows.org/instance/.well-known/genid/53> ;
+      <http://www.swows.org/sas#name>
+              "filter" ;
+      <http://www.swows.org/sas#subOp>
+              <http://www.swows.org/instance/.well-known/genid/57> .
+
+<http://www.swows.org/instance/.well-known/genid/107>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/instance/.well-known/genid/108> ;
+      spx:functionLabel "MD5" .
+
+<http://www.swows.org/instance/.well-known/genid/158>
+      a       <http://spinrdf.org/sp#TripleTemplate> ;
+      <http://spinrdf.org/sp#object>
+              "agriAreaRate"^^xsd:string ;
+      <http://spinrdf.org/sp#predicate>
+              :id ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/110> .
+
+<http://www.swows.org/instance/.well-known/genid/28>
+      spx:triple <http://www.swows.org/instance/.well-known/genid/29> .
+
+_:b4  a       df:ImportedGraph ;
+      df:uri  <file:///home/miguel/git/WorldInfo/dataflow/config.n3> .
+
+<http://www.swows.org/instance/.well-known/genid/380>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/instance/.well-known/genid/381> ;
+      spx:functionLabel "str" .
+
+<http://www.swows.org/instance/.well-known/genid/137>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/instance/.well-known/genid/138> ;
+      <http://spinrdf.org/sp#arg2>
+              <http://www.swows.org/instance/.well-known/genid/139> ;
+      spx:functionLabel "concat" .
+
+<http://www.swows.org/instance/.well-known/genid/128>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/instance/.well-known/genid/75> ;
+      spx:functionLabel "str" .
+
+<http://www.swows.org/instance/.well-known/genid/407>
+      a       <http://www.swows.org/sas#BGP> , <http://www.swows.org/sas#Op> ;
+      <http://www.swows.org/sas#name>
+              "bgp" ;
+      <http://www.swows.org/sas#triplePattern>
+              <http://www.swows.org/instance/.well-known/genid/408> .
+
+<http://www.swows.org/instance/.well-known/genid/68>
+      spx:triple <http://www.swows.org/instance/.well-known/genid/69> .
+
+<http://www.swows.org/instance/.well-known/genid/118>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/instance/.well-known/genid/79> ;
+      <http://spinrdf.org/sp#arg2>
+              <http://www.swows.org/instance/.well-known/genid/81> ;
+      spx:functionLabel "div" ;
+      spx:opName "/" .
+
+<http://www.swows.org/instance/.well-known/genid/147>
+      a       <http://www.swows.org/sas#TriplePattern> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.swows.org/instance/.well-known/genid/85> ;
+      <http://spinrdf.org/sp#predicate>
+              <http://www.fao.org/countryprofiles/geoinfo/geopolitical/resource/agriculturalAreaTotal> ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/75> .
+
+<http://www.swows.org/instance/.well-known/genid/mainOp_e9d2b5246e4abf5fc0ef7e01b8bad720>
+      a       <http://www.swows.org/sas#Graph> , <http://www.swows.org/sas#Op> ;
+      <http://www.swows.org/sas#graphNameNode>
+              _:b7 ;
+      <http://www.swows.org/sas#subOp>
+              <http://www.swows.org/instance/.well-known/genid/235> .
+
+<http://www.swows.org/instance/.well-known/genid/390>
+      a       <http://www.swows.org/sas#Assign> ;
+      <http://www.swows.org/sas#expr>
+              <http://www.swows.org/instance/.well-known/genid/391> ;
+      <http://www.swows.org/sas#variable>
+              <http://www.swows.org/instance/.well-known/genid/335> .
+
+<http://www.swows.org/instance/.well-known/genid/294>
+      a       <http://spinrdf.org/sp#Path> , <http://spinrdf.org/sp#ModPath> ;
+      <http://spinrdf.org/sp#modMax>
+              -1 ;
+      <http://spinrdf.org/sp#subPath>
+              xml:hasChild .
+
+<http://www.swows.org/instance/.well-known/genid/201>
+      a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#SubQuery> ;
+      <http://spinrdf.org/sp#query>
+              <http://www.swows.org/instance/.well-known/genid/202> .
+
+<http://www.swows.org/instance/.well-known/genid/167>
+      a       <http://spinrdf.org/sp#Variable> ;
+      <http://spinrdf.org/sp#varName>
+              "option" .
+
+<http://www.swows.org/instance/.well-known/genid/108>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/instance/.well-known/genid/75> ;
+      spx:functionLabel "str" .
+
+<http://www.swows.org/instance/.well-known/genid/274>
+      a       <http://spinrdf.org/sp#TripleTemplate> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.swows.org/instance/.well-known/genid/169> ;
+      <http://spinrdf.org/sp#predicate>
+              :id ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/167> .
+
+<http://www.swows.org/instance/.well-known/genid/179>
+      a       <http://spinrdf.org/sp#Variable> ;
+      <http://spinrdf.org/sp#varName>
+              "option" .
+
+<http://www.swows.org/instance/.well-known/genid/13>
+      a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#NamedGraph> ;
+      spx:element <http://www.swows.org/instance/.well-known/genid/14> .
+
+<http://www.swows.org/instance/.well-known/genid/370>
+      a       <http://www.swows.org/sas#Assign> ;
+      <http://www.swows.org/sas#expr>
+              <http://www.swows.org/instance/.well-known/genid/371> ;
+      <http://www.swows.org/sas#variable>
+              <http://www.swows.org/instance/.well-known/genid/346> .
+
+<http://www.swows.org/instance/.well-known/genid/53>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/instance/.well-known/genid/54> ;
+      <http://spinrdf.org/sp#arg2>
+              <http://www.swows.org/instance/.well-known/genid/43> ;
+      spx:functionLabel "eq" ;
+      spx:opName "=" .
+
+<http://www.swows.org/instance/.well-known/genid/215>
+      a       <http://www.swows.org/sas#Op> , <http://www.swows.org/sas#Extend> ;
+      <http://www.swows.org/sas#extension>
+              <http://www.swows.org/instance/.well-known/genid/216> ;
+      <http://www.swows.org/sas#name>
+              "extend" ;
+      <http://www.swows.org/sas#subOp>
+              <http://www.swows.org/instance/.well-known/genid/218> .
+
+<http://www.swows.org/instance/.well-known/genid/284>
+      a       df:NamedGraph .
+
+<http://www.swows.org/instance/.well-known/genid/340>
+      a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#NamedGraph> ;
+      <http://spinrdf.org/sp#graphNameNode>
+              <http://www.swows.org/instance/.well-known/genid/279> ;
+      spx:element <http://www.swows.org/instance/.well-known/genid/341> .
+
+<http://www.swows.org/instance/.well-known/genid/27>
+      a       <http://www.swows.org/sas#TriplePattern> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.swows.org/instance/.well-known/genid/9> ;
+      <http://spinrdf.org/sp#predicate>
+              :selectedOption ;
+      <http://spinrdf.org/sp#subject>
+              swi:GraphRoot .
+
+<http://www.swows.org/instance/.well-known/genid/320>
+      a       <http://spinrdf.org/sp#Variable> ;
+      <http://spinrdf.org/sp#varName>
+              "unselectedOption_radioBorder" .
+
+<http://www.swows.org/instance/.well-known/genid/360>
+      a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
+      <http://spinrdf.org/sp#arg1>
+              <http://www.swows.org/instance/.well-known/genid/361> ;
+      spx:functionLabel "round" .
+
+<http://www.swows.org/instance/.well-known/genid/157>
+      a       <http://spinrdf.org/sp#TripleTemplate> ;
+      <http://spinrdf.org/sp#object>
+              <http://www.swows.org/instance/.well-known/genid/90> ;
+      <http://spinrdf.org/sp#predicate>
+              :value ;
+      <http://spinrdf.org/sp#subject>
+              <http://www.swows.org/instance/.well-known/genid/103> .
