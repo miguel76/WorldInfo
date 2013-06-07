@@ -2,38 +2,3 @@
 @prefix df:      <http://www.swows.org/dataflow#> .
 @prefix sp:      <http://spinrdf.org/sp> .
 
-<http://www.swows.org/instance/.well-known/genid/connection_7fed414e621a987672699b021cf0e01c>
-      a       <http://www.swows.org/transform#Connection> ;
-      <http://www.swows.org/transform#bgp>
-              <http://www.swows.org/instance/.well-known/genid/66> ;
-      <http://www.swows.org/transform#graph>
-              _:b1 ;
-      <http://www.swows.org/transform#graphURI>
-              <file:///home/miguel/git/WorldInfo/dataflow/config.n3> .
-
-<http://www.swows.org/instance/.well-known/genid/connection_5126495442dbbb99bd1ce094cd0b6a9e>
-      a       <http://www.swows.org/transform#Connection> ;
-      <http://www.swows.org/transform#bgp>
-              <http://www.swows.org/instance/.well-known/genid/141> ;
-      <http://www.swows.org/transform#graph>
-              [] ;
-      <http://www.swows.org/transform#graphURI>
-              <file:///home/miguel/git/WorldInfo/data/fao.rdf> .
-
-<http://www.swows.org/instance/.well-known/genid/connection_ea25c8e37011ab6cbdfd34a7506a42b2>
-      a       <http://www.swows.org/transform#Connection> ;
-      <http://www.swows.org/transform#bgp>
-              <http://www.swows.org/instance/.well-known/genid/26> ;
-      <http://www.swows.org/transform#graph>
-              [] ;
-      <http://www.swows.org/transform#graphURI>
-              <file:///home/miguel/git/WorldInfo/dataflow/startingOption.n3> .
-
-<http://www.swows.org/instance/.well-known/genid/connection_295047333609ee8efddcbf1f654ddc99>
-      a       <http://www.swows.org/transform#Connection> ;
-      <http://www.swows.org/transform#bgp>
-              <http://www.swows.org/instance/.well-known/genid/410> ;
-      <http://www.swows.org/transform#graph>
-              _:b1 ;
-      <http://www.swows.org/transform#graphURI>
-              <file:///home/miguel/git/WorldInfo/dataflow/config.n3> .

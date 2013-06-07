@@ -2,34 +2,3 @@
 @prefix df:      <http://www.swows.org/dataflow#> .
 @prefix sp:      <http://spinrdf.org/sp> .
 
-[]    a       <http://www.swows.org/transform#Connection> ;
-      <http://www.swows.org/transform#bgp>
-              [] ;
-      <http://www.swows.org/transform#graph>
-              _:b1 ;
-      <http://www.swows.org/transform#graphURI>
-              <file:///home/miguel/git/WorldInfo/dataflow/config.n3> .
-
-[]    a       <http://www.swows.org/transform#Connection> ;
-      <http://www.swows.org/transform#bgp>
-              [] ;
-      <http://www.swows.org/transform#graph>
-              [] ;
-      <http://www.swows.org/transform#graphURI>
-              <file:///home/miguel/git/WorldInfo/dataflow/startingOption.n3> .
-
-[]    a       <http://www.swows.org/transform#Connection> ;
-      <http://www.swows.org/transform#bgp>
-              [] ;
-      <http://www.swows.org/transform#graph>
-              _:b1 ;
-      <http://www.swows.org/transform#graphURI>
-              <file:///home/miguel/git/WorldInfo/dataflow/config.n3> .
-
-[]    a       <http://www.swows.org/transform#Connection> ;
-      <http://www.swows.org/transform#bgp>
-              [] ;
-      <http://www.swows.org/transform#graph>
-              [] ;
-      <http://www.swows.org/transform#graphURI>
-              <file:///home/miguel/git/WorldInfo/data/fao.rdf> .

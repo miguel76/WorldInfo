@@ -94,9 +94,6 @@
       <http://www.swows.org/sas#subOp>
               <http://www.swows.org/instance/.well-known/genid/191> .
 
-_:b1  a       df:ImportedGraph ;
-      df:uri  <file:///home/miguel/git/WorldInfo/dataflow/config.n3> .
-
 <http://www.swows.org/instance/.well-known/genid/264>
       <http://spinrdf.org/sp#as>
               <http://www.swows.org/instance/.well-known/genid/254> .
@@ -125,10 +122,6 @@ _:b1  a       df:ImportedGraph ;
       a       <http://spinrdf.org/sp#Variable> ;
       <http://spinrdf.org/sp#varName>
               "country" .
-
-<http://www.swows.org/instance/.well-known/genid/278>
-      a       df:UnionGraph ;
-      df:input <http://www.swows.org/instance/.well-known/genid/280> , <http://www.swows.org/instance/.well-known/genid/279> .
 
 <http://www.swows.org/instance/.well-known/genid/224>
       a       <http://www.swows.org/sas#TriplePattern> ;
@@ -222,10 +215,6 @@ _:b1  a       df:ImportedGraph ;
               <http://www.fao.org/countryprofiles/geoinfo/geopolitical/resource/codeISO2> ;
       <http://spinrdf.org/sp#subject>
               <http://www.swows.org/instance/.well-known/genid/163> .
-
-<http://www.swows.org/instance/.well-known/genid/279>
-      a       df:ImportedGraph ;
-      df:uri  <file:///home/miguel/git/WorldInfo/svg/BlankMapWithRadioBox.svg> .
 
 <http://www.swows.org/instance/.well-known/genid/352>
       a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
@@ -339,14 +328,6 @@ _:b1  a       df:ImportedGraph ;
       spx:functionIRI xsd:integer ;
       spx:functionLabel "function" .
 
-_:b2  a       <http://spinrdf.org/sp#Construct> , <http://spinrdf.org/sp#Query> ;
-      <http://spinrdf.org/sp#op>
-              <http://www.swows.org/instance/.well-known/genid/mainOp_f1230792b9253e20f4595525e1e0c0d6> ;
-      <http://spinrdf.org/sp#templates>
-              <http://www.swows.org/instance/.well-known/genid/148> ;
-      <http://spinrdf.org/sp#where>
-              <http://www.swows.org/instance/.well-known/genid/where_3b0faa8849ce61d64be9e88ea48531a1> .
-
 <http://www.swows.org/instance/.well-known/genid/422>
       a       <http://spinrdf.org/sp#TripleTemplate> ;
       <http://spinrdf.org/sp#object>
@@ -437,6 +418,9 @@ _:b2  a       <http://spinrdf.org/sp#Construct> , <http://spinrdf.org/sp#Query> 
       a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#Bind> ;
       spx:expr <http://www.swows.org/instance/.well-known/genid/91> ;
       spx:var <http://www.swows.org/instance/.well-known/genid/90> .
+
+_:b1  <http://spinrdf.org/sp#query>
+              <http://www.swows.org/instance/.well-known/genid/3> , <http://www.swows.org/instance/.well-known/genid/30> .
 
 <http://www.swows.org/instance/.well-known/genid/305>
       a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#TriplePattern> ;
@@ -565,6 +549,10 @@ _:b2  a       <http://spinrdf.org/sp#Construct> , <http://spinrdf.org/sp#Query> 
               <http://www.swows.org/instance/.well-known/genid/184> ;
       spx:resultVariable <http://www.swows.org/instance/.well-known/genid/197> , <http://www.swows.org/instance/.well-known/genid/196> .
 
+<http://www.swows.org/instance/.well-known/genid/289>
+      a       df:ImportedGraph ;
+      df:uri  <file:///home/miguel/git/WorldInfo/svg/BlankMapWithRadioBox.svg> .
+
 <http://www.swows.org/instance/.well-known/genid/154>
       a       <http://spinrdf.org/sp#TripleTemplate> ;
       <http://spinrdf.org/sp#object>
@@ -633,6 +621,14 @@ _:b2  a       <http://spinrdf.org/sp#Construct> , <http://spinrdf.org/sp#Query> 
       spx:functionIRI xsd:decimal ;
       spx:functionLabel "function" .
 
+_:b2  a       <http://spinrdf.org/sp#Construct> , <http://spinrdf.org/sp#Query> ;
+      <http://spinrdf.org/sp#op>
+              <http://www.swows.org/instance/.well-known/genid/mainOp_e9d2b5246e4abf5fc0ef7e01b8bad720> ;
+      <http://spinrdf.org/sp#templates>
+              <http://www.swows.org/instance/.well-known/genid/270> ;
+      <http://spinrdf.org/sp#where>
+              <http://www.swows.org/instance/.well-known/genid/where_e8fd5053ce20019d65da378587878211> .
+
 <http://www.swows.org/instance/.well-known/genid/410>
       a       <http://www.swows.org/sas#BGP> , <http://www.swows.org/sas#Op> ;
       <http://www.swows.org/sas#name>
@@ -671,6 +667,9 @@ _:b2  a       <http://spinrdf.org/sp#Construct> , <http://spinrdf.org/sp#Query> 
               "extend" ;
       <http://www.swows.org/sas#subOp>
               <http://www.swows.org/instance/.well-known/genid/189> .
+
+_:b3  a       df:ImportedGraph ;
+      df:uri  <file:///home/miguel/git/WorldInfo/dataflow/startingOption.n3> .
 
 <http://www.swows.org/instance/.well-known/genid/400>
       a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
@@ -712,7 +711,7 @@ _:b2  a       <http://spinrdf.org/sp#Construct> , <http://spinrdf.org/sp#Query> 
 <http://www.swows.org/instance/.well-known/genid/where_3b0faa8849ce61d64be9e88ea48531a1>
       a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#NamedGraph> ;
       <http://spinrdf.org/sp#graphNameNode>
-              _:b3 ;
+              _:b4 ;
       spx:element <http://www.swows.org/instance/.well-known/genid/72> .
 
 <http://www.swows.org/instance/.well-known/genid/386>
@@ -721,9 +720,6 @@ _:b2  a       <http://spinrdf.org/sp#Construct> , <http://spinrdf.org/sp#Query> 
               <http://www.swows.org/instance/.well-known/genid/387> ;
       <http://www.swows.org/sas#variable>
               <http://www.swows.org/instance/.well-known/genid/365> .
-
-_:b3  a       df:ImportedGraph ;
-      df:uri  <file:///home/miguel/git/WorldInfo/data/fao.rdf> .
 
 <http://www.swows.org/instance/.well-known/genid/71>
       a       <http://spinrdf.org/sp#TripleTemplate> ;
@@ -742,7 +738,7 @@ _:b3  a       df:ImportedGraph ;
 <http://www.swows.org/instance/.well-known/genid/307>
       a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#NamedGraph> ;
       <http://spinrdf.org/sp#graphNameNode>
-              _:b1 ;
+              _:b5 ;
       spx:element <http://www.swows.org/instance/.well-known/genid/308> .
 
 <http://www.swows.org/instance/.well-known/genid/85>
@@ -776,7 +772,7 @@ _:b3  a       df:ImportedGraph ;
 <http://www.swows.org/instance/.well-known/genid/where_cbea8b80f239af06bf803ec6b80dcfbb>
       a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#NamedGraph> ;
       <http://spinrdf.org/sp#graphNameNode>
-              _:b4 ;
+              _:b2 ;
       spx:element <http://www.swows.org/instance/.well-known/genid/301> .
 
 <http://www.swows.org/instance/.well-known/genid/413>
@@ -1137,6 +1133,9 @@ _:b3  a       df:ImportedGraph ;
       <http://spinrdf.org/sp#subject>
               <http://www.swows.org/instance/.well-known/genid/163> .
 
+_:b6  a       df:SelectGraph ;
+      df:id   swi:mouseEvents .
+
 <http://www.swows.org/instance/.well-known/genid/369>
       a       <http://www.swows.org/sas#Op> , <http://www.swows.org/sas#Extend> ;
       <http://www.swows.org/sas#extension>
@@ -1251,9 +1250,6 @@ _:b3  a       df:ImportedGraph ;
               <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ;
       <http://spinrdf.org/sp#subject>
               <http://www.swows.org/instance/.well-known/genid/163> .
-
-_:b5  <http://spinrdf.org/sp#query>
-              <http://www.swows.org/instance/.well-known/genid/3> , <http://www.swows.org/instance/.well-known/genid/30> .
 
 <http://www.swows.org/instance/.well-known/genid/233>
       a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
@@ -1396,14 +1392,6 @@ _:b5  <http://spinrdf.org/sp#query>
               "_radioBorder" ;
       spx:functionLabel "concat" .
 
-_:b4  a       <http://spinrdf.org/sp#Construct> , <http://spinrdf.org/sp#Query> ;
-      <http://spinrdf.org/sp#op>
-              <http://www.swows.org/instance/.well-known/genid/mainOp_e9d2b5246e4abf5fc0ef7e01b8bad720> ;
-      <http://spinrdf.org/sp#templates>
-              <http://www.swows.org/instance/.well-known/genid/270> ;
-      <http://spinrdf.org/sp#where>
-              <http://www.swows.org/instance/.well-known/genid/where_e8fd5053ce20019d65da378587878211> .
-
 <http://www.swows.org/instance/.well-known/genid/312>
       a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#Filter> ;
       spx:expr <http://www.swows.org/instance/.well-known/genid/313> .
@@ -1440,7 +1428,7 @@ _:b4  a       <http://spinrdf.org/sp#Construct> , <http://spinrdf.org/sp#Query> 
 <http://www.swows.org/instance/.well-known/genid/where_765bcd4abc676bed441c032f05a8363c>
       a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#NamedGraph> ;
       <http://spinrdf.org/sp#graphNameNode>
-              _:b1 ;
+              _:b5 ;
       spx:element <http://www.swows.org/instance/.well-known/genid/31> .
 
 <http://www.swows.org/instance/.well-known/genid/37>
@@ -1497,7 +1485,7 @@ _:b4  a       <http://spinrdf.org/sp#Construct> , <http://spinrdf.org/sp#Query> 
 <http://www.swows.org/instance/.well-known/genid/mainOp_74a7f226de987702713e40dfc26e7ffc>
       a       <http://www.swows.org/sas#Graph> , <http://www.swows.org/sas#Op> ;
       <http://www.swows.org/sas#graphNameNode>
-              _:b4 ;
+              _:b2 ;
       <http://www.swows.org/sas#subOp>
               <http://www.swows.org/instance/.well-known/genid/367> .
 
@@ -1564,7 +1552,7 @@ _:b4  a       <http://spinrdf.org/sp#Construct> , <http://spinrdf.org/sp#Query> 
 <http://www.swows.org/instance/.well-known/genid/mainOp_40f7dc02743f04ea3f64825bc553dab4>
       a       <http://www.swows.org/sas#Graph> , <http://www.swows.org/sas#Op> ;
       <http://www.swows.org/sas#graphNameNode>
-              _:b1 ;
+              _:b5 ;
       <http://www.swows.org/sas#subOp>
               <http://www.swows.org/instance/.well-known/genid/18> .
 
@@ -1594,9 +1582,6 @@ _:b4  a       <http://spinrdf.org/sp#Construct> , <http://spinrdf.org/sp#Query> 
               "join" ;
       <http://www.swows.org/sas#rightOp>
               <http://www.swows.org/instance/.well-known/genid/62> .
-
-_:b6  a       df:SelectGraph ;
-      df:id   swi:mouseEvents .
 
 <http://www.swows.org/instance/.well-known/genid/315>
       a       <http://spinrdf.org/sp#Variable> ;
@@ -1650,7 +1635,7 @@ _:b6  a       df:SelectGraph ;
 
 swi:OutputDataset
       a       df:InlineDataset ;
-      df:input <http://www.swows.org/instance/.well-known/genid/278> .
+      df:input <http://www.swows.org/instance/.well-known/genid/280> .
 
 <http://www.swows.org/instance/.well-known/genid/345>
       a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#Bind> ;
@@ -1684,7 +1669,7 @@ swi:OutputDataset
 <http://www.swows.org/instance/.well-known/genid/where_e8fd5053ce20019d65da378587878211>
       a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#NamedGraph> ;
       <http://spinrdf.org/sp#graphNameNode>
-              _:b2 ;
+              _:b7 ;
       spx:element <http://www.swows.org/instance/.well-known/genid/160> .
 
 <http://www.swows.org/instance/.well-known/genid/46>
@@ -1696,6 +1681,14 @@ swi:OutputDataset
       a       <http://spinrdf.org/sp#Variable> ;
       <http://spinrdf.org/sp#varName>
               "oldOption" .
+
+_:b7  a       <http://spinrdf.org/sp#Construct> , <http://spinrdf.org/sp#Query> ;
+      <http://spinrdf.org/sp#op>
+              <http://www.swows.org/instance/.well-known/genid/mainOp_f1230792b9253e20f4595525e1e0c0d6> ;
+      <http://spinrdf.org/sp#templates>
+              <http://www.swows.org/instance/.well-known/genid/148> ;
+      <http://spinrdf.org/sp#where>
+              <http://www.swows.org/instance/.well-known/genid/where_3b0faa8849ce61d64be9e88ea48531a1> .
 
 <http://www.swows.org/instance/.well-known/genid/326>
       a       <http://spinrdf.org/sp#Variable> ;
@@ -1715,9 +1708,6 @@ swi:OutputDataset
               <http://www.swows.org/instance/.well-known/genid/83> ;
       spx:functionLabel "div" ;
       spx:opName "/" .
-
-_:b7  a       df:ImportedGraph ;
-      df:uri  <file:///home/miguel/git/WorldInfo/dataflow/startingOption.n3> .
 
 <http://www.swows.org/instance/.well-known/genid/346>
       a       <http://spinrdf.org/sp#Variable> ;
@@ -1762,6 +1752,9 @@ _:b7  a       df:ImportedGraph ;
               <http://www.fao.org/countryprofiles/geoinfo/geopolitical/resource/codeISO2> ;
       <http://spinrdf.org/sp#subject>
               <http://www.swows.org/instance/.well-known/genid/326> .
+
+_:b4  a       df:ImportedGraph ;
+      df:uri  <file:///home/miguel/git/WorldInfo/data/fao.rdf> .
 
 <http://www.swows.org/instance/.well-known/genid/347>
       a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
@@ -1973,6 +1966,9 @@ _:b7  a       df:ImportedGraph ;
       spx:functionLabel "div" ;
       spx:opName "/" .
 
+_:b5  a       df:ImportedGraph ;
+      df:uri  <file:///home/miguel/git/WorldInfo/dataflow/config.n3> .
+
 <http://www.swows.org/instance/.well-known/genid/132>
       a       <http://spinrdf.org/sp#Expression> , spx:FunctionCall ;
       <http://spinrdf.org/sp#arg1>
@@ -1994,7 +1990,7 @@ _:b7  a       df:ImportedGraph ;
 <http://www.swows.org/instance/.well-known/genid/5>
       a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#NamedGraph> ;
       <http://spinrdf.org/sp#graphNameNode>
-              _:b7 ;
+              _:b3 ;
       spx:element <http://www.swows.org/instance/.well-known/genid/6> .
 
 <http://www.swows.org/instance/.well-known/genid/12>
@@ -2011,7 +2007,7 @@ _:b7  a       df:ImportedGraph ;
 <http://www.swows.org/instance/.well-known/genid/302>
       a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#NamedGraph> ;
       <http://spinrdf.org/sp#graphNameNode>
-              _:b5 ;
+              _:b1 ;
       spx:element <http://www.swows.org/instance/.well-known/genid/303> .
 
 <http://www.swows.org/instance/.well-known/genid/41>
@@ -2157,7 +2153,7 @@ _:b7  a       df:ImportedGraph ;
 <http://www.swows.org/instance/.well-known/genid/where_e427ade9e382207c08fcb45d8333929c>
       a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#NamedGraph> ;
       <http://spinrdf.org/sp#graphNameNode>
-              _:b1 ;
+              _:b5 ;
       spx:element <http://www.swows.org/instance/.well-known/genid/4> .
 
 <http://www.swows.org/instance/.well-known/genid/61>
@@ -2248,6 +2244,15 @@ _:b7  a       df:ImportedGraph ;
       a       <http://spinrdf.org/sp#Element> , <http://spinrdf.org/sp#Bind> ;
       spx:expr <http://www.swows.org/instance/.well-known/genid/94> ;
       spx:var <http://www.swows.org/instance/.well-known/genid/93> .
+
+<http://www.swows.org/instance/.well-known/genid/281>
+      a       <http://spinrdf.org/sp#Construct> , <http://spinrdf.org/sp#Query> ;
+      <http://spinrdf.org/sp#op>
+              <http://www.swows.org/instance/.well-known/genid/mainOp_74a7f226de987702713e40dfc26e7ffc> ;
+      <http://spinrdf.org/sp#templates>
+              <http://www.swows.org/instance/.well-known/genid/421> ;
+      <http://spinrdf.org/sp#where>
+              <http://www.swows.org/instance/.well-known/genid/where_cbea8b80f239af06bf803ec6b80dcfbb> .
 
 <http://www.swows.org/instance/.well-known/genid/299>
       a       spx:TripleTemplateSet ;
@@ -2376,13 +2381,8 @@ _:b7  a       df:ImportedGraph ;
       spx:functionLabel "uri" .
 
 <http://www.swows.org/instance/.well-known/genid/280>
-      a       <http://spinrdf.org/sp#Construct> , <http://spinrdf.org/sp#Query> ;
-      <http://spinrdf.org/sp#op>
-              <http://www.swows.org/instance/.well-known/genid/mainOp_74a7f226de987702713e40dfc26e7ffc> ;
-      <http://spinrdf.org/sp#templates>
-              <http://www.swows.org/instance/.well-known/genid/421> ;
-      <http://spinrdf.org/sp#where>
-              <http://www.swows.org/instance/.well-known/genid/where_cbea8b80f239af06bf803ec6b80dcfbb> .
+      a       df:UnionGraph ;
+      df:input <http://www.swows.org/instance/.well-known/genid/289> , <http://www.swows.org/instance/.well-known/genid/281> .
 
 <http://www.swows.org/instance/.well-known/genid/270>
       a       spx:TripleTemplateSet ;
@@ -2469,14 +2469,14 @@ _:b7  a       df:ImportedGraph ;
 <http://www.swows.org/instance/.well-known/genid/mainOp_f05df3a0ed4fbeba5833566b54ada113>
       a       <http://www.swows.org/sas#Graph> , <http://www.swows.org/sas#Op> ;
       <http://www.swows.org/sas#graphNameNode>
-              _:b1 ;
+              _:b5 ;
       <http://www.swows.org/sas#subOp>
               <http://www.swows.org/instance/.well-known/genid/52> .
 
 <http://www.swows.org/instance/.well-known/genid/mainOp_f1230792b9253e20f4595525e1e0c0d6>
       a       <http://www.swows.org/sas#Graph> , <http://www.swows.org/sas#Op> ;
       <http://www.swows.org/sas#graphNameNode>
-              _:b3 ;
+              _:b4 ;
       <http://www.swows.org/sas#subOp>
               <http://www.swows.org/instance/.well-known/genid/116> .
 
@@ -2596,7 +2596,7 @@ _:b7  a       df:ImportedGraph ;
 <http://www.swows.org/instance/.well-known/genid/409>
       a       <http://www.swows.org/sas#Graph> , <http://www.swows.org/sas#Op> ;
       <http://www.swows.org/sas#graphNameNode>
-              :config , _:b1 ;
+              _:b5 , :config ;
       <http://www.swows.org/sas#name>
               "graph" ;
       <http://www.swows.org/sas#subOp>
@@ -2712,7 +2712,7 @@ _:b7  a       df:ImportedGraph ;
 <http://www.swows.org/instance/.well-known/genid/25>
       a       <http://www.swows.org/sas#Graph> , <http://www.swows.org/sas#Op> ;
       <http://www.swows.org/sas#graphNameNode>
-              :startingOption , _:b7 ;
+              :startingOption , _:b3 ;
       <http://www.swows.org/sas#name>
               "graph" ;
       <http://www.swows.org/sas#subOp>
@@ -2743,7 +2743,7 @@ _:b7  a       df:ImportedGraph ;
 <http://www.swows.org/instance/.well-known/genid/406>
       a       <http://www.swows.org/sas#Graph> , <http://www.swows.org/sas#Op> ;
       <http://www.swows.org/sas#graphNameNode>
-              _:b5 , :selectedOption ;
+              :selectedOption , _:b1 ;
       <http://www.swows.org/sas#name>
               "graph" ;
       <http://www.swows.org/sas#subOp>
@@ -2908,7 +2908,7 @@ _:b7  a       df:ImportedGraph ;
 <http://www.swows.org/instance/.well-known/genid/mainOp_e9d2b5246e4abf5fc0ef7e01b8bad720>
       a       <http://www.swows.org/sas#Graph> , <http://www.swows.org/sas#Op> ;
       <http://www.swows.org/sas#graphNameNode>
-              _:b2 ;
+              _:b7 ;
       <http://www.swows.org/sas#subOp>
               <http://www.swows.org/instance/.well-known/genid/235> .
 
