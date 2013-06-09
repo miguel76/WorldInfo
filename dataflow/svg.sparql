@@ -5,15 +5,18 @@ PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
 PREFIX swi:   <http://www.swows.org/instance#>
 PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX geo:   <http://www.fao.org/countryprofiles/geoinfo/geopolitical/resource/>
-PREFIX nn:    <http://www.swows.org/xml/no-namespace>
-PREFIX svg:   <http://www.w3.org/2000/svg>
-PREFIX xlink: <http://www.w3.org/1999/xlink>
+PREFIX nn:    <http://www.swows.org/xml/no-namespace#>
+PREFIX svg:   <http://www.w3.org/2000/svg#>
+PREFIX xlink: <http://www.w3.org/1999/xlink#>
+PREFIX local: <file:///home/miguel/git/WorldInfo/svg/>
 
 CONSTRUCT {
 
   ?selectedOption_g xml:hasChild <#selectedOption_use> .
   <#selectedOption_use>  a svg:use ; xlink:href "#radioPoint".
-  ?unselectedOption_radioBorder xml:listenedEventType "mousedown" .
+  ?unselectedOption_radioBorder
+    nn:cursor "pointer" ;
+    xml:listenedEventType "mousedown" .
 
   ?country_elementOrDescendant nn:style ?country_style_value .
 
@@ -24,11 +27,11 @@ WHERE {
     swi:GraphRoot :selectedOption ?selectedOption .
   } .
   GRAPH :config {
-    swi:GraphRoot :possibleOption ?unselectedOption .
+    swi:GraphRoot :possibleOption/:id ?unselectedOption .
   } .
   FILTER( ?selectedOption != ?unselectedOption ) .
-  BIND( URI( CONCAT( STR(doc:option_), ?selectedOption ) ) AS ?selectedOption_g ).
-  BIND( URI( CONCAT( STR(doc:option_), ?unselectedOption, "_radioBorder" ) ) AS ?unselectedOption_radioBorder ).
+  BIND( URI( CONCAT( STR(local:BlankMapWithRadioBox.svg), "#option_", ?selectedOption ) ) AS ?selectedOption_g ).
+  BIND( URI( CONCAT( STR(local:BlankMapWithRadioBox.svg), "#option_", ?unselectedOption, "_radioBorder" ) ) AS ?unselectedOption_radioBorder ).
 
   ?country
     a :Country ;
@@ -37,7 +40,7 @@ WHERE {
   ?option
     :id ?selectedOption ;
     :value ?proportion .
-  BIND( URI( CONCAT( STR( doc: ), LCASE(?codeISO2upper) ) ) AS ?country_element ) .
+  BIND( URI( CONCAT( STR( local:BlankMapWithRadioBox.svg ), "#", LCASE(?codeISO2upper) ) ) AS ?country_element ) .
   GRAPH :descendants {
     ?country_element :descendantOrSelf ?country_elementOrDescendant .
   } .

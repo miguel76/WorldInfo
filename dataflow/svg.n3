@@ -46,7 +46,7 @@ _:descendants
   a df:ConstructGraph ;
   df:input
     [ a df:InlineDataset ;
-      df:input :svgDoc ] ;
+      df:input _:svgDoc ] ;
   df:config
     [ a df:IncludedGraph ;
       df:url <children2descendants.sparql> ;

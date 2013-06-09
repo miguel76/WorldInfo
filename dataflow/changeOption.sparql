@@ -8,6 +8,7 @@ PREFIX time:   <http://www.swows.org/time#>
 PREFIX tuio:  <http://www.swows.org/tuio#>
 PREFIX events:  <http://www.swows.org/DOM/Events#>
 PREFIX doc:   <http://www.swows.org/xml/instance#>
+PREFIX local: <file:///home/miguel/git/WorldInfo/svg/>
 
 INSERT { swi:GraphRoot :selectedOption ?newOption }
 WHERE {
@@ -22,9 +23,9 @@ WHERE {
   GRAPH swi:mouseEvents {
     ?event a events:MouseEvent ; events:target ?eventTarget .
   } .
-  swi:GraphRoot :possibleOption ?newOption .
+  swi:GraphRoot :possibleOption/:id ?newOption .
   FILTER (
-    URI( CONCAT( STR(doc:option_), ?newOption, "_radioBorder" ) )
+    URI( CONCAT( STR(local:BlankMapWithRadioBox.svg), "#option_", ?newOption, "_radioBorder" ) )
         = ?eventTarget ).
 };
 
