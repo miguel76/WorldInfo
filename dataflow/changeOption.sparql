@@ -13,19 +13,22 @@ PREFIX local: <file:///home/miguel/git/WorldInfo/svg/>
 INSERT { swi:GraphRoot :selectedOption ?newOption }
 WHERE {
   GRAPH :startingOption { swi:GraphRoot :selectedOption ?newOption } .
-  FILTER NOT EXISTS{ GRAPH swi:ThisGraph { swi:GraphRoot :selectedOption ?oldOption } } .
+  FILTER NOT EXISTS{ swi:GraphRoot :selectedOption ?anyOption } .
 };
 
 DELETE { swi:GraphRoot :selectedOption ?oldOption }
-INSERT { swi:GraphRoot :selectedOption ?newOption }
+INSERT { swi:GraphRoot :selectedOption ?newOption } #; :pippo ?pippo; events:target ?eventTarget } 
 WHERE {
-  GRAPH swi:ThisGraph { swi:GraphRoot :selectedOption ?oldOption }
+  GRAPH :selectedOption {
+    swi:GraphRoot :selectedOption ?oldOption.
+  }
   GRAPH swi:mouseEvents {
     ?event a events:MouseEvent ; events:target ?eventTarget .
   } .
-  swi:GraphRoot :possibleOption/:id ?newOption .
+  GRAPH :config { swi:GraphRoot :possibleOption/:id ?newOption }
   FILTER (
     URI( CONCAT( STR(local:BlankMapWithRadioBox.svg), "#option_", ?newOption, "_radioBorder" ) )
         = ?eventTarget ).
+  BIND( URI( CONCAT( STR(local:BlankMapWithRadioBox.svg), "#option_", ?newOption, "_radioBorder" ) ) AS ?pippo ) .
 };
 

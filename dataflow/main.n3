@@ -49,7 +49,8 @@ _:selectedOption
   a df:UpdatableGraph ;
   df:input
     [ a df:InlineDataset ;
-      df:input _:config ;
+      df:namedInput [ a df:NamedGraph ; df:input _:selectedOption ; df:id :selectedOption ] ;
+      df:namedInput [ a df:NamedGraph ; df:input _:config ; df:id :config ] ;
       df:namedInput [ a df:NamedGraph ; df:input [a df:SelectGraph ; df:id swi:mouseEvents] ; df:id swi:mouseEvents ] ;
       df:namedInput [ a df:NamedGraph ; df:input [a df:IncludedGraph ; df:url <startingOption.n3>] ; df:id :startingOption ] ] ;
   df:config
