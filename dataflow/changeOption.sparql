@@ -17,11 +17,9 @@ WHERE {
 };
 
 DELETE { swi:GraphRoot :selectedOption ?oldOption }
-INSERT { swi:GraphRoot :selectedOption ?newOption } #; :pippo ?pippo; events:target ?eventTarget } 
+INSERT { swi:GraphRoot :selectedOption ?newOption }
 WHERE {
-  GRAPH :selectedOption {
-    swi:GraphRoot :selectedOption ?oldOption.
-  }
+  swi:GraphRoot :selectedOption ?oldOption.
   GRAPH swi:mouseEvents {
     ?event a events:MouseEvent ; events:target ?eventTarget .
   } .
@@ -29,6 +27,6 @@ WHERE {
   FILTER (
     URI( CONCAT( STR(local:BlankMapWithRadioBox.svg), "#option_", ?newOption, "_radioBorder" ) )
         = ?eventTarget ).
-  BIND( URI( CONCAT( STR(local:BlankMapWithRadioBox.svg), "#option_", ?newOption, "_radioBorder" ) ) AS ?pippo ) .
+  FILTER ( ?newOption != ?oldOption ).
 };
 
