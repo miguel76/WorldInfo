@@ -1,4 +1,4 @@
-@prefix :        <http://www.cattid.uniroma1.it/2012/pampers#> .
+@prefix :        <http://www.swows.org/samples/WorldInfo#> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 @prefix swi:     <http://www.swows.org/instance#> .
 

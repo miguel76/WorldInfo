@@ -1,0 +1,270 @@
+@prefix :        <http://www.swows.org/samples/WorldInfo#> .
+@prefix svg:     <http://uispin.org/svg#> .
+@prefix uix:     <http://www.swows.org/uix#> .
+@prefix tuio:    <http://www.swows.org/tuio#> .
+@prefix xml:    <http://www.swows.org/xml#> .
+@prefix sp:      <http://spinrdf.org/sp#> .
+@prefix df:   <http://www.swows.org/dataflow#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix vp:   <http://www.swows.org/viewport#> .
+@prefix swi:   <http://www.swows.org/instance#> .
+@prefix rdfSyntax:   <http://www.swows.org/syntaxes/RDF/> .
+@prefix rdf2Syntax:   <http://www.swows.org/syntaxes/RDF/RDF/> .
+@prefix syntax:   <http://www.swows.org/syntaxes/> .
+@prefix query: <http://jena.hpl.hp.com/2003/07/query/> .
+@prefix sparql: <http://jena.hpl.hp.com/2003/07/query/SPARQL_11/> .
+
+swi:OutputDataset
+  a df:InlineDataset ;
+  df:input
+      [ a df:UnionGraph ;
+        df:input :svgVar;
+        df:input :svgDoc 
+      ] .
+
+:svgVar
+  a df:ConstructGraph ;
+  df:input
+    [ a df:InlineDataset ;
+      df:input :normalizedCountryValues ;
+      df:namedInput 
+        [ a df:NamedGraph ;
+          df:id :descendants ;
+          df:input :descendants ] ;
+      df:namedInput 
+        [ a df:NamedGraph ;
+          df:id :selectedOption ;
+          df:input :selectedOption ] ;
+      df:namedInput 
+        [ a df:NamedGraph ;
+          df:id :config ;
+          df:input :config ] ] ;
+  df:txtConfig '''
+
+PREFIX :      <http://www.swows.org/samples/WorldInfo#>
+PREFIX xml:   <http://www.swows.org/xml#>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+PREFIX swi:   <http://www.swows.org/instance#>
+PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX geo:   <http://www.fao.org/countryprofiles/geoinfo/geopolitical/resource/>
+PREFIX nn:    <http://www.swows.org/xml/no-namespace#>
+PREFIX svg:   <http://www.w3.org/2000/svg#>
+PREFIX xlink: <http://www.w3.org/1999/xlink#>
+PREFIX local: <file:///home/miguel/git/WorldInfo/svg/>
+
+CONSTRUCT {
+
+  ?selectedOption_g xml:hasChild <#selectedOption_use> .
+  <#selectedOption_use>  a svg:use ; xlink:href "#radioPoint".
+  ?unselectedOption_radioBorder
+    nn:cursor "pointer" ;
+    xml:listenedEventType "mousedown" .
+
+  ?country_elementOrDescendant nn:style ?country_style_value .
+
+}
+WHERE {
+
+  GRAPH :selectedOption {
+    swi:GraphRoot :selectedOption ?selectedOption .
+  } .
+  GRAPH :config {
+    swi:GraphRoot :possibleOption/:id ?unselectedOption .
+  } .
+  FILTER( ?selectedOption != ?unselectedOption ) .
+  BIND( URI( CONCAT( STR(local:BlankMapWithRadioBox.svg), "#option_", ?selectedOption ) ) AS ?selectedOption_g ).
+  BIND( URI( CONCAT( STR(local:BlankMapWithRadioBox.svg), "#option_", ?unselectedOption, "_radioBorder" ) ) AS ?unselectedOption_radioBorder ).
+
+  ?country
+    a :Country ;
+    geo:codeISO2 ?codeISO2upper ;
+    :option ?option .
+  ?option
+    :id ?selectedOption ;
+    :value ?proportion .
+  BIND( URI( CONCAT( STR( local:BlankMapWithRadioBox.svg ), "#", LCASE(?codeISO2upper) ) ) AS ?country_element ) .
+  GRAPH :descendants {
+    ?country_element :descendantOrSelf ?country_elementOrDescendant .
+  } .
+  BIND( STR(255) AS ?red ).
+  BIND( STR(xsd:integer( ROUND( xsd:decimal( (1 - ?proportion) * 255) ) ) ) AS ?green ).
+  BIND( STR(xsd:integer( ROUND( xsd:decimal( (1 - ?proportion) * 255) ) ) ) AS ?blue ).
+  BIND( CONCAT( "fill: rgb(", ?red, ",", ?green, ",", ?blue, ")" ) AS ?country_style_value ) .
+
+} '''.
+
+:descendants
+  a df:ConstructGraph ;
+  df:input
+    [ a df:InlineDataset ;
+      df:input :svgDoc ] ;
+  df:txtConfig '''
+PREFIX :      <http://www.swows.org/samples/WorldInfo#>
+PREFIX xml:   <http://www.swows.org/xml#>
+
+CONSTRUCT {
+  ?node :descendantOrSelf ?descendantOrSelf .
+}
+WHERE {
+  ?node xml:hasChild* ?descendantOrSelf .
+}
+    ''' .
+
+:svgDoc
+  a df:IncludedGraph ;
+  df:url <../svg/BlankMapWithRadioBox.svg> ;
+  df:syntax syntax:XML .
+
+      
+:normalizedCountryValues
+  a df:ConstructGraph ;
+  df:input
+    [ a df:InlineDataset ;
+      df:input :countryValues  ] ;
+  df:txtConfig '''
+PREFIX :      <http://www.swows.org/samples/WorldInfo#>
+PREFIX xml:   <http://www.swows.org/xml#>
+PREFIX doc:   <http://www.swows.org/xml/instance#>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+PREFIX swi:   <http://www.swows.org/instance#>
+PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX geo:   <http://www.fao.org/countryprofiles/geoinfo/geopolitical/resource/>
+
+CONSTRUCT {
+
+  ?country
+    a :Country ;
+    geo:codeISO2 ?codeISO2upper ;
+    :option ?option .
+  ?option
+    :id ?optionId ;
+    :value ?proportion .
+
+}
+WHERE {
+
+  ?country
+    a :Country ;
+    geo:codeISO2 ?codeISO2upper ;
+    :option ?option .
+  ?option
+    :id ?optionId ;
+    :value ?value .
+  {
+    SELECT ?optionId (MAX(?value) AS ?maxValue)
+    WHERE {
+      ?country
+        a :Country ;
+        :option ?option .
+      ?option
+        :id ?optionId ;
+        :value ?value .
+    } GROUP BY ?optionId
+  } .
+  {
+    SELECT ?optionId (MIN(?value) AS ?minValue)
+    WHERE {
+      ?country
+        a :Country ;
+        :option ?option .
+      ?option
+        :id ?optionId ;
+        :value ?value .
+    } GROUP BY ?optionId
+  } .
+  BIND( ( ?value - ?minValue ) / ( ?maxValue - ?minValue ) AS ?proportion ).
+
+}
+
+  '''.
+
+:countryValues
+  a df:ConstructGraph ;
+  df:input
+    [ a df:InlineDataset ;
+      df:input :faoData  ] ;
+  df:txtConfig '''
+PREFIX :      <http://www.swows.org/samples/WorldInfo#>
+PREFIX xml:   <http://www.swows.org/xml#>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+PREFIX swi:   <http://www.swows.org/instance#>
+PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX geo:   <http://www.fao.org/countryprofiles/geoinfo/geopolitical/resource/>
+
+CONSTRUCT {
+  ?country
+    a :Country ;
+    geo:codeISO2 ?codeISO2upper ;
+    :option ?optionGdp, ?optionDensity, ?optionAgriAreaRate .
+  ?optionGdp
+    :id "gdp"^^xsd:string ;
+    :value ?gdpPerCapita .
+  ?optionDensity
+    :id "density"^^xsd:string ;
+    :value ?density .
+  ?optionAgriAreaRate
+    :id "agriAreaRate"^^xsd:string ;
+    :value ?agriAreaRate .
+}
+WHERE {
+  ?country
+    a geo:self_governing ;
+    geo:codeISO2 ?codeISO2upper ;
+    geo:GDPTotalInCurrentPrices ?gdp ;
+    geo:populationTotal ?pop ;
+    geo:landAreaTotal ?landArea ;
+    geo:agriculturalAreaTotal ?agriArea .
+  BIND( ?gdp / ?pop AS ?gdpPerCapita ) .
+  BIND( ?pop / ?landArea AS ?density ) .
+  BIND( ?agriArea / ?landArea AS ?agriAreaRate ) .
+  BIND( URI( CONCAT( STR(:optionGdp_), MD5(STR(?country)) ) ) AS ?optionGdp ) .
+  BIND( URI( CONCAT( STR(:optionDensity_), MD5(STR(?country)) ) ) AS ?optionDensity ) .
+  BIND( URI( CONCAT( STR(:optionAgriAreaRate_), MD5(STR(?country)) ) ) AS ?optionAgriAreaRate ) .
+}
+  '''.
+
+:selectedOption
+  a df:UpdatableGraph ;
+  df:input
+    [ a df:InlineDataset ;
+      #df:namedInput [ a df:NamedGraph ; df:input :selectedOption ; df:id :selectedOption ] ;
+      df:namedInput [ a df:NamedGraph ; df:input :config ; df:id :config ] ;
+      df:namedInput [ a df:NamedGraph ; df:input [a df:SelectGraph ; df:id swi:mouseEvents] ; df:id swi:mouseEvents ] ;
+      df:namedInput [ a df:NamedGraph ; df:input [a df:IncludedGraph ; df:url <startingOption.n3>] ; df:id :startingOption ] ] ;
+  df:txtConfig '''
+PREFIX :      <http://www.swows.org/samples/WorldInfo#>
+PREFIX xml:   <http://www.swows.org/xml#>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+PREFIX swi:   <http://www.swows.org/instance#>
+PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX time:   <http://www.swows.org/time#>
+PREFIX tuio:  <http://www.swows.org/tuio#>
+PREFIX events:  <http://www.swows.org/DOM/Events#>
+PREFIX doc:   <http://www.swows.org/xml/instance#>
+PREFIX local: <file:///home/miguel/git/WorldInfo/svg/>
+
+INSERT { swi:GraphRoot :selectedOption ?newOption }
+WHERE {
+  GRAPH :startingOption { swi:GraphRoot :selectedOption ?newOption } .
+  FILTER NOT EXISTS{ swi:GraphRoot :selectedOption ?anyOption } .
+};
+
+DELETE { swi:GraphRoot :selectedOption ?oldOption }
+INSERT { swi:GraphRoot :selectedOption ?newOption }
+WHERE {
+  swi:GraphRoot :selectedOption ?oldOption.
+  GRAPH swi:mouseEvents {
+    ?event a events:MouseEvent ; events:target ?eventTarget .
+  } .
+  GRAPH :config { swi:GraphRoot :possibleOption/:id ?newOption }
+  FILTER (
+    URI( CONCAT( STR(local:BlankMapWithRadioBox.svg), "#option_", ?newOption, "_radioBorder" ) )
+        = ?eventTarget ).
+  FILTER ( ?newOption != ?oldOption ).
+};
+    ''' .
+
+:config a df:IncludedGraph ; df:url <config.n3> .
+:faoData a df:IncludedGraph ; df:url <../data/fao.rdf> .
+
