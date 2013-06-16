@@ -1,4 +1,0 @@
-@prefix spx:     <http://www.swows.org/spinx#> .
-@prefix df:      <http://www.swows.org/dataflow#> .
-@prefix sp:      <http://spinrdf.org/sp> .
-
