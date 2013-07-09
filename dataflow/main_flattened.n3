@@ -255,7 +255,7 @@ INSERT { swi:GraphRoot :selectedOption ?newOption }
 WHERE {
   swi:GraphRoot :selectedOption ?oldOption.
   GRAPH swi:mouseEvents {
-    ?event a events:MouseEvent ; events:target ?eventTarget .
+    ?event a events:Event ; events:target ?eventTarget .
   } .
   GRAPH :config { swi:GraphRoot :possibleOption/:id ?newOption }
   FILTER (
